@@ -4,13 +4,44 @@
   <title><![CDATA[jarryyen.github.io]]></title>
   <link href="https://jarryyen.github.io/atom.xml" rel="self"/>
   <link href="https://jarryyen.github.io/"/>
-  <updated>2018-01-04T11:50:07+08:00</updated>
+  <updated>2018-01-04T11:51:43+08:00</updated>
   <id>https://jarryyen.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[screen detached了怎么办]]></title>
+    <link href="https://jarryyen.github.io/15151417121416.html"/>
+    <updated>2018-01-05T16:41:52+08:00</updated>
+    <id>https://jarryyen.github.io/15151417121416.html</id>
+    <content type="html"><![CDATA[
+<pre><code>screen -X -S [session # you want to kill] quit
+</code></pre>
+
+<p>例如:<br/>
+```<br/>
+[root@localhost ~]# screen -ls<br/>
+There are screens on:<br/>
+        9975.pts-0.localhost    (Detached)<br/>
+        4588.pts-3.localhost    (Detached)<br/>
+2 Sockets in /var/run/screen/S-root.</p>
+
+<p>[root@localhost ~]# screen -X -S 4588 quit<br/>
+[root@localhost ~]# screen -ls<br/>
+There is a screen on:<br/>
+        9975.pts-0.localhost    (Detached)<br/>
+1 Socket in /var/run/screen/S-root.<br/>
+```<br/>
+可以看到，4588会话已经没有了。</p>
+
+<p>参考资料：<br/>
+（1）<a href="http://stackoverflow.com/questions/1509677/kill-detached-screen-session" title="Kill detached screen session">Kill detached screen session</a></p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[在MarkDown中添加潜入视频或音频]]></title>

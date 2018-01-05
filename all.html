@@ -103,6 +103,59 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
+                <a class="clearlink" href="15151417121416.html">
+                
+                  <h1>screen detached了怎么办</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<pre><code>screen -X -S [session # you want to kill] quit
+</code></pre>
+
+<p>例如:<br/>
+```<br/>
+[root@localhost ~]# screen -ls<br/>
+There are screens on:<br/>
+        9975.pts-0.localhost    (Detached)<br/>
+        4588.pts-3.localhost    (Detached)<br/>
+2 Sockets in /var/run/screen/S-root.</p>
+
+<p>[root@localhost ~]# screen -X -S 4588 quit<br/>
+[root@localhost ~]# screen -ls<br/>
+There is a screen on:<br/>
+        9975.pts-0.localhost    (Detached)<br/>
+1 Socket in /var/run/screen/S-root.<br/>
+```<br/>
+可以看到，4588会话已经没有了。</p>
+
+<p>参考资料：<br/>
+（1）<a href="http://stackoverflow.com/questions/1509677/kill-detached-screen-session" title="Kill detached screen session">Kill detached screen session</a></p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/1/5</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
                 <a class="clearlink" href="15150357946970.html">
                 
                   <h1>在MarkDown中添加潜入视频或音频</h1>
@@ -598,6 +651,12 @@ rm ~/Library/Application\ Support/Dock/*.db ; killall Dock<br/>
 	      
 		      
 			      <li class="post">
+			        <a href="15151417121416.html">screen detached了怎么办</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="15150357946970.html">在MarkDown中添加潜入视频或音频</a>
 			      </li>
 		     
@@ -621,10 +680,6 @@ rm ~/Library/Application\ Support/Dock/*.db ; killall Dock<br/>
 		     
 		  
 		      
-			      <li class="post">
-			        <a href="15046915958368.html">敦刻尔克(1080P) Dunkirk 2017 NEW HD-TS x264-CPG</a>
-			      </li>
-		     
 		  
 		      
 		  
