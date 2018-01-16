@@ -4,13 +4,47 @@
   <title><![CDATA[jarryyen.github.io]]></title>
   <link href="https://jarryyen.github.io/atom.xml" rel="self"/>
   <link href="https://jarryyen.github.io/"/>
-  <updated>2018-01-05T16:47:39+08:00</updated>
+  <updated>2018-01-05T16:49:19+08:00</updated>
   <id>https://jarryyen.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[SSR连接如何解析]]></title>
+    <link href="https://jarryyen.github.io/15160793301068.html"/>
+    <updated>2018-01-16T13:08:50+08:00</updated>
+    <id>https://jarryyen.github.io/15160793301068.html</id>
+    <content type="html"><![CDATA[
+<p>1、编码后的 URI 格式：</p>
+
+<p>ss://BASE64-ENCODED-STRING-WITHOUT-PADDING</p>
+
+<p>2、编码前的 URI 格式：</p>
+
+<p>ss://method:password@hostname:port （原文没有直接说明需要把加粗部分经过一次Base64加密才能得下面的地址串）</p>
+
+<p>3、Base64<br/>
+ss://YmYtY2ZiOnRlc3RAMTkyLjE2OC4xMDAuMTo4ODg4</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[通过Hook实现VPN代理]]></title>
+    <link href="https://jarryyen.github.io/15159817711460.html"/>
+    <updated>2018-01-15T10:02:51+08:00</updated>
+    <id>https://jarryyen.github.io/15159817711460.html</id>
+    <content type="html"><![CDATA[
+<p>需要清单:<br/>
+1. 外网 IP Server(建议独立)<br/>
+2. Xen 虚拟化<br/>
+3. </p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[screen detached了怎么办]]></title>

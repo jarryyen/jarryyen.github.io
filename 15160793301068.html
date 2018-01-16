@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  今天遇到了LaunchPad的问题 - jarryyen.github.io
+  SSR连接如何解析 - jarryyen.github.io
   
   </title>
   
@@ -103,10 +103,10 @@
       <div class="markdown-body article-wrap">
        <div class="article">
           
-          <h1>今天遇到了LaunchPad的问题</h1>
+          <h1>SSR连接如何解析</h1>
      
         <div class="read-more clearfix">
-          <span class="date">2017/8/3</span>
+          <span class="date">2018/1/16</span>
 
           <span>posted in&nbsp;</span> 
           
@@ -123,20 +123,16 @@
       </div><!-- article -->
 
       <div class="article-content">
-      <p>今天遇到了一个Mac OS的LaunchPad的问题，使用手势打开LaunchPad后输入关键字无法进行搜索。</p>
+      <p>1、编码后的 URI 格式：</p>
 
-<p>处理这个问题我的办法是，重置Dock。<br/>
-LaunchPad是属于Dock的.</p>
+<p>ss://BASE64-ENCODED-STRING-WITHOUT-PADDING</p>
 
-<p>Mac OS 10.10系统或更新<br/>
-<code><br/>
-defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock<br/>
-</code></p>
+<p>2、编码前的 URI 格式：</p>
 
-<p>Mac OS 10.9系统<br/>
-<code><br/>
-rm ~/Library/Application\ Support/Dock/*.db ; killall Dock<br/>
-</code></p>
+<p>ss://method:password@hostname:port （原文没有直接说明需要把加粗部分经过一次Base64加密才能得下面的地址串）</p>
+
+<p>3、Base64<br/>
+ss://YmYtY2ZiOnRlc3RAMTkyLjE2OC4xMDAuMTo4ODg4</p>
 
 
     
@@ -147,13 +143,13 @@ rm ~/Library/Application\ Support/Dock/*.db ; killall Dock<br/>
         <div class="large-6 columns">
         <p class="text-left" style="padding:15px 0px;">
       
-          <a href="15038828406046.html" 
-          title="Previous Post: 星际特工：千星之城(1080P & 4K)">&laquo; 星际特工：千星之城(1080P & 4K)</a>
-      
         </p>
         </div>
         <div class="large-6 columns">
       <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15159817711460.html" 
+          title="Next Post: 通过Hook实现VPN代理">通过Hook实现VPN代理 &raquo;</a>
       
       </p>
         </div>
