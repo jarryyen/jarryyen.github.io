@@ -4,13 +4,57 @@
   <title><![CDATA[jarryyen.github.io]]></title>
   <link href="https://jarryyen.github.io/atom.xml" rel="self"/>
   <link href="https://jarryyen.github.io/"/>
-  <updated>2018-01-05T16:49:19+08:00</updated>
+  <updated>2018-01-16T13:09:13+08:00</updated>
   <id>https://jarryyen.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[亚马逊云(aws)提供了4.9核心主机]]></title>
+    <link href="https://jarryyen.github.io/15161754454851.html"/>
+    <updated>2018-01-17T15:50:45+08:00</updated>
+    <id>https://jarryyen.github.io/15161754454851.html</id>
+    <content type="html"><![CDATA[
+<p>今天发行aws提供了4.9的主机</p>
+
+<blockquote>
+<p>4.9.76-38.79.amzn2.x86_64</p>
+</blockquote>
+
+<p>并且aws用的是什么虚拟化技术呢？<br/>
+我们使用virt-what进行查看</p>
+
+<blockquote>
+<p>如果没有可以通过 yum install virt-what 进行安装</p>
+</blockquote>
+
+<p>结果是</p>
+
+<blockquote>
+<p>xen-hvm</p>
+</blockquote>
+
+<p>如何开通BBR?<br/>
+在sysctl.conf里面添加如下2条信息</p>
+
+<blockquote>
+<p>net.core.default_qdisc = fq<br/>
+net.ipv4.tcp_congestion_control = bbr</p>
+</blockquote>
+
+<p>之后执行 sysctl -p</p>
+
+<p>即可开启BBR，查看BBR是否启用使用来查看</p>
+
+<blockquote>
+<p>lsmod | grep bbr</p>
+</blockquote>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[SSR连接如何解析]]></title>

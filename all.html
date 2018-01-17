@@ -103,6 +103,72 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
+                <a class="clearlink" href="15161754454851.html">
+                
+                  <h1>亚马逊云(aws)提供了4.9核心主机</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>今天发行aws提供了4.9的主机</p>
+
+<blockquote>
+<p>4.9.76-38.79.amzn2.x86_64</p>
+</blockquote>
+
+<p>并且aws用的是什么虚拟化技术呢？<br/>
+我们使用virt-what进行查看</p>
+
+<blockquote>
+<p>如果没有可以通过 yum install virt-what 进行安装</p>
+</blockquote>
+
+<p>结果是</p>
+
+<blockquote>
+<p>xen-hvm</p>
+</blockquote>
+
+<p>如何开通BBR?<br/>
+在sysctl.conf里面添加如下2条信息</p>
+
+<blockquote>
+<p>net.core.default_qdisc = fq<br/>
+net.ipv4.tcp_congestion_control = bbr</p>
+</blockquote>
+
+<p>之后执行 sysctl -p</p>
+
+<p>即可开启BBR，查看BBR是否启用使用来查看</p>
+
+<blockquote>
+<p>lsmod | grep bbr</p>
+</blockquote>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/1/17</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
                 <a class="clearlink" href="15160793301068.html">
                 
                   <h1>SSR连接如何解析</h1>
@@ -729,6 +795,12 @@ rm ~/Library/Application\ Support/Dock/*.db ; killall Dock<br/>
 	      
 		      
 			      <li class="post">
+			        <a href="15161754454851.html">亚马逊云(aws)提供了4.9核心主机</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="15160793301068.html">SSR连接如何解析</a>
 			      </li>
 		     
@@ -752,10 +824,6 @@ rm ~/Library/Application\ Support/Dock/*.db ; killall Dock<br/>
 		     
 		  
 		      
-			      <li class="post">
-			        <a href="15111487950640.html">【纪录片】《蓝色星球2》单剧连载中</a>
-			      </li>
-		     
 		  
 		      
 		  
