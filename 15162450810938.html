@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  screen detached了怎么办 - jarryyen.github.io
+  MacOS X 10.13(High Sierra)开启隐私权限 - jarryyen.github.io
   
   </title>
   
@@ -103,10 +103,10 @@
       <div class="markdown-body article-wrap">
        <div class="article">
           
-          <h1>screen detached了怎么办</h1>
+          <h1>MacOS X 10.13(High Sierra)开启隐私权限</h1>
      
         <div class="read-more clearfix">
-          <span class="date">2018/1/5</span>
+          <span class="date">2018/1/18</span>
 
           <span>posted in&nbsp;</span> 
           
@@ -123,27 +123,35 @@
       </div><!-- article -->
 
       <div class="article-content">
-      <pre><code>screen -X -S [session # you want to kill] quit
-</code></pre>
+      <p>在下载一些Mac软件后打卡，系统会告诉你说软件受损，需要删除掉。其实，并不是软件受损，而是苹果修改了安全限制。以前，允许来自任何第三方的软件有选项，可以选择。现在，苹果去掉了选项，必须要从App Store或者含有苹果认证证书的软件才可以运行。</p>
 
-<p>例如:<br/>
-```<br/>
-[root@localhost ~]# screen -ls<br/>
-There are screens on:<br/>
-        9975.pts-0.localhost    (Detached)<br/>
-        4588.pts-3.localhost    (Detached)<br/>
-2 Sockets in /var/run/screen/S-root.</p>
+<p>如果关闭这个选项，实现任何软件都可以运行呢？</p>
 
-<p>[root@localhost ~]# screen -X -S 4588 quit<br/>
-[root@localhost ~]# screen -ls<br/>
-There is a screen on:<br/>
-        9975.pts-0.localhost    (Detached)<br/>
-1 Socket in /var/run/screen/S-root.<br/>
-```<br/>
-可以看到，4588会话已经没有了。</p>
+<p>我们只需要打开终端，输入下面的命令</p>
 
-<p>参考资料：<br/>
-（1）<a href="http://stackoverflow.com/questions/1509677/kill-detached-screen-session" title="Kill detached screen session">Kill detached screen session</a></p>
+<blockquote>
+<p>sudo spctl --master-disable</p>
+</blockquote>
+
+<p>然后打开系统便好设置-&gt;安全性与隐私选项-&gt;任何来源（最下面）<br/>
+![WX20180118-111614@2x](# MacOS X 10.13(High Sierra)开启隐私权限</p>
+
+<p>在下载一些Mac软件后打卡，系统会告诉你说软件受损，需要删除掉。其实，并不是软件受损，而是苹果修改了安全限制。以前，允许来自任何第三方的软件有选项，可以选择。现在，苹果去掉了选项，必须要从App Store或者含有苹果认证证书的软件才可以运行。</p>
+
+<p>如果关闭这个选项，实现任何软件都可以运行呢？</p>
+
+<p>我们只需要打开终端，输入下面的命令</p>
+
+<blockquote>
+<p>sudo spctl --master-disable</p>
+</blockquote>
+
+<p>然后打开系统便好设置-&gt;安全性与隐私选项-&gt;任何来源（最下面）<br/>
+<img src="http://ofcfvx6lf.bkt.clouddn.com/WX20180118-111614@2x.png" alt="安全性与隐私"/></p>
+
+<p>选择这个选项，软件就可以正常运行了</p>
+
+<p>选择这个选项，软件就可以正常运行了</p>
 
 
     
@@ -154,16 +162,13 @@ There is a screen on:<br/>
         <div class="large-6 columns">
         <p class="text-left" style="padding:15px 0px;">
       
-          <a href="15159817711460.html" 
-          title="Previous Post: 通过Hook实现VPN代理">&laquo; 通过Hook实现VPN代理</a>
-      
         </p>
         </div>
         <div class="large-6 columns">
       <p class="text-right" style="padding:15px 0px;">
       
-          <a  href="15150357946970.html" 
-          title="Next Post: 在MarkDown中添加潜入视频或音频">在MarkDown中添加潜入视频或音频 &raquo;</a>
+          <a  href="15161754454851.html" 
+          title="Next Post: 亚马逊云(aws)提供了4.9核心主机">亚马逊云(aws)提供了4.9核心主机 &raquo;</a>
       
       </p>
         </div>
