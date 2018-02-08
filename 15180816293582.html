@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  今天遇到了LaunchPad的问题 - jarryyen.github.io
+  CentOS7.4搭建shadowsocks - jarryyen.github.io
   
   </title>
   
@@ -103,10 +103,10 @@
       <div class="markdown-body article-wrap">
        <div class="article">
           
-          <h1>今天遇到了LaunchPad的问题</h1>
+          <h1>CentOS7.4搭建shadowsocks</h1>
      
         <div class="read-more clearfix">
-          <span class="date">2017/8/3</span>
+          <span class="date">2018/2/8</span>
 
           <span>posted in&nbsp;</span> 
           
@@ -123,22 +123,104 @@
       </div><!-- article -->
 
       <div class="article-content">
-      <p>今天遇到了一个Mac OS的LaunchPad的问题，使用手势打开LaunchPad后输入关键字无法进行搜索。</p>
+      <h4 id="toc_0">安装 pip</h4>
 
-<p>处理这个问题我的办法是，重置Dock。<br/>
-LaunchPad是属于Dock的.</p>
+<p>pip是 python 的包管理工具。在本文中将使用 python 版本的 shadowsocks，此版本的 shadowsocks 已发布到 pip 上，因此我们需要通过 pip 命令来安装。</p>
 
-<p>Mac OS 10.10系统或更新</p>
+<p>在控制台执行以下命令安装 pip</p>
+
+<pre><code>[root@server ~]# curl &quot;https://bootstrap.pypa.io/get-pip.py&quot; -o &quot;get-pip.py&quot;
+[root@server ~]# python get-pip.py
+</code></pre>
+
+<h4 id="toc_1">安装配置 shadowsocks</h4>
+
+<p>在控制台执行以下命令安装 shadowsocks：</p>
+
+<pre><code>[root@server ~]# pip install --upgrade pip
+[root@server ~]# pip install shadowsocks
+</code></pre>
+
+<p>安装完成后，需要创建shadowsocks的配置文件/etc/shadowsocks.json，编辑内容如下：</p>
+
+<pre><code>[root@server ~]# vim /etc/shadowsocks.json
+{
+&quot;server&quot;: &quot;0.0.0.0&quot;,
+&quot;local_address&quot;:&quot;127.0.0.1&quot;,
+&quot;local_port&quot;: 1080,
+&quot;port_password&quot;: {
+&quot;8080&quot;: &quot;填写密码&quot;,
+&quot;8081&quot;: &quot;填写密码&quot;
+},
+&quot;timeout&quot;: 600,
+&quot;method&quot;: &quot;aes-256-cfb&quot;
+}
+</code></pre>
+
+<p>说明：</p>
+
+<p>method为加密方法，可选aes-128-cfb, aes-192-cfb, aes-256-cfb, bf-cfb, cast5-cfb, des-cfb, rc4-md5, chacha20, salsa20, rc4, table<br/>
+port_password为端口对应的密码，可使用密码生成工具生成一个随机密码<br/>
+以上两项信息在配置 shadowsocks 客户端时需要配置一致，具体说明可查看 shadowsocks 的帮助文档。</p>
+
+<h5 id="toc_2">如果你不需要配置多个端口的话，仅配置单个端口，则可以使用以下配置：</h5>
+
+<pre><code>{
+&quot;server&quot;: &quot;0.0.0.0&quot;,
+&quot;server_port&quot;: 8080,
+&quot;password&quot;: &quot;填写密码&quot;,
+&quot;method&quot;: &quot;aes-256-cfb&quot;
+}
+</code></pre>
+
+<p>说明：</p>
+
+<ul>
+<li>server_port为服务监听端口</li>
+<li>password为密码</li>
+</ul>
+
+<p>同样的以上两项信息在配置shadowsocks 客户端时需要配置一致。</p>
+
+<hr/>
+
+<h4 id="toc_3">配置自启动</h4>
+
+<p>编辑shadowsocks 服务的启动脚本文件，内容如下：</p>
+
+<pre><code>[root@server ~]# vim /etc/systemd/system/shadowsocks.service
+[Unit]
+Description=Shadowsocks
+
+[Service]
+TimeoutStartSec=0
+ExecStart=/usr/bin/ssserver -c /etc/shadowsocks.json
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+
+<p>执行以下命令启动 shadowsocks 服务：</p>
+
+<pre><code>[root@server ~]# systemctl enable shadowsocks
+[root@server ~]# systemctl start shadowsocks
+</code></pre>
+
+<p>检查 shadowsocks 服务是否已成功启动，可以执行以下命令查看服务的状态：</p>
 
 <blockquote>
-<p>defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock</p>
+<p>systemctl status shadowsocks -l</p>
 </blockquote>
 
-<p>Mac OS 10.9系统</p>
+<p>确认服务启动成功后，配置防火墙规则，开放你配置的端口，不然客户端是无法连接的：</p>
 
-<blockquote>
-<p>rm ~/Library/Application\ Support/Dock/*.db ; killall Dock</p>
-</blockquote>
+<pre><code>[root@server ~]# firewall-cmd --zone=public --add-port=8080/tcp --permanent
+success
+[root@server ~]# firewall-cmd --zone=public --add-port=8081/tcp --permanent
+success
+[root@server ~]# firewall-cmd --reload
+success
+</code></pre>
 
 
     
@@ -149,13 +231,16 @@ LaunchPad是属于Dock的.</p>
         <div class="large-6 columns">
         <p class="text-left" style="padding:15px 0px;">
       
-          <a href="15038828406046.html" 
-          title="Previous Post: 星际特工：千星之城(1080P & 4K)">&laquo; 星际特工：千星之城(1080P & 4K)</a>
+          <a href="15180905572524.html" 
+          title="Previous Post: Linux 7.4 配置BBR加速">&laquo; Linux 7.4 配置BBR加速</a>
       
         </p>
         </div>
         <div class="large-6 columns">
       <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15162450810938.html" 
+          title="Next Post: MacOS X 10.13(High Sierra)开启隐私权限">MacOS X 10.13(High Sierra)开启隐私权限 &raquo;</a>
       
       </p>
         </div>

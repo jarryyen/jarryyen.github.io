@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  今天遇到了LaunchPad的问题 - jarryyen.github.io
+  Linux 7.4 配置BBR加速 - jarryyen.github.io
   
   </title>
   
@@ -103,10 +103,10 @@
       <div class="markdown-body article-wrap">
        <div class="article">
           
-          <h1>今天遇到了LaunchPad的问题</h1>
+          <h1>Linux 7.4 配置BBR加速</h1>
      
         <div class="read-more clearfix">
-          <span class="date">2017/8/3</span>
+          <span class="date">2018/2/8</span>
 
           <span>posted in&nbsp;</span> 
           
@@ -123,22 +123,99 @@
       </div><!-- article -->
 
       <div class="article-content">
-      <p>今天遇到了一个Mac OS的LaunchPad的问题，使用手势打开LaunchPad后输入关键字无法进行搜索。</p>
+      <h4 id="toc_0">配置BBR加速</h4>
 
-<p>处理这个问题我的办法是，重置Dock。<br/>
-LaunchPad是属于Dock的.</p>
+<p>什么是BBR：</p>
 
-<p>Mac OS 10.10系统或更新</p>
+<p>TCP BBR是谷歌出品的TCP拥塞控制算法。BBR目的是要尽量跑满带宽，并且尽量不要有排队的情况。BBR可以起到单边加速TCP连接的效果。</p>
+
+<p>Google提交到Linux主线并发表在ACM queue期刊上的TCP-BBR拥塞控制算法。继承了Google“先在生产环境上部署，再开源和发论文”的研究传统。TCP-BBR已经再YouTube服务器和Google跨数据中心的内部广域网(B4)上部署。由此可见出该算法的前途。</p>
+
+<p>TCP-BBR的目标就是最大化利用网络上瓶颈链路的带宽。一条网络链路就像一条水管，要想最大化利用这条水管，最好的办法就是给这跟水管灌满水。</p>
+
+<p>BBR解决了两个问题：</p>
+
+<p>在有一定丢包率的网络链路上充分利用带宽。非常适合高延迟，高带宽的网络链路。<br/>
+降低网络链路上的buffer占用率，从而降低延迟。非常适合慢速接入网络的用户。<br/>
+Google 在 2016年9月份开源了他们的优化网络拥堵算法BBR，最新版本的 Linux内核(4.9-rc8)中已经集成了该算法。</p>
+
+<p>对于TCP单边加速，并非所有人都很熟悉，不过有另外一个大名鼎鼎的商业软件“锐速”，相信很多人都清楚。特别是对于使用国外服务器或者VPS的人来说，效果更佳。</p>
+
+<h5 id="toc_1">BBR项目地址：</h5>
 
 <blockquote>
-<p>defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock</p>
+<p><a href="https://github.com/google/bbr">https://github.com/google/bbr</a></p>
 </blockquote>
 
-<p>Mac OS 10.9系统</p>
+<p>升级内核，第一步首先是升级内核到支持BBR的版本：<br/>
+1.yum更新系统版本：</p>
 
 <blockquote>
-<p>rm ~/Library/Application\ Support/Dock/*.db ; killall Dock</p>
+<p>yum update</p>
 </blockquote>
+
+<p>2.查看系统版本：</p>
+
+<pre><code>[root@server ~]# cat /etc/redhat-release 
+CentOS Linux release 7.4.1708 (Core) 
+[root@server ~]# 
+</code></pre>
+
+<p>3.安装elrepo并升级内核：</p>
+
+<pre><code>[root@server ~]# rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+[root@server ~]# rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm
+[root@server ~]# yum --enablerepo=elrepo-kernel install kernel-ml -y
+</code></pre>
+
+<p>4.更新grub文件并重启系统：</p>
+
+<pre><code>[root@server ~]# egrep  ^menuentry /etc/grub2.cfg |     cut -f 2 -d \&#39;
+CentOS Linux 7 Rescue 8619ff5e1306499eac41c02d3b23868e (4.14.14-1.el7.elrepo.x86_64)
+CentOS Linux (4.14.14-1.el7.elrepo.x86_64) 7 (Core)
+CentOS Linux (3.10.0-693.11.6.el7.x86_64) 7 (Core)
+CentOS Linux (3.10.0-693.el7.x86_64) 7 (Core)
+CentOS Linux (0-rescue-c73a5ccf3b8145c3a675b64c4c3ab1d4) 7 (Core)
+[root@server ~]# grub2-set-default 0
+[root@server ~]# reboot
+</code></pre>
+
+<p>5.重启完成后查看内核是否已更换为4.14版本：</p>
+
+<pre><code>[root@server ~]# uname -r 4.14.14-1.el7.elrepo.x86_64
+[root@server ~]#
+</code></pre>
+
+<p>6.开启bbr：</p>
+
+<pre><code>[root@server ~]# vim /etc/sysctl.conf    # 在文件末尾添加如下内容
+net.core.default_qdisc = fq
+</code></pre>
+
+<p>net.ipv4.tcp_congestion_control = bbr</p>
+
+<p>7.加载系统参数：</p>
+
+<pre><code>[root@vultr ~]# sysctl -p
+net.ipv6.conf.all.accept_ra = 2
+net.ipv6.conf.eth0.accept_ra = 2
+net.core.default_qdisc = fq
+net.ipv4.tcp_congestion_control = bbr
+[root@vultr ~]#
+</code></pre>
+
+<p>如上，输出了我们添加的那两行配置代表正常。</p>
+
+<p>8.确定bbr已经成功开启：</p>
+
+<pre><code>[root@vultr ~]# sysctl net.ipv4.tcp_available_congestion_control
+net.ipv4.tcp_available_congestion_control = bbr cubic reno
+[root@vultr ~]# lsmod | grep bbr
+tcp_bbr                20480  2 
+[root@vultr ~]# 
+</code></pre>
+
+<p>输出内容如上，则表示bbr已经成功开启。    </p>
 
 
     
@@ -149,13 +226,13 @@ LaunchPad是属于Dock的.</p>
         <div class="large-6 columns">
         <p class="text-left" style="padding:15px 0px;">
       
-          <a href="15038828406046.html" 
-          title="Previous Post: 星际特工：千星之城(1080P & 4K)">&laquo; 星际特工：千星之城(1080P & 4K)</a>
-      
         </p>
         </div>
         <div class="large-6 columns">
       <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15180816293582.html" 
+          title="Next Post: CentOS7.4搭建shadowsocks">CentOS7.4搭建shadowsocks &raquo;</a>
       
       </p>
         </div>
