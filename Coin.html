@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  CentOS7.4搭建shadowsocks - jarryyen.github.io
+  Coin - jarryyen.github.io
   
   </title>
   
@@ -96,174 +96,108 @@
        
 
  <script type="text/javascript">
-  $(function(){
-    $('#menu_item_index').addClass('is_active');
-  });
+	$(function(){
+		$('#menu_item_index').addClass('is_active');
+	});
 </script>
 <div class="row">
-  <div class="large-8 medium-8 columns">
-      <div class="markdown-body article-wrap">
-       <div class="article">
-          
-          <h1>CentOS7.4搭建shadowsocks</h1>
-     
-        <div class="read-more clearfix">
-          <span class="date">2018/2/8</span>
+	<div class="large-8 medium-8 columns">
+		<div class="markdown-body home-categories">
+		
+			<div class="article">
+                <a class="clearlink" href="15192838129981.html">
+                
+                  <h1>Geth 的JavaScript控制</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<ol>
+<li>  如何连接</li>
+<li><p>常用命令</p>
 
-          <span>posted in&nbsp;</span> 
-          
-              <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-           
-         
-          <span class="comments">
-            
+<ol>
+<li>attach</li>
+<li>admin.peers</li>
+<li>net.peerCount</li>
+<li>admin.addPeer(&quot;enode://....&quot;)</li>
+</ol></li>
+<li><p>如何连接</p>
 
-            
-          </span>
+<blockquote>
+<p>geth attach [路径]/geth.ipc<br/>
+geth attach http://[IP]:8545<br/>
+geth attach ws://[IP]:8545</p>
+</blockquote></li>
+<li><p>常用命令</p>
 
-        </div>
-      </div><!-- article -->
-
-      <div class="article-content">
-      <h4 id="toc_0">安装 pip</h4>
-
-<p>pip是 python 的包管理工具。在本文中将使用 python 版本的 shadowsocks，此版本的 shadowsocks 已发布到 pip 上，因此我们需要通过 pip 命令来安装。</p>
-
-<p>在控制台执行以下命令安装 pip</p>
-
-<pre><code>[root@server ~]# curl &quot;https://bootstrap.pypa.io/get-pip.py&quot; -o &quot;get-pip.py&quot;
-[root@server ~]# python get-pip.py
-</code></pre>
-
-<h4 id="toc_1">安装配置 shadowsocks</h4>
-
-<p>在控制台执行以下命令安装 shadowsocks：</p>
-
-<pre><code>[root@server ~]# pip install --upgrade pip
-[root@server ~]# pip install shadowsocks
-</code></pre>
-
-<p>安装完成后，需要创建shadowsocks的配置文件/etc/shadowsocks.json，编辑内容如下：</p>
-
-<pre><code>[root@server ~]# vim /etc/shadowsocks.json
-{
-&quot;server&quot;: &quot;0.0.0.0&quot;,
-&quot;local_address&quot;:&quot;127.0.0.1&quot;,
-&quot;local_port&quot;: 1080,
-&quot;port_password&quot;: {
-&quot;8080&quot;: &quot;填写密码&quot;,
-&quot;8081&quot;: &quot;填写密码&quot;
-},
-&quot;timeout&quot;: 600,
-&quot;method&quot;: &quot;aes-256-cfb&quot;
-}
-</code></pre>
-
-<p>说明：</p>
-
-<p>method为加密方法，可选aes-128-cfb, aes-192-cfb, aes-256-cfb, bf-cfb, cast5-cfb, des-cfb, rc4-md5, chacha20, salsa20, rc4, table<br/>
-port_password为端口对应的密码，可使用密码生成工具生成一个随机密码<br/>
-以上两项信息在配置 shadowsocks 客户端时需要配置一致，具体说明可查看 shadowsocks 的帮助文档。</p>
-
-<h5 id="toc_2">如果你不需要配置多个端口的话，仅配置单个端口，则可以使用以下配置：</h5>
-
-<pre><code>{
-&quot;server&quot;: &quot;0.0.0.0&quot;,
-&quot;server_port&quot;: 8080,
-&quot;password&quot;: &quot;填写密码&quot;,
-&quot;method&quot;: &quot;aes-256-cfb&quot;
-}
-</code></pre>
-
-<p>说明：</p>
-
-<ul>
-<li>server_port为服务监听端口</li>
-<li>password为密码</li>
-</ul>
-
-<p>同样的以上两项信息在配置shadowsocks 客户端时需要配置一致。</p>
+<blockquote>
+<p>attach<br/>
+可以使用geth然后使用这个参数可以进行登录</p>
+</blockquote>
 
 <hr/>
 
-<h4 id="toc_3">配置自启动</h4>
-
-<p>编辑shadowsocks 服务的启动脚本文件，内容如下：</p>
-
-<pre><code>[root@server ~]# vim /etc/systemd/system/shadowsocks.service
-[Unit]
-Description=Shadowsocks
-
-[Service]
-TimeoutStartSec=0
-ExecStart=/usr/bin/ssserver -c /etc/shadowsocks.json
-
-[Install]
-WantedBy=multi-user.target
-</code></pre>
-
-<p>执行以下命令启动 shadowsocks 服务：</p>
-
-<pre><code>[root@server ~]# systemctl enable shadowsocks
-[root@server ~]# systemctl start shadowsocks
-</code></pre>
-
-<p>检查 shadowsocks 服务是否已成功启动，可以执行以下命令查看服务的状态：</p>
-
 <blockquote>
-<p>systemctl status shadowsocks -l</p>
+<p>add.peers<br/>
+查看集群信息</p>
 </blockquote>
 
-<p>确认服务启动成功后，配置防火墙规则，开放你配置的端口，不然客户端是无法连接的：</p>
+<hr/>
 
-<pre><code>[root@server ~]# firewall-cmd --zone=public --add-port=8080/tcp --permanent
-success
-[root@server ~]# firewall-cmd --zone=public --add-port=8081/tcp --permanent
-success
-[root@server ~]# firewall-cmd --reload
-success
-</code></pre>
+<blockquote>
+<p>net.peerCount<br/>
+查看现在已经连接的节点数量</p>
+</blockquote>
 
+<hr/>
 
-    
+<blockquote>
+<p>admin.addPeer(&quot;enode://....&quot;)<br/>
+可以使用这个方法添加节点</p>
+</blockquote></li>
+</ol>
 
-      </div>
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/2/22</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Coin.html'>Coin</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
 
-      <div class="row">
-        <div class="large-6 columns">
-        <p class="text-left" style="padding:15px 0px;">
-      
-          <a href="15180905572524.html" 
-          title="Previous Post: Linux 7.4 配置BBR加速">&laquo; Linux 7.4 配置BBR加速</a>
-      
-        </p>
-        </div>
-        <div class="large-6 columns">
-      <p class="text-right" style="padding:15px 0px;">
-      
-          <a  href="15162450810938.html" 
-          title="Next Post: MacOS X 10.13(High Sierra)开启隐私权限">MacOS X 10.13(High Sierra)开启隐私权限 &raquo;</a>
-      
-      </p>
-        </div>
-      </div>
-      <div class="comments-wrap">
-        <div class="share-comments">
-          <!-- UYAN NEW COMMENT BEGIN -->
-<div id="uyan_newcmt_unit"></div>
-<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2143340"></script> <!-- 如果已经过加载此行JS，即可不用重复加载 -->
-<!-- UYAN NEW COMMENT END -->
-
-          
-
-          
-        </div>
-      </div>
-    </div><!-- article-wrap -->
-  </div><!-- large 8 -->
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+              
 
 
-
+			<div class="row">
+			  <div class="large-6 columns">
+			  <p class="text-left" style="padding-top:25px;">
+			   
+			  </p>
+			  </div>
+			  <div class="large-6 columns">
+			<p class="text-right" style="padding-top:25px;">
+			
+			</p>
+			  </div>
+			</div>
+		</div>
+	</div><!-- large 8 -->
 
  <div class="large-4 medium-4 columns">
   <div class="hide-for-small">
