@@ -105,6 +105,81 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
+                <a class="clearlink" href="15200669761091.html">
+                
+                  <h1>使用Shell脚本下载并拼合m3u8</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>遇到了一个想下载m3u8合并的问题</p>
+
+<pre><code>#!/bin/bash  
+  
+#howToUse: ./down_m3u8.sh url output.ts  
+  
+#检测参数  
+# if [ $# != 2 ] ; then   
+# echo &quot;USAGE: $0 url output.ts&quot;   
+# exit 1;   
+# fi   
+  
+input_m3u8=$1  
+# output_ts=$2  
+output_ts=output.ts
+temp_m3u8=temp.m3u8  
+n=1;  
+  
+# if echo &quot;$input_m3u8&quot; | grep -E &#39;^http&#39; &gt;/dev/null ;then  
+#     wget $input_m3u8 -O $temp_m3u8  
+# else  
+#     temp_m3u8=$input_m3u8  
+# fi  
+  
+# echo &quot;Download segments:&quot;  
+  
+#1. 这种方法简便,但没有下载&quot;...&quot;提示,容易误以为卡住了  
+#wget -q -i $temp_m3u8 -O $output_ts  
+  
+#2. 这种方法麻烦,但有下载&quot;...&quot;提示  
+rm $output_ts  
+cat $temp_m3u8 | while read myline  
+do   
+  if echo &quot;$myline&quot; | grep -E &#39;^http&#39; &gt;/dev/null ;then  
+    echo -n &quot;.&quot;  
+    wget -q &quot;$myline&quot; -O &quot;$output_ts.t&quot;;  
+    cat &quot;$output_ts.t&quot; &gt;&gt; $output_ts  
+    let &quot;n = $n + 1&quot;  
+  fi  
+done  
+rm &quot;$output_ts.t&quot;  
+echo &quot;Done&quot;  
+</code></pre>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/3/3</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
                 <a class="clearlink" href="15192838129981.html">
                 
                   <h1>Geth 的JavaScript控制</h1>
@@ -1194,6 +1269,12 @@ LaunchPad是属于Dock的.</p>
 	      
 		      
 			      <li class="post">
+			        <a href="15200669761091.html">使用Shell脚本下载并拼合m3u8</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="15192838129981.html">Geth 的JavaScript控制</a>
 			      </li>
 		     
@@ -1217,10 +1298,6 @@ LaunchPad是属于Dock的.</p>
 		     
 		  
 		      
-			      <li class="post">
-			        <a href="15161754454851.html">亚马逊云(aws)提供了4.9核心主机</a>
-			      </li>
-		     
 		  
 		      
 		  
