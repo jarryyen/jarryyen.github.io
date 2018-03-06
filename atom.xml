@@ -4,13 +4,24 @@
   <title><![CDATA[jarryyen.github.io]]></title>
   <link href="https://jarryyen.github.io/atom.xml" rel="self"/>
   <link href="https://jarryyen.github.io/"/>
-  <updated>2018-03-06T10:26:28+08:00</updated>
+  <updated>2018-03-06T10:43:43+08:00</updated>
   <id>https://jarryyen.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[MYSQL命令行内倒入文本数据]]></title>
+    <link href="https://jarryyen.github.io/15203221731981.html"/>
+    <updated>2018-03-06T15:42:53+08:00</updated>
+    <id>https://jarryyen.github.io/15203221731981.html</id>
+    <content type="html"><![CDATA[
+<p>load data local infile &#39;/文件名.txt&#39; into table 表名(字段);</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Linux增加swap(aws建议添加)]]></title>

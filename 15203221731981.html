@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  使用Shell脚本下载并拼合m3u8 - jarryyen.github.io
+  MYSQL命令行内倒入文本数据 - jarryyen.github.io
   
   </title>
   
@@ -105,10 +105,10 @@
       <div class="markdown-body article-wrap">
        <div class="article">
           
-          <h1>使用Shell脚本下载并拼合m3u8</h1>
+          <h1>MYSQL命令行内倒入文本数据</h1>
      
         <div class="read-more clearfix">
-          <span class="date">2018/3/3</span>
+          <span class="date">2018/3/6</span>
 
           <span>posted in&nbsp;</span> 
           
@@ -125,49 +125,7 @@
       </div><!-- article -->
 
       <div class="article-content">
-      <p>遇到了一个想下载m3u8合并的问题</p>
-
-<pre><code>#!/bin/bash  
-  
-#howToUse: ./down_m3u8.sh url output.ts  
-  
-#检测参数  
-# if [ $# != 2 ] ; then   
-# echo &quot;USAGE: $0 url output.ts&quot;   
-# exit 1;   
-# fi   
-  
-input_m3u8=$1  
-# output_ts=$2  
-output_ts=output.ts
-temp_m3u8=temp.m3u8  
-n=1;  
-  
-# if echo &quot;$input_m3u8&quot; | grep -E &#39;^http&#39; &gt;/dev/null ;then  
-#     wget $input_m3u8 -O $temp_m3u8  
-# else  
-#     temp_m3u8=$input_m3u8  
-# fi  
-  
-# echo &quot;Download segments:&quot;  
-  
-#1. 这种方法简便,但没有下载&quot;...&quot;提示,容易误以为卡住了  
-#wget -q -i $temp_m3u8 -O $output_ts  
-  
-#2. 这种方法麻烦,但有下载&quot;...&quot;提示  
-rm $output_ts  
-cat $temp_m3u8 | while read myline  
-do   
-  if echo &quot;$myline&quot; | grep -E &#39;^http&#39; &gt;/dev/null ;then  
-    echo -n &quot;.&quot;  
-    wget -q &quot;$myline&quot; -O &quot;$output_ts.t&quot;;  
-    cat &quot;$output_ts.t&quot; &gt;&gt; $output_ts  
-    let &quot;n = $n + 1&quot;  
-  fi  
-done  
-rm &quot;$output_ts.t&quot;  
-echo &quot;Done&quot;  
-</code></pre>
+      <p>load data local infile &#39;/文件名.txt&#39; into table 表名(字段);</p>
 
 
     
@@ -183,8 +141,8 @@ echo &quot;Done&quot;
         <div class="large-6 columns">
       <p class="text-right" style="padding:15px 0px;">
       
-          <a  href="15192838129981.html" 
-          title="Next Post: Geth 的JavaScript控制">Geth 的JavaScript控制 &raquo;</a>
+          <a  href="15203031656074.html" 
+          title="Next Post: Linux增加swap(aws建议添加)">Linux增加swap(aws建议添加) &raquo;</a>
       
       </p>
         </div>
@@ -264,7 +222,13 @@ echo &quot;Done&quot;
 	      
 		      
 			      <li class="post">
-			        <a href="15200669761091.html">使用Shell脚本下载并拼合m3u8</a>
+			        <a href="15203221731981.html">MYSQL命令行内倒入文本数据</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15203031656074.html">Linux增加swap(aws建议添加)</a>
 			      </li>
 		     
 		  
@@ -287,10 +251,6 @@ echo &quot;Done&quot;
 		     
 		  
 		      
-			      <li class="post">
-			        <a href="15162450810938.html">MacOS X 10.13(High Sierra)开启隐私权限</a>
-			      </li>
-		     
 		  
 		      
 		  
