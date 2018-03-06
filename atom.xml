@@ -4,13 +4,37 @@
   <title><![CDATA[jarryyen.github.io]]></title>
   <link href="https://jarryyen.github.io/atom.xml" rel="self"/>
   <link href="https://jarryyen.github.io/"/>
-  <updated>2018-02-08T19:53:26+08:00</updated>
+  <updated>2018-02-22T15:30:04+08:00</updated>
   <id>https://jarryyen.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Linux增加swap(aws建议添加)]]></title>
+    <link href="https://jarryyen.github.io/15203031656074.html"/>
+    <updated>2018-03-06T10:26:05+08:00</updated>
+    <id>https://jarryyen.github.io/15203031656074.html</id>
+    <content type="html"><![CDATA[
+<p>添加交换文件步骤： <br/>
+1、找个地方创建一个.swap的文件，我放在了/mnt目录下 <br/>
+sudo dd if=/dev/zero of=/mnt/10GB.swap bs=1G count=10 <br/>
+这条命令是在/mnt目录下创建一个名为10GB.swap的交换文件，基础大小为1GB，有10个，so：1*10=10GB <br/>
+2、把创建的.swap文件格式化为Swap文件 <br/>
+sudo mkswap /mnt/10GB.swap <br/>
+3、把创建的.swap文件加入到系统中 <br/>
+sudo swapon /mnt/10GB.swap <br/>
+以上步骤可以做到临时启用交换文件，如果要下次启动系统的时候也启动交换文件，那么还要继续做以下步骤。 <br/>
+4、在/ect/fstab中加入新的Swap分区 <br/>
+sudo gedit /etc/fstab <br/>
+在最后一行添加（前面是生成的.swap文件的位置） <br/>
+/mnt/10GB.swap none swap sw 0 0 <br/>
+以上步骤为添加交换文件方法。</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Geth 的JavaScript控制]]></title>

@@ -105,6 +105,52 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
+                <a class="clearlink" href="15203031656074.html">
+                
+                  <h1>Linux增加swap(aws建议添加)</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>添加交换文件步骤： <br/>
+1、找个地方创建一个.swap的文件，我放在了/mnt目录下 <br/>
+sudo dd if=/dev/zero of=/mnt/10GB.swap bs=1G count=10 <br/>
+这条命令是在/mnt目录下创建一个名为10GB.swap的交换文件，基础大小为1GB，有10个，so：1*10=10GB <br/>
+2、把创建的.swap文件格式化为Swap文件 <br/>
+sudo mkswap /mnt/10GB.swap <br/>
+3、把创建的.swap文件加入到系统中 <br/>
+sudo swapon /mnt/10GB.swap <br/>
+以上步骤可以做到临时启用交换文件，如果要下次启动系统的时候也启动交换文件，那么还要继续做以下步骤。 <br/>
+4、在/ect/fstab中加入新的Swap分区 <br/>
+sudo gedit /etc/fstab <br/>
+在最后一行添加（前面是生成的.swap文件的位置） <br/>
+/mnt/10GB.swap none swap sw 0 0 <br/>
+以上步骤为添加交换文件方法。</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/3/6</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
                 <a class="clearlink" href="15192838129981.html">
                 
                   <h1>Geth 的JavaScript控制</h1>
@@ -1194,6 +1240,12 @@ LaunchPad是属于Dock的.</p>
 	      
 		      
 			      <li class="post">
+			        <a href="15203031656074.html">Linux增加swap(aws建议添加)</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="15192838129981.html">Geth 的JavaScript控制</a>
 			      </li>
 		     
@@ -1217,10 +1269,6 @@ LaunchPad是属于Dock的.</p>
 		     
 		  
 		      
-			      <li class="post">
-			        <a href="15161754454851.html">亚马逊云(aws)提供了4.9核心主机</a>
-			      </li>
-		     
 		  
 		      
 		  
