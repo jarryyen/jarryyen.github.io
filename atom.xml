@@ -4,7 +4,7 @@
   <title><![CDATA[jarryyen.github.io]]></title>
   <link href="https://jarryyen.github.io/atom.xml" rel="self"/>
   <link href="https://jarryyen.github.io/"/>
-  <updated>2018-03-06T10:43:43+08:00</updated>
+  <updated>2018-03-06T16:08:01+08:00</updated>
   <id>https://jarryyen.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -80,7 +80,7 @@ geth attach ws://[IP]:8545</p>
 <hr/>
 
 <blockquote>
-<p>add.peers<br/>
+<p>admin.peers<br/>
 查看集群信息</p>
 </blockquote>
 
@@ -96,6 +96,13 @@ geth attach ws://[IP]:8545</p>
 <blockquote>
 <p>admin.addPeer(&quot;enode://....&quot;)<br/>
 可以使用这个方法添加节点</p>
+</blockquote>
+
+<hr/>
+
+<blockquote>
+<p>admin.peers.forEach(function(p) {console.log(p.network.remoteAddress);})<br/>
+通过这个方法可以查看已经连接的节点IP列表</p>
 </blockquote></li>
 </ol>
 

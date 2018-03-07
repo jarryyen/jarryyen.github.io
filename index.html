@@ -218,7 +218,7 @@ geth attach ws://[IP]:8545</p>
 <hr/>
 
 <blockquote>
-<p>add.peers<br/>
+<p>admin.peers<br/>
 查看集群信息</p>
 </blockquote>
 
@@ -234,6 +234,13 @@ geth attach ws://[IP]:8545</p>
 <blockquote>
 <p>admin.addPeer(&quot;enode://....&quot;)<br/>
 可以使用这个方法添加节点</p>
+</blockquote>
+
+<hr/>
+
+<blockquote>
+<p>admin.peers.forEach(function(p) {console.log(p.network.remoteAddress);})<br/>
+通过这个方法可以查看已经连接的节点IP列表</p>
 </blockquote></li>
 </ol>
 

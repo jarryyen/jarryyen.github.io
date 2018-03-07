@@ -152,7 +152,7 @@ geth attach ws://[IP]:8545</p>
 <hr/>
 
 <blockquote>
-<p>add.peers<br/>
+<p>admin.peers<br/>
 查看集群信息</p>
 </blockquote>
 
@@ -168,6 +168,13 @@ geth attach ws://[IP]:8545</p>
 <blockquote>
 <p>admin.addPeer(&quot;enode://....&quot;)<br/>
 可以使用这个方法添加节点</p>
+</blockquote>
+
+<hr/>
+
+<blockquote>
+<p>admin.peers.forEach(function(p) {console.log(p.network.remoteAddress);})<br/>
+通过这个方法可以查看已经连接的节点IP列表</p>
 </blockquote></li>
 </ol>
 
@@ -196,10 +203,7 @@ geth attach ws://[IP]:8545</p>
       </div>
       <div class="comments-wrap">
         <div class="share-comments">
-          <!-- UYAN NEW COMMENT BEGIN -->
-<div id="uyan_newcmt_unit"></div>
-<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2143340"></script> <!-- 如果已经过加载此行JS，即可不用重复加载 -->
-<!-- UYAN NEW COMMENT END -->
+          
 
           
 
