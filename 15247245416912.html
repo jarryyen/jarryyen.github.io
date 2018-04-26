@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  Geth 的JavaScript控制 - jarryyen.github.io
+  远程执行tomcat执行脚本出现找不到环境变量问题 - jarryyen.github.io
   
   </title>
   
@@ -105,14 +105,14 @@
       <div class="markdown-body article-wrap">
        <div class="article">
           
-          <h1>Geth 的JavaScript控制</h1>
+          <h1>远程执行tomcat执行脚本出现找不到环境变量问题</h1>
      
         <div class="read-more clearfix">
-          <span class="date">2018/2/22</span>
+          <span class="date">2018/4/26</span>
 
           <span>posted in&nbsp;</span> 
           
-              <span class="posted-in"><a href='Coin.html'>Coin</a></span>
+              <span class="posted-in"><a href='Tips.html'>Tips</a></span>
            
          
           <span class="comments">
@@ -125,58 +125,24 @@
       </div><!-- article -->
 
       <div class="article-content">
-      <ol>
-<li>  如何连接</li>
-<li><p>常用命令</p>
-
-<ol>
-<li>attach</li>
-<li>admin.peers</li>
-<li>net.peerCount</li>
-<li>admin.addPeer(&quot;enode://....&quot;)</li>
-</ol></li>
-<li><p>如何连接</p>
+      <p>问题描述:</p>
 
 <blockquote>
-<p>geth attach [路径]/geth.ipc<br/>
-geth attach http://[IP]:8545<br/>
-geth attach ws://[IP]:8545</p>
-</blockquote></li>
-<li><p>常用命令</p>
+<p>我使用jenkins在build工程的时候,使用了执行shell部分.脚本内含有远程主机运行或者停止tomcat脚本,在执行的时候报告有java_home和java_jar没有环境变量的问题.根据问题查找,是远程执行的时候没有加载profile造成环境变量确实的问题.<br/>
+<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fqq20j3ev3j30tr0fudir.jpg" alt=""/><br/>
+脚本中的远程执行命令是</p>
 
 <blockquote>
-<p>attach<br/>
-可以使用geth然后使用这个参数可以进行登录</p>
+<p>ssh root@web01 &quot;/data/script/run.sh&quot; 中的 run.sh包含tomcat启动脚本</p>
+</blockquote>
 </blockquote>
 
-<hr/>
+<p>解决方案:</p>
 
 <blockquote>
-<p>admin.peers<br/>
-查看集群信息</p>
+<p>在tomcat的catalina.sh中添加环境变量部分.<br/>
+<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fqq1ywrzs4j315k0xitf3.jpg" alt=""/></p>
 </blockquote>
-
-<hr/>
-
-<blockquote>
-<p>net.peerCount<br/>
-查看现在已经连接的节点数量</p>
-</blockquote>
-
-<hr/>
-
-<blockquote>
-<p>admin.addPeer(&quot;enode://....&quot;)<br/>
-可以使用这个方法添加节点</p>
-</blockquote>
-
-<hr/>
-
-<blockquote>
-<p>admin.peers.forEach(function(p) {console.log(p.network.remoteAddress);})<br/>
-通过这个方法可以查看已经连接的节点IP列表</p>
-</blockquote></li>
-</ol>
 
 
     
@@ -187,16 +153,13 @@ geth attach ws://[IP]:8545</p>
         <div class="large-6 columns">
         <p class="text-left" style="padding:15px 0px;">
       
-          <a href="15203031656074.html" 
-          title="Previous Post: Linux增加swap(aws建议添加)">&laquo; Linux增加swap(aws建议添加)</a>
-      
         </p>
         </div>
         <div class="large-6 columns">
       <p class="text-right" style="padding:15px 0px;">
       
-          <a  href="15180905572524.html" 
-          title="Next Post: Linux 7.4 配置BBR加速">Linux 7.4 配置BBR加速 &raquo;</a>
+          <a  href="15203221731981.html" 
+          title="Next Post: MYSQL命令行内倒入文本数据">MYSQL命令行内倒入文本数据 &raquo;</a>
       
       </p>
         </div>

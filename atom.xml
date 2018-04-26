@@ -4,13 +4,41 @@
   <title><![CDATA[jarryyen.github.io]]></title>
   <link href="https://jarryyen.github.io/atom.xml" rel="self"/>
   <link href="https://jarryyen.github.io/"/>
-  <updated>2018-03-06T16:08:01+08:00</updated>
+  <updated>2018-03-07T12:55:37+08:00</updated>
   <id>https://jarryyen.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[远程执行tomcat执行脚本出现找不到环境变量问题]]></title>
+    <link href="https://jarryyen.github.io/15247245416912.html"/>
+    <updated>2018-04-26T14:35:41+08:00</updated>
+    <id>https://jarryyen.github.io/15247245416912.html</id>
+    <content type="html"><![CDATA[
+<p>问题描述:</p>
+
+<blockquote>
+<p>我使用jenkins在build工程的时候,使用了执行shell部分.脚本内含有远程主机运行或者停止tomcat脚本,在执行的时候报告有java_home和java_jar没有环境变量的问题.根据问题查找,是远程执行的时候没有加载profile造成环境变量确实的问题.<br/>
+<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fqq20j3ev3j30tr0fudir.jpg" alt=""/><br/>
+脚本中的远程执行命令是</p>
+
+<blockquote>
+<p>ssh root@web01 &quot;/data/script/run.sh&quot; 中的 run.sh包含tomcat启动脚本</p>
+</blockquote>
+</blockquote>
+
+<p>解决方案:</p>
+
+<blockquote>
+<p>在tomcat的catalina.sh中添加环境变量部分.<br/>
+<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fqq1ywrzs4j315k0xitf3.jpg" alt=""/></p>
+</blockquote>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[MYSQL命令行内倒入文本数据]]></title>

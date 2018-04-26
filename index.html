@@ -105,6 +105,56 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
+                <a class="clearlink" href="15247245416912.html">
+                
+                  <h1>远程执行tomcat执行脚本出现找不到环境变量问题</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>问题描述:</p>
+
+<blockquote>
+<p>我使用jenkins在build工程的时候,使用了执行shell部分.脚本内含有远程主机运行或者停止tomcat脚本,在执行的时候报告有java_home和java_jar没有环境变量的问题.根据问题查找,是远程执行的时候没有加载profile造成环境变量确实的问题.<br/>
+<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fqq20j3ev3j30tr0fudir.jpg" alt=""/><br/>
+脚本中的远程执行命令是</p>
+
+<blockquote>
+<p>ssh root@web01 &quot;/data/script/run.sh&quot; 中的 run.sh包含tomcat启动脚本</p>
+</blockquote>
+</blockquote>
+
+<p>解决方案:</p>
+
+<blockquote>
+<p>在tomcat的catalina.sh中添加环境变量部分.<br/>
+<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fqq1ywrzs4j315k0xitf3.jpg" alt=""/></p>
+</blockquote>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/4/26</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
                 <a class="clearlink" href="15203221731981.html">
                 
                   <h1>MYSQL命令行内倒入文本数据</h1>
@@ -1280,6 +1330,12 @@ LaunchPad是属于Dock的.</p>
 	      
 		      
 			      <li class="post">
+			        <a href="15247245416912.html">远程执行tomcat执行脚本出现找不到环境变量问题</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="15203221731981.html">MYSQL命令行内倒入文本数据</a>
 			      </li>
 		     
@@ -1303,10 +1359,6 @@ LaunchPad是属于Dock的.</p>
 		     
 		  
 		      
-			      <li class="post">
-			        <a href="15180816293582.html">CentOS7.4搭建shadowsocks</a>
-			      </li>
-		     
 		  
 		      
 		  
