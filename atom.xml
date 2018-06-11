@@ -4,13 +4,31 @@
   <title><![CDATA[jarryyen.github.io]]></title>
   <link href="https://jarryyen.github.io/atom.xml" rel="self"/>
   <link href="https://jarryyen.github.io/"/>
-  <updated>2018-04-26T14:46:11+08:00</updated>
+  <updated>2018-05-15T15:15:54+08:00</updated>
   <id>https://jarryyen.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Jenkins ssh登陆到其他主机]]></title>
+    <link href="https://jarryyen.github.io/15287113422567.html"/>
+    <updated>2018-06-11T18:02:22+08:00</updated>
+    <id>https://jarryyen.github.io/15287113422567.html</id>
+    <content type="html"><![CDATA[
+<p>今天遇到了一个坑,同事部署的jenkins.<br/>
+无论我怎么添加key,在execute shll里面执行scp等操作都无法登陆....结果找了半天...jenkins的pubkey位置在<br/>
+<code><br/>
+/var/lib/jenkins/.ssh/id_rsa.pub <br/>
+</code></p>
+
+<p>无语了....<br/>
+在此记录一下...</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Opera浏览器送你无限流量的V.P.N]]></title>

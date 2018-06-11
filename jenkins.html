@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  远程执行tomcat执行脚本出现找不到环境变量问题 - jarryyen.github.io
+  jenkins - jarryyen.github.io
   
   </title>
   
@@ -96,91 +96,71 @@
        
 
  <script type="text/javascript">
-  $(function(){
-    $('#menu_item_index').addClass('is_active');
-  });
+	$(function(){
+		$('#menu_item_index').addClass('is_active');
+	});
 </script>
 <div class="row">
-  <div class="large-8 medium-8 columns">
-      <div class="markdown-body article-wrap">
-       <div class="article">
-          
-          <h1>远程执行tomcat执行脚本出现找不到环境变量问题</h1>
-     
-        <div class="read-more clearfix">
-          <span class="date">2018/4/26</span>
+	<div class="large-8 medium-8 columns">
+		<div class="markdown-body home-categories">
+		
+			<div class="article">
+                <a class="clearlink" href="15287113422567.html">
+                
+                  <h1>Jenkins ssh登陆到其他主机</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>今天遇到了一个坑,同事部署的jenkins.<br/>
+无论我怎么添加key,在execute shll里面执行scp等操作都无法登陆....结果找了半天...jenkins的pubkey位置在<br/>
+<code><br/>
+/var/lib/jenkins/.ssh/id_rsa.pub <br/>
+</code></p>
 
-          <span>posted in&nbsp;</span> 
-          
-              <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-           
-         
-          <span class="comments">
-            
+<p>无语了....<br/>
+在此记录一下...</p>
 
-            
-          </span>
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/6/11</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='jenkins.html'>jenkins</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
 
-        </div>
-      </div><!-- article -->
-
-      <div class="article-content">
-      <p>问题描述:</p>
-
-<blockquote>
-<p>我使用jenkins在build工程的时候,使用了执行shell部分.脚本内含有远程主机运行或者停止tomcat脚本,在执行的时候报告有java_home和java_jar没有环境变量的问题.根据问题查找,是远程执行的时候没有加载profile造成环境变量确实的问题.<br/>
-<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fqq20j3ev3j30tr0fudir.jpg" alt=""/><br/>
-脚本中的远程执行命令是</p>
-
-<blockquote>
-<p>ssh root@web01 &quot;/data/script/run.sh&quot; 中的 run.sh包含tomcat启动脚本</p>
-</blockquote>
-</blockquote>
-
-<p>解决方案:</p>
-
-<blockquote>
-<p>在tomcat的catalina.sh中添加环境变量部分.<br/>
-<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fqq1ywrzs4j315k0xitf3.jpg" alt=""/></p>
-</blockquote>
-
-
-    
-
-      </div>
-
-      <div class="row">
-        <div class="large-6 columns">
-        <p class="text-left" style="padding:15px 0px;">
-      
-          <a href="15263677435766.html" 
-          title="Previous Post: Opera浏览器送你无限流量的V.P.N">&laquo; Opera浏览器送你无限流量的V.P.N</a>
-      
-        </p>
-        </div>
-        <div class="large-6 columns">
-      <p class="text-right" style="padding:15px 0px;">
-      
-          <a  href="15203221731981.html" 
-          title="Next Post: MYSQL命令行内倒入文本数据">MYSQL命令行内倒入文本数据 &raquo;</a>
-      
-      </p>
-        </div>
-      </div>
-      <div class="comments-wrap">
-        <div class="share-comments">
-          
-
-          
-
-          
-        </div>
-      </div>
-    </div><!-- article-wrap -->
-  </div><!-- large 8 -->
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+              
 
 
-
+			<div class="row">
+			  <div class="large-6 columns">
+			  <p class="text-left" style="padding-top:25px;">
+			   
+			  </p>
+			  </div>
+			  <div class="large-6 columns">
+			<p class="text-right" style="padding-top:25px;">
+			
+			</p>
+			  </div>
+			</div>
+		</div>
+	</div><!-- large 8 -->
 
  <div class="large-4 medium-4 columns">
   <div class="hide-for-small">
