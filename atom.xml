@@ -4,7 +4,7 @@
   <title><![CDATA[jarryyen.github.io]]></title>
   <link href="https://jarryyen.github.io/atom.xml" rel="self"/>
   <link href="https://jarryyen.github.io/"/>
-  <updated>2018-05-15T15:15:54+08:00</updated>
+  <updated>2018-06-11T18:04:06+08:00</updated>
   <id>https://jarryyen.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -26,6 +26,15 @@
 
 <p>无语了....<br/>
 在此记录一下...</p>
+
+<p>还有一个问题.就是known_hosts问题.</p>
+
+<pre><code>su -s /bin/bash jenkins
+
+ssh root@ip 
+</code></pre>
+
+<p>登陆一下就好了</p>
 
 ]]></content>
   </entry>
