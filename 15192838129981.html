@@ -48,7 +48,7 @@
 
         <ul class="right" id="search-wrap">
           <li>
-<form target="_blank" onsubmit="return before_search();" action="http://google.com/search" method="get">
+<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
     <input type="hidden" id="search_q" name="q" value="" />
     <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
 </form>
@@ -68,10 +68,11 @@
 
 <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
-       
-       <li><a href="index.html">HOME</a></li>
-    <li><a href="archives.html">Archives</a></li>
-    <li><a href="about.html">ABOUT</a></li>
+        
+        <li><a target="self" href="index.html">Home</a></li>
+        
+        <li><a target="_self" href="archives.html">Archives</a></li>
+        
 
     <li><label>Categories</label></li>
 
@@ -84,7 +85,11 @@
         
             <li><a href="Free.html">Free</a></li>
         
+            <li><a href="Share.html">Share</a></li>
+        
             <li><a href="Coin.html">Coin</a></li>
+        
+            <li><a href="scrapy.html">scrapy</a></li>
          
 
       </ul>
@@ -130,7 +135,6 @@
       <ol>
 <li>  如何连接</li>
 <li><p>常用命令</p>
-
 <ol>
 <li>attach</li>
 <li>admin.peers</li>
@@ -138,47 +142,34 @@
 <li>admin.addPeer(&quot;enode://....&quot;)</li>
 </ol></li>
 <li><p>如何连接</p>
-
 <blockquote>
 <p>geth attach [路径]/geth.ipc<br/>
 geth attach http://[IP]:8545<br/>
 geth attach ws://[IP]:8545</p>
 </blockquote></li>
 <li><p>常用命令</p>
-
 <blockquote>
 <p>attach<br/>
 可以使用geth然后使用这个参数可以进行登录</p>
-</blockquote>
-
-<hr/>
-
-<blockquote>
-<p>admin.peers<br/>
-查看集群信息</p>
-</blockquote>
-
-<hr/>
-
-<blockquote>
-<p>net.peerCount<br/>
-查看现在已经连接的节点数量</p>
-</blockquote>
-
-<hr/>
-
-<blockquote>
-<p>admin.addPeer(&quot;enode://....&quot;)<br/>
-可以使用这个方法添加节点</p>
-</blockquote>
-
-<hr/>
-
-<blockquote>
-<p>admin.peers.forEach(function(p) {console.log(p.network.remoteAddress);})<br/>
-通过这个方法可以查看已经连接的节点IP列表</p>
 </blockquote></li>
 </ol>
+
+<pre><code class="language-text">-----
+&gt;admin.peers
+&gt;查看集群信息
+
+-----
+&gt;net.peerCount
+&gt;查看现在已经连接的节点数量
+
+-----
+&gt;admin.addPeer(&quot;enode://....&quot;)
+&gt;可以使用这个方法添加节点
+
+----
+&gt;admin.peers.forEach(function(p) {console.log(p.network.remoteAddress);})
+&gt;通过这个方法可以查看已经连接的节点IP列表
+</code></pre>
 
 
     
@@ -260,7 +251,11 @@ geth attach ws://[IP]:8545</p>
         
             <a href="Free.html"><strong>Free</strong></a>
         
+            <a href="Share.html"><strong>Share</strong></a>
+        
             <a href="Coin.html"><strong>Coin</strong></a>
+        
+            <a href="scrapy.html"><strong>scrapy</strong></a>
          
         </p>
 
@@ -277,31 +272,31 @@ geth attach ws://[IP]:8545</p>
 	      
 		      
 			      <li class="post">
+			        <a href="15459836208690.html">1.Mac上如何安装Python3和scrapy</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15451223173625.html">代码merge常用命令</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15451222627805.html">以太坊相关参考文档</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15451222204100.html">Http auth basic认证</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="15311228224258.html">【16元全国免流】你要的19元联通全国无限流量，最全合集，邮寄全国</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15311227612961.html">联通跨省注销方法</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15287113422567.html">Jenkins ssh登陆到其他主机</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15263677435766.html">Opera浏览器送你无限流量的V.P.N</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15247245416912.html">远程执行tomcat执行脚本出现找不到环境变量问题</a>
 			      </li>
 		     
 		  

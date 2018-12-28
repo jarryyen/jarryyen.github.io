@@ -48,7 +48,7 @@
 
         <ul class="right" id="search-wrap">
           <li>
-<form target="_blank" onsubmit="return before_search();" action="http://google.com/search" method="get">
+<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
     <input type="hidden" id="search_q" name="q" value="" />
     <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
 </form>
@@ -68,10 +68,11 @@
 
 <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
-       
-       <li><a href="index.html">HOME</a></li>
-    <li><a href="archives.html">Archives</a></li>
-    <li><a href="about.html">ABOUT</a></li>
+        
+        <li><a target="self" href="index.html">Home</a></li>
+        
+        <li><a target="_self" href="archives.html">Archives</a></li>
+        
 
     <li><label>Categories</label></li>
 
@@ -84,7 +85,11 @@
         
             <li><a href="Free.html">Free</a></li>
         
+            <li><a href="Share.html">Share</a></li>
+        
             <li><a href="Coin.html">Coin</a></li>
+        
+            <li><a href="scrapy.html">scrapy</a></li>
          
 
       </ul>
@@ -133,7 +138,7 @@
 
 <p>在控制台执行以下命令安装 pip</p>
 
-<pre><code>[root@server ~]# curl &quot;https://bootstrap.pypa.io/get-pip.py&quot; -o &quot;get-pip.py&quot;
+<pre><code class="language-text">[root@server ~]# curl &quot;https://bootstrap.pypa.io/get-pip.py&quot; -o &quot;get-pip.py&quot;
 [root@server ~]# python get-pip.py
 </code></pre>
 
@@ -141,13 +146,13 @@
 
 <p>在控制台执行以下命令安装 shadowsocks：</p>
 
-<pre><code>[root@server ~]# pip install --upgrade pip
+<pre><code class="language-text">[root@server ~]# pip install --upgrade pip
 [root@server ~]# pip install shadowsocks
 </code></pre>
 
 <p>安装完成后，需要创建shadowsocks的配置文件/etc/shadowsocks.json，编辑内容如下：</p>
 
-<pre><code>[root@server ~]# vim /etc/shadowsocks.json
+<pre><code class="language-text">[root@server ~]# vim /etc/shadowsocks.json
 {
 &quot;server&quot;: &quot;0.0.0.0&quot;,
 &quot;local_address&quot;:&quot;127.0.0.1&quot;,
@@ -169,7 +174,7 @@ port_password为端口对应的密码，可使用密码生成工具生成一个�
 
 <h5 id="toc_2">如果你不需要配置多个端口的话，仅配置单个端口，则可以使用以下配置：</h5>
 
-<pre><code>{
+<pre><code class="language-text">{
 &quot;server&quot;: &quot;0.0.0.0&quot;,
 &quot;server_port&quot;: 8080,
 &quot;password&quot;: &quot;填写密码&quot;,
@@ -192,7 +197,7 @@ port_password为端口对应的密码，可使用密码生成工具生成一个�
 
 <p>编辑shadowsocks 服务的启动脚本文件，内容如下：</p>
 
-<pre><code>[root@server ~]# vim /etc/systemd/system/shadowsocks.service
+<pre><code class="language-text">[root@server ~]# vim /etc/systemd/system/shadowsocks.service
 [Unit]
 Description=Shadowsocks
 
@@ -206,7 +211,7 @@ WantedBy=multi-user.target
 
 <p>执行以下命令启动 shadowsocks 服务：</p>
 
-<pre><code>[root@server ~]# systemctl enable shadowsocks
+<pre><code class="language-text">[root@server ~]# systemctl enable shadowsocks
 [root@server ~]# systemctl start shadowsocks
 </code></pre>
 
@@ -218,7 +223,7 @@ WantedBy=multi-user.target
 
 <p>确认服务启动成功后，配置防火墙规则，开放你配置的端口，不然客户端是无法连接的：</p>
 
-<pre><code>[root@server ~]# firewall-cmd --zone=public --add-port=8080/tcp --permanent
+<pre><code class="language-text">[root@server ~]# firewall-cmd --zone=public --add-port=8080/tcp --permanent
 success
 [root@server ~]# firewall-cmd --zone=public --add-port=8081/tcp --permanent
 success
@@ -306,7 +311,11 @@ success
         
             <a href="Free.html"><strong>Free</strong></a>
         
+            <a href="Share.html"><strong>Share</strong></a>
+        
             <a href="Coin.html"><strong>Coin</strong></a>
+        
+            <a href="scrapy.html"><strong>scrapy</strong></a>
          
         </p>
 
@@ -323,31 +332,31 @@ success
 	      
 		      
 			      <li class="post">
+			        <a href="15459836208690.html">1.Mac上如何安装Python3和scrapy</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15451223173625.html">代码merge常用命令</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15451222627805.html">以太坊相关参考文档</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15451222204100.html">Http auth basic认证</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="15311228224258.html">【16元全国免流】你要的19元联通全国无限流量，最全合集，邮寄全国</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15311227612961.html">联通跨省注销方法</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15287113422567.html">Jenkins ssh登陆到其他主机</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15263677435766.html">Opera浏览器送你无限流量的V.P.N</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15247245416912.html">远程执行tomcat执行脚本出现找不到环境变量问题</a>
 			      </li>
 		     
 		  

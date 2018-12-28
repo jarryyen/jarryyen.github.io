@@ -48,7 +48,7 @@
 
         <ul class="right" id="search-wrap">
           <li>
-<form target="_blank" onsubmit="return before_search();" action="http://google.com/search" method="get">
+<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
     <input type="hidden" id="search_q" name="q" value="" />
     <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
 </form>
@@ -68,10 +68,11 @@
 
 <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
-       
-       <li><a href="index.html">HOME</a></li>
-    <li><a href="archives.html">Archives</a></li>
-    <li><a href="about.html">ABOUT</a></li>
+        
+        <li><a target="self" href="index.html">Home</a></li>
+        
+        <li><a target="_self" href="archives.html">Archives</a></li>
+        
 
     <li><label>Categories</label></li>
 
@@ -84,7 +85,11 @@
         
             <li><a href="Free.html">Free</a></li>
         
+            <li><a href="Share.html">Share</a></li>
+        
             <li><a href="Coin.html">Coin</a></li>
+        
+            <li><a href="scrapy.html">scrapy</a></li>
          
 
       </ul>
@@ -106,6 +111,207 @@
 	<div class="large-8 medium-8 columns">
 		<div class="markdown-body home-categories">
 		
+			<div class="article">
+                <a class="clearlink" href="15459836208690.html">
+                
+                  <h1>1.Mac上如何安装Python3和scrapy</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>1) 安装brew<br/>
+使用浏览器打开<a href="https://brew.sh/,%E6%8C%89%E7%85%A7%E6%8F%90%E7%A4%BA%E5%9C%A8**%E7%BB%88%E7%AB%AF**%E8%BE%93%E5%85%A5%E4%B8%8B%E9%9D%A2%E4%BF%A1%E6%81%AF">https://brew.sh/,按照提示在**终端**输入下面信息</a></p>
+
+<pre><code class="language-text">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+
+</code></pre>
+
+<p>2) 安装Command Line Tools,在<strong>终端</strong>中输入下面命令</p>
+
+<pre><code class="language-text">xcode-select --install
+</code></pre>
+
+<p>3) 安装GCC编译器,在<strong>终端</strong>中输入下面命令</p>
+
+<pre><code class="language-text">brew install gcc
+</code></pre>
+
+<p>4) 安装后使用brew安装Python3,在<strong>终端</strong>中输入下面命令</p>
+
+<pre><code class="language-text">brew install python3
+</code></pre>
+
+<p>5) 安装scrapy,在<strong>终端</strong>中输入下面命令</p>
+
+<pre><code class="language-text">pip3 install scrapy
+</code></pre>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/12/28</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='scrapy.html'>scrapy</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15451223173625.html">
+                
+                  <h1>代码merge常用命令</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h1 id="toc_0">切换到master 分支</h1>
+
+<p>git checkout master </p>
+
+<h1 id="toc_1">切换到dev分支</h1>
+
+<p>git checkout dev</p>
+
+<h1 id="toc_2">获取最新的分支信息</h1>
+
+<p>git fetch </p>
+
+<h1 id="toc_3">确认处于本地分支中</h1>
+
+<p>git status </p>
+
+<h1 id="toc_4">在 dev 分支上合并master 分支</h1>
+
+<p>git merge origin/master</p>
+
+<h1 id="toc_5">在master分支上合并dev分支</h1>
+
+<p>git merge origin/dev</p>
+
+<p>执行 git log ,如果看到 master 分支和dev 分支的最新commit id是一致的，说明master和dev分支是一样的</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/12/18</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15451222627805.html">
+                
+                  <h1>以太坊相关参考文档</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p><a href="http://web3js.readthedocs.io/en/1.0/index.html">http://web3js.readthedocs.io/en/1.0/index.html</a> web3.js 1.0 版本</p>
+
+<p><a href="https://github.com/ethereum/wiki/wiki/JavaScript-API">https://github.com/ethereum/wiki/wiki/JavaScript-API</a>   web3.js 0.2版本</p>
+
+<p><a href="https://solidity-cn.readthedocs.io/zh/develop/">https://solidity-cn.readthedocs.io/zh/develop/</a>  Solidity 中文版帮助文档</p>
+
+<p><a href="https://solidity.readthedocs.io/en/develop/">https://solidity.readthedocs.io/en/develop/</a>  Solidity 英文版帮助文档</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/12/18</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Coin.html'>Coin</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15451222204100.html">
+                
+                  <h1>Http auth basic认证</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>使用 nginx 作为前端服务器。某些资源要保护。用 http auth basic 认证简单方便。<br/>
+nginx 的 http auth basic 的密码是用 crypt(3) 加密的。具体可以参考：<a href="http://wiki.nginx.org/HttpAuthBasicModule">http://wiki.nginx.org/HttpAuthBasicModule</a><br/>
+1.修改NGINX配置文件</p>
+
+<pre><code class="language-text">location ~ /admin {
+        auth_basic &quot;Restricted&quot;;
+        auth_basic_user_file /etc/nginx/pass_file;//请使用绝对路径
+        root   /home/www/admin; //host 地址，不然认证通过之后，找不到对应的文件
+}  
+</code></pre>
+
+<p>2.生成加密的auth_basic_user_file文件</p>
+
+<pre><code class="language-text">htpasswd -c -d /etc/nginx/pass_file  username
+</code></pre>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/12/18</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
 			<div class="article">
                 <a class="clearlink" href="15311228224258.html">
                 
@@ -231,17 +437,17 @@
                       <div class="a-content-text">
                         
                         	<p>今天遇到了一个坑,同事部署的jenkins.<br/>
-无论我怎么添加key,在execute shll里面执行scp等操作都无法登陆....结果找了半天...jenkins的pubkey位置在<br/>
-<code><br/>
-/var/lib/jenkins/.ssh/id_rsa.pub <br/>
-</code></p>
+无论我怎么添加key,在execute shll里面执行scp等操作都无法登陆....结果找了半天...jenkins的pubkey位置在</p>
+
+<pre><code class="language-text">/var/lib/jenkins/.ssh/id_rsa.pub 
+</code></pre>
 
 <p>无语了....<br/>
 在此记录一下...</p>
 
 <p>还有一个问题.就是known_hosts问题.</p>
 
-<pre><code>su -s /bin/bash jenkins
+<pre><code class="language-text">su -s /bin/bash jenkins
 
 ssh root@ip 
 </code></pre>
@@ -465,7 +671,6 @@ sudo gedit /etc/fstab <br/>
                         	<ol>
 <li>  如何连接</li>
 <li><p>常用命令</p>
-
 <ol>
 <li>attach</li>
 <li>admin.peers</li>
@@ -473,47 +678,34 @@ sudo gedit /etc/fstab <br/>
 <li>admin.addPeer(&quot;enode://....&quot;)</li>
 </ol></li>
 <li><p>如何连接</p>
-
 <blockquote>
 <p>geth attach [路径]/geth.ipc<br/>
 geth attach http://[IP]:8545<br/>
 geth attach ws://[IP]:8545</p>
 </blockquote></li>
 <li><p>常用命令</p>
-
 <blockquote>
 <p>attach<br/>
 可以使用geth然后使用这个参数可以进行登录</p>
-</blockquote>
-
-<hr/>
-
-<blockquote>
-<p>admin.peers<br/>
-查看集群信息</p>
-</blockquote>
-
-<hr/>
-
-<blockquote>
-<p>net.peerCount<br/>
-查看现在已经连接的节点数量</p>
-</blockquote>
-
-<hr/>
-
-<blockquote>
-<p>admin.addPeer(&quot;enode://....&quot;)<br/>
-可以使用这个方法添加节点</p>
-</blockquote>
-
-<hr/>
-
-<blockquote>
-<p>admin.peers.forEach(function(p) {console.log(p.network.remoteAddress);})<br/>
-通过这个方法可以查看已经连接的节点IP列表</p>
 </blockquote></li>
 </ol>
+
+<pre><code class="language-text">-----
+&gt;admin.peers
+&gt;查看集群信息
+
+-----
+&gt;net.peerCount
+&gt;查看现在已经连接的节点数量
+
+-----
+&gt;admin.addPeer(&quot;enode://....&quot;)
+&gt;可以使用这个方法添加节点
+
+----
+&gt;admin.peers.forEach(function(p) {console.log(p.network.remoteAddress);})
+&gt;通过这个方法可以查看已经连接的节点IP列表
+</code></pre>
 
                         
                       </div>
@@ -579,21 +771,21 @@ Google 在 2016年9月份开源了他们的优化网络拥堵算法BBR，最新�
 
 <p>2.查看系统版本：</p>
 
-<pre><code>[root@server ~]# cat /etc/redhat-release 
+<pre><code class="language-text">[root@server ~]# cat /etc/redhat-release 
 CentOS Linux release 7.4.1708 (Core) 
 [root@server ~]# 
 </code></pre>
 
 <p>3.安装elrepo并升级内核：</p>
 
-<pre><code>[root@server ~]# rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+<pre><code class="language-text">[root@server ~]# rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 [root@server ~]# rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm
 [root@server ~]# yum --enablerepo=elrepo-kernel install kernel-ml -y
 </code></pre>
 
 <p>4.更新grub文件并重启系统：</p>
 
-<pre><code>[root@server ~]# egrep  ^menuentry /etc/grub2.cfg |     cut -f 2 -d \&#39;
+<pre><code class="language-text">[root@server ~]# egrep  ^menuentry /etc/grub2.cfg |     cut -f 2 -d \&#39;
 CentOS Linux 7 Rescue 8619ff5e1306499eac41c02d3b23868e (4.14.14-1.el7.elrepo.x86_64)
 CentOS Linux (4.14.14-1.el7.elrepo.x86_64) 7 (Core)
 CentOS Linux (3.10.0-693.11.6.el7.x86_64) 7 (Core)
@@ -605,13 +797,13 @@ CentOS Linux (0-rescue-c73a5ccf3b8145c3a675b64c4c3ab1d4) 7 (Core)
 
 <p>5.重启完成后查看内核是否已更换为4.14版本：</p>
 
-<pre><code>[root@server ~]# uname -r 4.14.14-1.el7.elrepo.x86_64
+<pre><code class="language-text">[root@server ~]# uname -r 4.14.14-1.el7.elrepo.x86_64
 [root@server ~]#
 </code></pre>
 
 <p>6.开启bbr：</p>
 
-<pre><code>[root@server ~]# vim /etc/sysctl.conf    # 在文件末尾添加如下内容
+<pre><code class="language-text">[root@server ~]# vim /etc/sysctl.conf    # 在文件末尾添加如下内容
 net.core.default_qdisc = fq
 </code></pre>
 
@@ -619,7 +811,7 @@ net.core.default_qdisc = fq
 
 <p>7.加载系统参数：</p>
 
-<pre><code>[root@vultr ~]# sysctl -p
+<pre><code class="language-text">[root@vultr ~]# sysctl -p
 net.ipv6.conf.all.accept_ra = 2
 net.ipv6.conf.eth0.accept_ra = 2
 net.core.default_qdisc = fq
@@ -631,7 +823,7 @@ net.ipv4.tcp_congestion_control = bbr
 
 <p>8.确定bbr已经成功开启：</p>
 
-<pre><code>[root@vultr ~]# sysctl net.ipv4.tcp_available_congestion_control
+<pre><code class="language-text">[root@vultr ~]# sysctl net.ipv4.tcp_available_congestion_control
 net.ipv4.tcp_available_congestion_control = bbr cubic reno
 [root@vultr ~]# lsmod | grep bbr
 tcp_bbr                20480  2 
@@ -677,7 +869,7 @@ tcp_bbr                20480  2
 
 <p>在控制台执行以下命令安装 pip</p>
 
-<pre><code>[root@server ~]# curl &quot;https://bootstrap.pypa.io/get-pip.py&quot; -o &quot;get-pip.py&quot;
+<pre><code class="language-text">[root@server ~]# curl &quot;https://bootstrap.pypa.io/get-pip.py&quot; -o &quot;get-pip.py&quot;
 [root@server ~]# python get-pip.py
 </code></pre>
 
@@ -685,13 +877,13 @@ tcp_bbr                20480  2
 
 <p>在控制台执行以下命令安装 shadowsocks：</p>
 
-<pre><code>[root@server ~]# pip install --upgrade pip
+<pre><code class="language-text">[root@server ~]# pip install --upgrade pip
 [root@server ~]# pip install shadowsocks
 </code></pre>
 
 <p>安装完成后，需要创建shadowsocks的配置文件/etc/shadowsocks.json，编辑内容如下：</p>
 
-<pre><code>[root@server ~]# vim /etc/shadowsocks.json
+<pre><code class="language-text">[root@server ~]# vim /etc/shadowsocks.json
 {
 &quot;server&quot;: &quot;0.0.0.0&quot;,
 &quot;local_address&quot;:&quot;127.0.0.1&quot;,
@@ -713,7 +905,7 @@ port_password为端口对应的密码，可使用密码生成工具生成一个�
 
 <h5 id="toc_2">如果你不需要配置多个端口的话，仅配置单个端口，则可以使用以下配置：</h5>
 
-<pre><code>{
+<pre><code class="language-text">{
 &quot;server&quot;: &quot;0.0.0.0&quot;,
 &quot;server_port&quot;: 8080,
 &quot;password&quot;: &quot;填写密码&quot;,
@@ -736,7 +928,7 @@ port_password为端口对应的密码，可使用密码生成工具生成一个�
 
 <p>编辑shadowsocks 服务的启动脚本文件，内容如下：</p>
 
-<pre><code>[root@server ~]# vim /etc/systemd/system/shadowsocks.service
+<pre><code class="language-text">[root@server ~]# vim /etc/systemd/system/shadowsocks.service
 [Unit]
 Description=Shadowsocks
 
@@ -750,7 +942,7 @@ WantedBy=multi-user.target
 
 <p>执行以下命令启动 shadowsocks 服务：</p>
 
-<pre><code>[root@server ~]# systemctl enable shadowsocks
+<pre><code class="language-text">[root@server ~]# systemctl enable shadowsocks
 [root@server ~]# systemctl start shadowsocks
 </code></pre>
 
@@ -762,7 +954,7 @@ WantedBy=multi-user.target
 
 <p>确认服务启动成功后，配置防火墙规则，开放你配置的端口，不然客户端是无法连接的：</p>
 
-<pre><code>[root@server ~]# firewall-cmd --zone=public --add-port=8080/tcp --permanent
+<pre><code class="language-text">[root@server ~]# firewall-cmd --zone=public --add-port=8080/tcp --permanent
 success
 [root@server ~]# firewall-cmd --zone=public --add-port=8081/tcp --permanent
 success
@@ -814,7 +1006,7 @@ success
 <p>然后打开系统便好设置-&gt;安全性与隐私选项-&gt;任何来源（最下面）<br/>
 ![WX20180118-111614@2x](# MacOS X 10.13(High Sierra)开启隐私权限</p>
 
-<p>在下载一些Mac软件后打卡，系统会告诉你说软件受损，需要删除掉。其实，并不是软件受损，而是苹果修改了安全限制。以前，允许来自任何第三方的软件有选项，可以选择。现在，苹果去掉了选项，必须要从App Store或者含有苹果认证证书的软件才可以运行。</p>
+<p>在下载一些Mac软件后打开，系统会告诉你说软件受损，需要删除掉。其实，并不是软件受损，而是苹果修改了安全限制。以前，允许来自任何第三方的软件有选项，可以选择。现在，苹果去掉了选项，必须要从App Store或者含有苹果认证证书的软件才可以运行。</p>
 
 <p>如果关闭这个选项，实现任何软件都可以运行呢？</p>
 
@@ -970,10 +1162,13 @@ ss://YmYtY2ZiOnRlc3RAMTkyLjE2OC4xMDAuMTo4ODg4</p>
                       
                       <div class="a-content-text">
                         
-                        	<p>需要清单:<br/>
-1. 外网 IP Server(建议独立)<br/>
-2. Xen 虚拟化<br/>
-3. </p>
+                        	<p>需要清单:</p>
+
+<ol>
+<li>外网 IP Server(建议独立)</li>
+<li>Xen 虚拟化</li>
+<li></li>
+</ol>
 
                         
                       </div>
@@ -1006,24 +1201,25 @@ ss://YmYtY2ZiOnRlc3RAMTkyLjE2OC4xMDAuMTo4ODg4</p>
                       
                       <div class="a-content-text">
                         
-                        	<pre><code>screen -X -S [session # you want to kill] quit
+                        	<pre><code class="language-text">screen -X -S [session # you want to kill] quit
 </code></pre>
 
-<p>例如:<br/>
-```<br/>
-[root@localhost ~]# screen -ls<br/>
-There are screens on:<br/>
-        9975.pts-0.localhost    (Detached)<br/>
-        4588.pts-3.localhost    (Detached)<br/>
-2 Sockets in /var/run/screen/S-root.</p>
+<p>例如:</p>
 
-<p>[root@localhost ~]# screen -X -S 4588 quit<br/>
-[root@localhost ~]# screen -ls<br/>
-There is a screen on:<br/>
-        9975.pts-0.localhost    (Detached)<br/>
-1 Socket in /var/run/screen/S-root.<br/>
-```<br/>
-可以看到，4588会话已经没有了。</p>
+<pre><code class="language-text">[root@localhost ~]# screen -ls
+There are screens on:
+        9975.pts-0.localhost    (Detached)
+        4588.pts-3.localhost    (Detached)
+2 Sockets in /var/run/screen/S-root.
+
+[root@localhost ~]# screen -X -S 4588 quit
+[root@localhost ~]# screen -ls
+There is a screen on:
+        9975.pts-0.localhost    (Detached)
+1 Socket in /var/run/screen/S-root.
+</code></pre>
+
+<p>可以看到，4588会话已经没有了。</p>
 
 <p>参考资料：<br/>
 （1）<a href="http://stackoverflow.com/questions/1509677/kill-detached-screen-session" title="Kill detached screen session">Kill detached screen session</a></p>
@@ -1063,7 +1259,7 @@ There is a screen on:<br/>
 
 <p>下面是一段网易云音乐的音乐播放列表事例,直接在MarkDown中贴上HTML的iframe就可以实现资源的嵌入渲染了.</p>
 
-<pre><code>&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=450 src=&quot;http://music.163.com/outchain/player?type=1&amp;id=36037083&amp;auto=0&amp;height=430&quot;&gt;&lt;/iframe&gt;
+<pre><code class="language-text">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=450 src=&quot;http://music.163.com/outchain/player?type=1&amp;id=36037083&amp;auto=0&amp;height=430&quot;&gt;&lt;/iframe&gt;
 </code></pre>
 
                         
@@ -1171,7 +1367,6 @@ ed2k://|file|Blue.Planet.II.S01E01.One.Ocean.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb.
 <li>DxO PRIME 2016: even more powerful and up to 4x faster</li>
 <li>Highly customizable interface</li>
 <li>Advanced controls :
-
 <ul>
 <li>moiré removal,</li>
 <li>ICC profile support,</li>
@@ -1317,7 +1512,7 @@ This offer ends on : January, 1st 2018</p>
 
 <h2 id="toc_12">下载链接</h2>
 
-<pre><code>https://pan.baidu.com/s/1dEFVgOT
+<pre><code class="language-text">https://pan.baidu.com/s/1dEFVgOT
 </code></pre>
 
                         
@@ -1364,7 +1559,7 @@ This offer ends on : January, 1st 2018</p>
 <img src="https://ws2.sinaimg.cn/large/006tNc79ly1fj9zykrxv5g308w04s4qp.gif" alt=""/><br/>
 <img src="https://ws1.sinaimg.cn/large/006tNc79ly1fj9zyll4i3g30b4061kjl.gif" alt=""/></p>
 
-<pre><code>ed2k://|file|Dunkirk.2017.BD-1080p.1920X1080.mkv|4297243249|0EAEAFD6C865E3C96C28EDD268E3175D|h=CST5CXE2SWLGSZUJIOBAVF74AWOMFMOR|/
+<pre><code class="language-text">ed2k://|file|Dunkirk.2017.BD-1080p.1920X1080.mkv|4297243249|0EAEAFD6C865E3C96C28EDD268E3175D|h=CST5CXE2SWLGSZUJIOBAVF74AWOMFMOR|/
 </code></pre>
 
                         
@@ -1402,7 +1597,7 @@ This offer ends on : January, 1st 2018</p>
 
 <p><img src="https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=5472f250a3773912d02b8d339970ed7d/8b13632762d0f70333fe213102fa513d2797c58b.jpg" alt=""/></p>
 
-<pre><code>magnet:?xt=urn:btih:AN5SS67YIB56US7M6FU5GDDE4EPQQCFW
+<pre><code class="language-text">magnet:?xt=urn:btih:AN5SS67YIB56US7M6FU5GDDE4EPQQCFW
 </code></pre>
 
                         
@@ -1536,7 +1731,11 @@ LaunchPad是属于Dock的.</p>
         
             <a href="Free.html"><strong>Free</strong></a>
         
+            <a href="Share.html"><strong>Share</strong></a>
+        
             <a href="Coin.html"><strong>Coin</strong></a>
+        
+            <a href="scrapy.html"><strong>scrapy</strong></a>
          
         </p>
 
@@ -1553,31 +1752,31 @@ LaunchPad是属于Dock的.</p>
 	      
 		      
 			      <li class="post">
+			        <a href="15459836208690.html">1.Mac上如何安装Python3和scrapy</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15451223173625.html">代码merge常用命令</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15451222627805.html">以太坊相关参考文档</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15451222204100.html">Http auth basic认证</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="15311228224258.html">【16元全国免流】你要的19元联通全国无限流量，最全合集，邮寄全国</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15311227612961.html">联通跨省注销方法</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15287113422567.html">Jenkins ssh登陆到其他主机</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15263677435766.html">Opera浏览器送你无限流量的V.P.N</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15247245416912.html">远程执行tomcat执行脚本出现找不到环境变量问题</a>
 			      </li>
 		     
 		  
