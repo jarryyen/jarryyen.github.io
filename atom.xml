@@ -4,13 +4,32 @@
   <title><![CDATA[jarryyen.github.io]]></title>
   <link href="https://jarryyen.github.io/atom.xml" rel="self"/>
   <link href="https://jarryyen.github.io/"/>
-  <updated>2018-12-28T17:15:44+08:00</updated>
+  <updated>2019-04-20T22:56:01+08:00</updated>
   <id>https://jarryyen.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[开启荒野无灯大佬新固件的隐藏彩蛋]]></title>
+    <link href="https://jarryyen.github.io/15557613334242.html"/>
+    <updated>2019-04-20T19:55:33+08:00</updated>
+    <id>https://jarryyen.github.io/15557613334242.html</id>
+    <content type="html"><![CDATA[
+<p><a href="http://p4davan.80x86.io/">http://p4davan.80x86.io/</a><br/>
+大佬的最新固件没有SS.... 用下面的命令可以直接开启</p>
+
+<p>感谢大佬~</p>
+
+<pre><code class="language-text">nvram set google_fu_mode=0xDEADBEEF
+
+nvram commit
+</code></pre>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[1.Mac上如何安装Python3和scrapy]]></title>
@@ -726,22 +745,6 @@ There is a screen on:
 
 <p>参考资料：<br/>
 （1）<a href="http://stackoverflow.com/questions/1509677/kill-detached-screen-session" title="Kill detached screen session">Kill detached screen session</a></p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[在MarkDown中添加潜入视频或音频]]></title>
-    <link href="https://jarryyen.github.io/15150357946970.html"/>
-    <updated>2018-01-04T11:16:34+08:00</updated>
-    <id>https://jarryyen.github.io/15150357946970.html</id>
-    <content type="html"><![CDATA[
-<p>我们使用iframe来将资源进行潜入</p>
-
-<p>下面是一段网易云音乐的音乐播放列表事例,直接在MarkDown中贴上HTML的iframe就可以实现资源的嵌入渲染了.</p>
-
-<pre><code class="language-text">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=450 src=&quot;http://music.163.com/outchain/player?type=1&amp;id=36037083&amp;auto=0&amp;height=430&quot;&gt;&lt;/iframe&gt;
-</code></pre>
 
 ]]></content>
   </entry>
