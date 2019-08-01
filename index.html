@@ -112,21 +112,16 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
-                <a class="clearlink" href="15557613334242.html">
+                <a class="clearlink" href="15646322854275.html">
                 
-                  <h1>开启荒野无灯大佬新固件的隐藏彩蛋</h1>
+                  <h1>在MacOS下无需安装任何工具解压PKG</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
-                        	<p><a href="http://p4davan.80x86.io/">http://p4davan.80x86.io/</a><br/>
-大佬的最新固件没有SS.... 用下面的命令可以直接开启</p>
+                        	<pre><code class="language-text">xar -xf [文件名].pkg //之后会解压出来一个新的pkg文件
 
-<p>感谢大佬~</p>
-
-<pre><code class="language-text">nvram set google_fu_mode=0xDEADBEEF
-
-nvram commit
+cat [新的pkg文件名].pkg/Payload | cpio -i //就可以解压出来相应的app了
 </code></pre>
 
                         
@@ -136,14 +131,124 @@ nvram commit
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2019/4/20</span>
-                    
+                    <span class="date">2019/8/1</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
           				   
                   </div>
                   <div class="more-right right">
                   <span class="comments">
                       
-                        <a href="https://jarryyen.github.io/15557613334242.html#disqus_thread">comments</a>
+                        <a href="https://jarryyen.github.io/15646322854275.html#disqus_thread">comments</a>
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15638065887503.html">
+                
+                  <h1>不使用PHPExcel导出Excel文件</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<pre><code class="language-text">$table = &#39;&lt;html xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot; xmlns:x=&quot;urn:schemas-microsoft-com:office:excel&quot; xmlns=&quot;http://www.w3.org/TR/REC-html40&quot;&gt;&lt;head&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;&lt;x:ExcelWorkbook&gt;&lt;x:ExcelWorksheets&gt;&lt;x:ExcelWorksheet&gt;&lt;x:Name&gt;{worksheet}&lt;/x:Name&gt;&lt;x:WorksheetOptions&gt;&lt;x:DisplayGridlines/&gt;&lt;/x:WorksheetOptions&gt;&lt;/x:ExcelWorksheet&gt;&lt;/x:ExcelWorksheets&gt;&lt;/x:ExcelWorkbook&gt;&lt;/xml&gt;&lt;![endif]--&gt;&lt;style type=&quot;text/css&quot;&gt;
+.excelTable  {border-collapse:collapse;border:thin solid #999;}
+.excelTable  th {border: thin solid #999;padding:20px;text-align: center;border-top: thin solid #999;background-color: #E6E6E6;}
+.excelTable  td {border:thin solid #999;padding:2px 5px;text-align: center;}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&#39;;
+$table .= &quot;&lt;table&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th class=&#39;name&#39;&gt;追逆ID&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;用户ID&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;状态&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;创建时间&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;问题描述&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;问题类型&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;问题图片1&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;问题图片2&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;问题地址&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;投诉人电话&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;备注&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;&quot;;
+foreach ($innerdata as $k =&gt; $v) {
+    $id = $v[&#39;id&#39;];
+    $userid = $v[&#39;users_id&#39;];
+    $status = $v[&#39;status&#39;]==1?&#39;已过审&#39;:&#39;未过审&#39;;
+    $create_time = $v[&#39;create_time&#39;];
+    $qcon = $v[&#39;qcon&#39;];
+    $qid = getQName($v[&#39;qid&#39;]);
+    $photo1 = $v[&#39;photo1&#39;];
+    $address = $v[&#39;address&#39;];
+    $phone = $v[&#39;phone&#39;];
+    //$unionid = $v[&#39;wx_unionid&#39;];
+    $unionid = $v[&#39;users_id&#39;];
+    $tag = $v[&#39;tag&#39;];
+
+    $tmp = json_decode($v[&#39;photo2&#39;]);
+    $ttmp = &#39;&#39;;
+    foreach ($tmp as $v){
+        $ttmp .= $v.&#39;,&#39;;
+    }
+    $photo2 = $ttmp;
+
+    $table .= &quot;&lt;tr&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$id}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$userid}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$status}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$create_time}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$qcon}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$qid}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$photo1}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$photo2}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$address}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$phone}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$tag}&lt;/td&gt;
+                &lt;/tr&gt;&quot;;
+}
+$table .= &quot;&lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;&quot;;
+
+//通过header头控制输出excel表格
+header(&quot;Pragma: public&quot;);
+header(&quot;Expires: 0&quot;);
+header(&quot;Cache-Control:must-revalidate, post-check=0, pre-check=0&quot;);
+header(&quot;Content-Type:application/force-download&quot;);
+header(&quot;Content-Type:application/vnd.ms-execl&quot;);
+header(&quot;Content-Type:application/octet-stream&quot;);
+header(&quot;Content-Type:application/download&quot;);;
+header(&#39;Content-Disposition:attachment;filename=&quot;百日攻坚.xls&quot;&#39;);
+header(&quot;Content-Transfer-Encoding:binary&quot;);
+echo $table;
+</code></pre>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2019/7/22</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15638065887503.html#disqus_thread">comments</a>
                       
 
                        
@@ -1845,7 +1950,13 @@ LaunchPad是属于Dock的.</p>
 	      
 		      
 			      <li class="post">
-			        <a href="15557613334242.html">开启荒野无灯大佬新固件的隐藏彩蛋</a>
+			        <a href="15646322854275.html">在MacOS下无需安装任何工具解压PKG</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15638065887503.html">不使用PHPExcel导出Excel文件</a>
 			      </li>
 		     
 		  
@@ -1864,12 +1975,6 @@ LaunchPad是属于Dock的.</p>
 		      
 			      <li class="post">
 			        <a href="15451222627805.html">以太坊相关参考文档</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15451222204100.html">Http auth basic认证</a>
 			      </li>
 		     
 		  

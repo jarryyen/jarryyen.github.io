@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  代码merge常用命令 - jarryyen.github.io
+  在MacOS下无需安装任何工具解压PKG - jarryyen.github.io
   
   </title>
   
@@ -112,10 +112,10 @@
       <div class="markdown-body article-wrap">
        <div class="article">
           
-          <h1>代码merge常用命令</h1>
+          <h1>在MacOS下无需安装任何工具解压PKG</h1>
      
         <div class="read-more clearfix">
-          <span class="date">2018/12/18</span>
+          <span class="date">2019/8/1</span>
 
           <span>posted in&nbsp;</span> 
           
@@ -124,7 +124,7 @@
          
           <span class="comments">
             
-              <a href="https://jarryyen.github.io/15451223173625.html#disqus_thread">comments</a>
+              <a href="https://jarryyen.github.io/15646322854275.html#disqus_thread">comments</a>
             
 
             
@@ -134,31 +134,10 @@
       </div><!-- article -->
 
       <div class="article-content">
-      <h1 id="toc_0">切换到master 分支</h1>
+      <pre><code class="language-text">xar -xf [文件名].pkg //之后会解压出来一个新的pkg文件
 
-<p>git checkout master </p>
-
-<h1 id="toc_1">切换到dev分支</h1>
-
-<p>git checkout dev</p>
-
-<h1 id="toc_2">获取最新的分支信息</h1>
-
-<p>git fetch </p>
-
-<h1 id="toc_3">确认处于本地分支中</h1>
-
-<p>git status </p>
-
-<h1 id="toc_4">在 dev 分支上合并master 分支</h1>
-
-<p>git merge origin/master</p>
-
-<h1 id="toc_5">在master分支上合并dev分支</h1>
-
-<p>git merge origin/dev</p>
-
-<p>执行 git log ,如果看到 master 分支和dev 分支的最新commit id是一致的，说明master和dev分支是一样的</p>
+cat [新的pkg文件名].pkg/Payload | cpio -i //就可以解压出来相应的app了
+</code></pre>
 
 
     
@@ -169,16 +148,13 @@
         <div class="large-6 columns">
         <p class="text-left" style="padding:15px 0px;">
       
-          <a href="15459836208690.html" 
-          title="Previous Post: 1.Mac上如何安装Python3和scrapy">&laquo; 1.Mac上如何安装Python3和scrapy</a>
-      
         </p>
         </div>
         <div class="large-6 columns">
       <p class="text-right" style="padding:15px 0px;">
       
-          <a  href="15451222627805.html" 
-          title="Next Post: 以太坊相关参考文档">以太坊相关参考文档 &raquo;</a>
+          <a  href="15638065887503.html" 
+          title="Next Post: 不使用PHPExcel导出Excel文件">不使用PHPExcel导出Excel文件 &raquo;</a>
       
       </p>
         </div>

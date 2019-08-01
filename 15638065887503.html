@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  代码merge常用命令 - jarryyen.github.io
+  不使用PHPExcel导出Excel文件 - jarryyen.github.io
   
   </title>
   
@@ -112,10 +112,10 @@
       <div class="markdown-body article-wrap">
        <div class="article">
           
-          <h1>代码merge常用命令</h1>
+          <h1>不使用PHPExcel导出Excel文件</h1>
      
         <div class="read-more clearfix">
-          <span class="date">2018/12/18</span>
+          <span class="date">2019/7/22</span>
 
           <span>posted in&nbsp;</span> 
           
@@ -124,7 +124,7 @@
          
           <span class="comments">
             
-              <a href="https://jarryyen.github.io/15451223173625.html#disqus_thread">comments</a>
+              <a href="https://jarryyen.github.io/15638065887503.html#disqus_thread">comments</a>
             
 
             
@@ -134,31 +134,80 @@
       </div><!-- article -->
 
       <div class="article-content">
-      <h1 id="toc_0">切换到master 分支</h1>
+      <pre><code class="language-text">$table = &#39;&lt;html xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot; xmlns:x=&quot;urn:schemas-microsoft-com:office:excel&quot; xmlns=&quot;http://www.w3.org/TR/REC-html40&quot;&gt;&lt;head&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;&lt;x:ExcelWorkbook&gt;&lt;x:ExcelWorksheets&gt;&lt;x:ExcelWorksheet&gt;&lt;x:Name&gt;{worksheet}&lt;/x:Name&gt;&lt;x:WorksheetOptions&gt;&lt;x:DisplayGridlines/&gt;&lt;/x:WorksheetOptions&gt;&lt;/x:ExcelWorksheet&gt;&lt;/x:ExcelWorksheets&gt;&lt;/x:ExcelWorkbook&gt;&lt;/xml&gt;&lt;![endif]--&gt;&lt;style type=&quot;text/css&quot;&gt;
+.excelTable  {border-collapse:collapse;border:thin solid #999;}
+.excelTable  th {border: thin solid #999;padding:20px;text-align: center;border-top: thin solid #999;background-color: #E6E6E6;}
+.excelTable  td {border:thin solid #999;padding:2px 5px;text-align: center;}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&#39;;
+$table .= &quot;&lt;table&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th class=&#39;name&#39;&gt;追逆ID&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;用户ID&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;状态&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;创建时间&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;问题描述&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;问题类型&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;问题图片1&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;问题图片2&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;问题地址&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;投诉人电话&lt;/th&gt;
+                    &lt;th class=&#39;name&#39;&gt;备注&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;&quot;;
+foreach ($innerdata as $k =&gt; $v) {
+    $id = $v[&#39;id&#39;];
+    $userid = $v[&#39;users_id&#39;];
+    $status = $v[&#39;status&#39;]==1?&#39;已过审&#39;:&#39;未过审&#39;;
+    $create_time = $v[&#39;create_time&#39;];
+    $qcon = $v[&#39;qcon&#39;];
+    $qid = getQName($v[&#39;qid&#39;]);
+    $photo1 = $v[&#39;photo1&#39;];
+    $address = $v[&#39;address&#39;];
+    $phone = $v[&#39;phone&#39;];
+    //$unionid = $v[&#39;wx_unionid&#39;];
+    $unionid = $v[&#39;users_id&#39;];
+    $tag = $v[&#39;tag&#39;];
 
-<p>git checkout master </p>
+    $tmp = json_decode($v[&#39;photo2&#39;]);
+    $ttmp = &#39;&#39;;
+    foreach ($tmp as $v){
+        $ttmp .= $v.&#39;,&#39;;
+    }
+    $photo2 = $ttmp;
 
-<h1 id="toc_1">切换到dev分支</h1>
+    $table .= &quot;&lt;tr&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$id}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$userid}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$status}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$create_time}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$qcon}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$qid}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$photo1}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$photo2}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$address}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$phone}&lt;/td&gt;
+                    &lt;td class=&#39;name&#39;&gt;{$tag}&lt;/td&gt;
+                &lt;/tr&gt;&quot;;
+}
+$table .= &quot;&lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;&quot;;
 
-<p>git checkout dev</p>
-
-<h1 id="toc_2">获取最新的分支信息</h1>
-
-<p>git fetch </p>
-
-<h1 id="toc_3">确认处于本地分支中</h1>
-
-<p>git status </p>
-
-<h1 id="toc_4">在 dev 分支上合并master 分支</h1>
-
-<p>git merge origin/master</p>
-
-<h1 id="toc_5">在master分支上合并dev分支</h1>
-
-<p>git merge origin/dev</p>
-
-<p>执行 git log ,如果看到 master 分支和dev 分支的最新commit id是一致的，说明master和dev分支是一样的</p>
+//通过header头控制输出excel表格
+header(&quot;Pragma: public&quot;);
+header(&quot;Expires: 0&quot;);
+header(&quot;Cache-Control:must-revalidate, post-check=0, pre-check=0&quot;);
+header(&quot;Content-Type:application/force-download&quot;);
+header(&quot;Content-Type:application/vnd.ms-execl&quot;);
+header(&quot;Content-Type:application/octet-stream&quot;);
+header(&quot;Content-Type:application/download&quot;);;
+header(&#39;Content-Disposition:attachment;filename=&quot;百日攻坚.xls&quot;&#39;);
+header(&quot;Content-Transfer-Encoding:binary&quot;);
+echo $table;
+</code></pre>
 
 
     
@@ -169,16 +218,16 @@
         <div class="large-6 columns">
         <p class="text-left" style="padding:15px 0px;">
       
-          <a href="15459836208690.html" 
-          title="Previous Post: 1.Mac上如何安装Python3和scrapy">&laquo; 1.Mac上如何安装Python3和scrapy</a>
+          <a href="15646322854275.html" 
+          title="Previous Post: 在MacOS下无需安装任何工具解压PKG">&laquo; 在MacOS下无需安装任何工具解压PKG</a>
       
         </p>
         </div>
         <div class="large-6 columns">
       <p class="text-right" style="padding:15px 0px;">
       
-          <a  href="15451222627805.html" 
-          title="Next Post: 以太坊相关参考文档">以太坊相关参考文档 &raquo;</a>
+          <a  href="15459836208690.html" 
+          title="Next Post: 1.Mac上如何安装Python3和scrapy">1.Mac上如何安装Python3和scrapy &raquo;</a>
       
       </p>
         </div>
