@@ -13,16 +13,16 @@ dns:
     enable: false
     ipv6: false
   
-nameserver:
-    - 223.5.5.5
-    - 114.114.114.114
-    - 223.6.6.6
-    - tls://dns.rubyfish.cn:853
+    nameserver:
+        - 223.5.5.5
+        - 114.114.114.114
+        - 223.6.6.6
+        - tls://dns.rubyfish.cn:853
 
-fallback:
-    - tls://dns.rubyfish.cn:853
-    - tls://1.0.0.1:853
-    - tls://dns.google:853
+    fallback:
+        - tls://dns.rubyfish.cn:853
+        - tls://1.0.0.1:853
+        - tls://dns.google:853
 
 Proxy:
     - { name: "HTTP10000", type: http, server: dyn-iidu.charged.fun, port: 443, tls: true , username: ".hx@6114460;jp.", password: "PmUQMNfXsjMtiW9J+PeNyHlsbbv8YPE7" } 
