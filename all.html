@@ -1,114 +1,520 @@
-
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
     
   jarryyen.github.io
   
-
   </title>
-  <meta name="author" content="">
-  <meta name="description" content="">
-
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <link href="asset/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  
   <link href="atom.xml" rel="alternate" title="jarryyen.github.io" type="application/atom+xml">
-  <script src="asset/js/modernizr-2.0.js"></script>
-  <script src="asset/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
   <script src="asset/highlightjs/highlight.pack.js"></script>
-  <link href="asset/highlightjs/styles/solarized_light.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script>hljs.initHighlightingOnLoad();</script>
-
-  <style type="text/css">
-  .cat-children-p{ padding: 6px 0px;}
-  .hljs{background: none;}
-  </style>
-  <script type="text/javascript">
-  var isAddSildbar = true;
-  </script>
-  <script src="asset/js/octopress.js" type="text/javascript"></script>
-</head>
 <script type="text/javascript">
-//链接新开窗口
-function addBlankTargetForLinks () {
-  $('a[href^="http"]').each(function(){
-      $(this).attr('target', '_blank');
-  });
-}
-$(document).ready(function(event) {
-  addBlankTargetForLinks();
-});
+  function before_search(){
+    var searchVal = 'site:jarryyen.github.io ' + document.getElementById('search_input').value;
+    document.getElementById('search_q').value = searchVal;
+    return true;
+  }
 </script>
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="index.html">jarryyen.github.io</a></h1>
-  
-    <h2></h2>
-  
-</hgroup>
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
 
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:jarryyen.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+
+  <section class="top-bar-section">
+  <div class="row">
+      <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
+        <ul id="main-menu" class="left">
+        
+        <li id=""><a target="self" href="index.html">Home</a></li>
+        
+        <li id=""><a target="_self" href="archives.html">Archives</a></li>
+        
+        </ul>
+
+        <ul class="right" id="search-wrap">
+          <li>
+<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
+    <input type="hidden" id="search_q" name="q" value="" />
+    <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
 </form>
-  
-<ul class="main-navigation">
-
-  <li id=""><a target="self" href="index.html">Home</a></li>
-
-  <li id=""><a target="_self" href="archives.html">Archives</a></li>
-
-</ul>
+</li>
+          </ul>
+      </div></div>
+  </div>
+  </section>
 
 </nav>
-  <div id="main">
-    <div id="content"> 
-<div class="blog-index">
 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15646322854275.html">在MacOS下无需安装任何工具解压PKG</a></h1>
-			<p class="meta"><time datetime="2019-08-01T12:04:45+08:00" 
-			pubdate data-updated="true">2019/8/1</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<pre><code class="language-text">xar -xf [文件名].pkg //之后会解压出来一个新的pkg文件
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; jarryyen.github.io</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        
+        <li><a target="self" href="index.html">Home</a></li>
+        
+        <li><a target="_self" href="archives.html">Archives</a></li>
+        
+
+    <li><label>Categories</label></li>
+
+        
+            <li><a href="jenkins.html">jenkins</a></li>
+        
+            <li><a href="Movie.html">Movie</a></li>
+        
+            <li><a href="Tips.html">Tips</a></li>
+        
+            <li><a href="Free.html">Free</a></li>
+        
+            <li><a href="Share.html">Share</a></li>
+        
+            <li><a href="Coin.html">Coin</a></li>
+        
+            <li><a href="scrapy.html">scrapy</a></li>
+         
+
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+
+        <section id="main-content" role="main" class="scroll-container">
+        
+       
+
+ <script type="text/javascript">
+	$(function(){
+		$('#menu_item_index').addClass('is_active');
+	});
+</script>
+<div class="row">
+	<div class="large-8 medium-8 columns">
+		<div class="markdown-body home-categories">
+		
+			<div class="article">
+                <a class="clearlink" href="15759676309433.html">
+                
+                  <h1>Shadowsocks-NG-R8订阅失效问题</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>在下图中为止添加如下两句话</p>
+
+<p>.......</p>
+
+<pre><code class="language-text">&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
+&lt;dict&gt;
+&lt;key&gt;NSAllowsArbitraryLoads&lt;/key&gt; 
+&lt;true/&gt;
+&lt;/dict&gt;
+</code></pre>
+
+<p><img src="media/15759676309433/WX20191205-093035@2x.png" alt="WX20191205-093035@2x"/></p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2019/12/10</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15759676309433.html#disqus_thread">comments</a>
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15734416345812.html">
+                
+                  <h1>Centos 8 直接开启BBR</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<blockquote>
+<p>由于Centos8内核默认已经升级到 4.18 , 所以可以直接开启BBR</p>
+</blockquote>
+
+<h4 id="toc_0">1.修改配置文件</h4>
+
+<pre><code class="language-text">vim /etc/sysctl.conf
+</code></pre>
+
+<h4 id="toc_1">2.添加配置选项</h4>
+
+<pre><code class="language-text">net.core.default_qdisc = fq
+net.ipv4.tcp_congestion_control = bbr
+</code></pre>
+
+<h4 id="toc_2">3.启动</h4>
+
+<pre><code class="language-text">sysctl -p
+</code></pre>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2019/11/11</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15734416345812.html#disqus_thread">comments</a>
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15664660068365.html">
+                
+                  <h1>MacOS删除文件不释放空间？</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>我今天遇到了一个很头疼的问题，我删除了很多文件但是使用空间一直没有被释放。</p>
+
+<p>在终端里面 df -Hs 后看到使用空间一点也没有被释放。</p>
+
+<p>最后找到了Apple在线客服，使用一条命令就完成了。</p>
+
+<pre><code class="language-text">tmutil thinlocalsnapshots / 999999999999999 4
+</code></pre>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2019/8/22</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15664660068365.html#disqus_thread">comments</a>
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15663803373515.html">
+                
+                  <h1>百日攻坚后台接口</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<blockquote>
+<p>baseURL <a href="http://100day.hlgnet.com/api/">http://100day.hlgnet.com/api/</a></p>
+
+<p>预设值: auth = 7B6E50D62577C570CD541ABBF3B476E8</p>
+</blockquote>
+
+<h2 id="toc_0">1.获取信息列表</h2>
+
+<h5 id="toc_1">文件名:</h5>
+
+<blockquote>
+<pre><code class="language-text">  getInfoList.php
+</code></pre>
+</blockquote>
+
+<h5 id="toc_2">请求:</h5>
+
+<blockquote>
+<pre><code class="language-text">  GET/POST
+</code></pre>
+</blockquote>
+
+<h5 id="toc_3">参数:</h5>
+
+<blockquote>
+<pre><code class="language-text">  page //页数
+  count //获取信息数量
+  authkey //验证key
+</code></pre>
+
+<p>(这个接口中data中的每一组值中的 nickstatus 如果为1就隐藏用户头像及微信昵称,为0就不隐藏)</p>
+</blockquote>
+
+<h5 id="toc_4">返回类型:</h5>
+
+<blockquote>
+<pre><code class="language-text">  json
+</code></pre>
+</blockquote>
+
+<h5 id="toc_5">返回值:</h5>
+
+<blockquote>
+<pre><code class="language-text">  data //列表数据
+  count //总数
+  totalpages //总页数
+</code></pre>
+</blockquote>
+
+<h2 id="toc_6">2.过审以及取消过审</h2>
+
+<h5 id="toc_7">文件名:</h5>
+
+<blockquote>
+<pre><code class="language-text">  activeId.php
+</code></pre>
+</blockquote>
+
+<h5 id="toc_8">请求:</h5>
+
+<blockquote>
+<pre><code class="language-text">  GET/POST
+</code></pre>
+</blockquote>
+
+<h5 id="toc_9">参数:</h5>
+
+<blockquote>
+<pre><code class="language-text">  active //1为过审，0为取消过审
+  id //信息ID
+  authkey //验证key
+</code></pre>
+</blockquote>
+
+<h5 id="toc_10">返回类型:</h5>
+
+<blockquote>
+<pre><code class="language-text">  json
+</code></pre>
+</blockquote>
+
+<h5 id="toc_11">返回值:</h5>
+
+<blockquote>
+<pre><code class="language-text">  status //返回状态，1为成功，0为未成功
+  message //返回文字信息
+</code></pre>
+</blockquote>
+
+<h2 id="toc_12">3.获取或保存结果</h2>
+
+<h5 id="toc_13">文件名:</h5>
+
+<blockquote>
+<pre><code class="language-text">  tag.php
+</code></pre>
+</blockquote>
+
+<h5 id="toc_14">请求:</h5>
+
+<blockquote>
+<pre><code class="language-text">  GET/POST
+</code></pre>
+</blockquote>
+
+<h5 id="toc_15">参数:</h5>
+
+<blockquote>
+<pre><code class="language-text">  type //1为读取，2为保存
+  id //信息ID
+  conn //文字内容
+  pic //图片URL(图片URL使用逗号隔开)
+  authkey //验证key
+</code></pre>
+</blockquote>
+
+<h5 id="toc_16">返回类型:</h5>
+
+<blockquote>
+<pre><code class="language-text">  json
+</code></pre>
+</blockquote>
+
+<h5 id="toc_17">返回值:</h5>
+
+<blockquote>
+<pre><code class="language-text">  status //返回状态，1为成功，0为未成功
+  message //返回文字信息
+  data //返回数据列表
+</code></pre>
+</blockquote>
+
+<h3 id="toc_18">4.获取或保存相关部门</h3>
+
+<h5 id="toc_19">文件名:</h5>
+
+<blockquote>
+<pre><code class="language-text">  jurisdiction.php
+</code></pre>
+</blockquote>
+
+<h5 id="toc_20">请求:</h5>
+
+<blockquote>
+<pre><code class="language-text">  GET/POST
+</code></pre>
+</blockquote>
+
+<h5 id="toc_21">参数:</h5>
+
+<blockquote>
+<pre><code class="language-text">  type //1为读取，2为保存
+  id //信息ID
+  submit //部门ID(使用逗号隔开)
+  pic //图片URL(图片URL使用逗号隔开)
+  authkey //验证key
+</code></pre>
+</blockquote>
+
+<h5 id="toc_22">返回类型:</h5>
+
+<blockquote>
+<pre><code class="language-text">  json
+</code></pre>
+</blockquote>
+
+<h5 id="toc_23">返回值:</h5>
+
+<blockquote>
+<pre><code class="language-text">  status //返回状态，1为成功，0为未成功
+  message //返回文字信息
+  data //返回数据列表
+</code></pre>
+</blockquote>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2019/8/21</span>
+                    
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15663803373515.html#disqus_thread">comments</a>
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15646322854275.html">
+                
+                  <h1>在MacOS下无需安装任何工具解压PKG</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<pre><code class="language-text">xar -xf [文件名].pkg //之后会解压出来一个新的pkg文件
 
 cat [新的pkg文件名].pkg/Payload | cpio -i //就可以解压出来相应的app了
 </code></pre>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2019/8/1</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15646322854275.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15638065887503.html">不使用PHPExcel导出Excel文件</a></h1>
-			<p class="meta"><time datetime="2019-07-22T22:43:08+08:00" 
-			pubdate data-updated="true">2019/7/22</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<pre><code class="language-text">$table = &#39;&lt;html xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot; xmlns:x=&quot;urn:schemas-microsoft-com:office:excel&quot; xmlns=&quot;http://www.w3.org/TR/REC-html40&quot;&gt;&lt;head&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;&lt;x:ExcelWorkbook&gt;&lt;x:ExcelWorksheets&gt;&lt;x:ExcelWorksheet&gt;&lt;x:Name&gt;{worksheet}&lt;/x:Name&gt;&lt;x:WorksheetOptions&gt;&lt;x:DisplayGridlines/&gt;&lt;/x:WorksheetOptions&gt;&lt;/x:ExcelWorksheet&gt;&lt;/x:ExcelWorksheets&gt;&lt;/x:ExcelWorkbook&gt;&lt;/xml&gt;&lt;![endif]--&gt;&lt;style type=&quot;text/css&quot;&gt;
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15638065887503.html">
+                
+                  <h1>不使用PHPExcel导出Excel文件</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<pre><code class="language-text">$table = &#39;&lt;html xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot; xmlns:x=&quot;urn:schemas-microsoft-com:office:excel&quot; xmlns=&quot;http://www.w3.org/TR/REC-html40&quot;&gt;&lt;head&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;&lt;x:ExcelWorkbook&gt;&lt;x:ExcelWorksheets&gt;&lt;x:ExcelWorksheet&gt;&lt;x:Name&gt;{worksheet}&lt;/x:Name&gt;&lt;x:WorksheetOptions&gt;&lt;x:DisplayGridlines/&gt;&lt;/x:WorksheetOptions&gt;&lt;/x:ExcelWorksheet&gt;&lt;/x:ExcelWorksheets&gt;&lt;/x:ExcelWorkbook&gt;&lt;/xml&gt;&lt;![endif]--&gt;&lt;style type=&quot;text/css&quot;&gt;
 .excelTable  {border-collapse:collapse;border:thin solid #999;}
 .excelTable  th {border: thin solid #999;padding:20px;text-align: center;border-top: thin solid #999;background-color: #E6E6E6;}
 .excelTable  td {border:thin solid #999;padding:2px 5px;text-align: center;}
@@ -183,22 +589,42 @@ header(&quot;Content-Transfer-Encoding:binary&quot;);
 echo $table;
 </code></pre>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2019/7/22</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15638065887503.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15459836208690.html">1.Mac上如何安装Python3和scrapy</a></h1>
-			<p class="meta"><time datetime="2018-12-28T15:53:40+08:00" 
-			pubdate data-updated="true">2018/12/28</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>1) 安装brew<br/>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15459836208690.html">
+                
+                  <h1>1.Mac上如何安装Python3和scrapy</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>1) 安装brew<br/>
 使用浏览器打开<a href="https://brew.sh/,%E6%8C%89%E7%85%A7%E6%8F%90%E7%A4%BA%E5%9C%A8**%E7%BB%88%E7%AB%AF**%E8%BE%93%E5%85%A5%E4%B8%8B%E9%9D%A2%E4%BF%A1%E6%81%AF">https://brew.sh/,按照提示在**终端**输入下面信息</a></p>
 
 <pre><code class="language-text">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
@@ -225,22 +651,42 @@ echo $table;
 <pre><code class="language-text">pip3 install scrapy
 </code></pre>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/12/28</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='scrapy.html'>scrapy</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15459836208690.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15451223173625.html">代码merge常用命令</a></h1>
-			<p class="meta"><time datetime="2018-12-18T16:38:37+08:00" 
-			pubdate data-updated="true">2018/12/18</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<h1 id="toc_0">切换到master 分支</h1>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15451223173625.html">
+                
+                  <h1>代码merge常用命令</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h1 id="toc_0">切换到master 分支</h1>
 
 <p>git checkout master </p>
 
@@ -266,22 +712,42 @@ echo $table;
 
 <p>执行 git log ,如果看到 master 分支和dev 分支的最新commit id是一致的，说明master和dev分支是一样的</p>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/12/18</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15451223173625.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15451222627805.html">以太坊相关参考文档</a></h1>
-			<p class="meta"><time datetime="2018-12-18T16:37:42+08:00" 
-			pubdate data-updated="true">2018/12/18</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p><a href="http://web3js.readthedocs.io/en/1.0/index.html">http://web3js.readthedocs.io/en/1.0/index.html</a> web3.js 1.0 版本</p>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15451222627805.html">
+                
+                  <h1>以太坊相关参考文档</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p><a href="http://web3js.readthedocs.io/en/1.0/index.html">http://web3js.readthedocs.io/en/1.0/index.html</a> web3.js 1.0 版本</p>
 
 <p><a href="https://github.com/ethereum/wiki/wiki/JavaScript-API">https://github.com/ethereum/wiki/wiki/JavaScript-API</a>   web3.js 0.2版本</p>
 
@@ -289,22 +755,42 @@ echo $table;
 
 <p><a href="https://solidity.readthedocs.io/en/develop/">https://solidity.readthedocs.io/en/develop/</a>  Solidity 英文版帮助文档</p>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/12/18</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Coin.html'>Coin</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15451222627805.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15451222204100.html">Http auth basic认证</a></h1>
-			<p class="meta"><time datetime="2018-12-18T16:37:00+08:00" 
-			pubdate data-updated="true">2018/12/18</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>使用 nginx 作为前端服务器。某些资源要保护。用 http auth basic 认证简单方便。<br/>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15451222204100.html">
+                
+                  <h1>Http auth basic认证</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>使用 nginx 作为前端服务器。某些资源要保护。用 http auth basic 认证简单方便。<br/>
 nginx 的 http auth basic 的密码是用 crypt(3) 加密的。具体可以参考：<a href="http://wiki.nginx.org/HttpAuthBasicModule">http://wiki.nginx.org/HttpAuthBasicModule</a><br/>
 1.修改NGINX配置文件</p>
 
@@ -320,22 +806,42 @@ nginx 的 http auth basic 的密码是用 crypt(3) 加密的。具体可以参�
 <pre><code class="language-text">htpasswd -c -d /etc/nginx/pass_file  username
 </code></pre>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/12/18</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15451222204100.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15311228224258.html">【16元全国免流】你要的19元联通全国无限流量，最全合集，邮寄全国</a></h1>
-			<p class="meta"><time datetime="2018-07-09T15:53:42+08:00" 
-			pubdate data-updated="true">2018/7/9</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<blockquote>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15311228224258.html">
+                
+                  <h1>【16元全国免流】你要的19元联通全国无限流量，最全合集，邮寄全国</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<blockquote>
 <p>网友反馈:接到工作人员电话:收到卡后一周内激活充值一百元不会回收号码<br/>
 网友反馈:可以取消集团网和回电宝，实际16元一个月全国不限流量</p>
 </blockquote>
@@ -385,41 +891,81 @@ nginx 的 http auth basic 的密码是用 crypt(3) 加密的。具体可以参�
 答：一个人凭本人信息最多可以办理一张。</p>
 </blockquote>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/7/9</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Share.html'>Share</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15311228224258.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15311227612961.html">联通跨省注销方法</a></h1>
-			<p class="meta"><time datetime="2018-07-09T15:52:41+08:00" 
-			pubdate data-updated="true">2018/7/9</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p><img src="media/15311227612961/%E8%81%94%E9%80%9A%E6%B3%A8%E9%94%80%E5%8F%B7%E7%A0%81.jpg" alt="联通注销号码"/></p>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15311227612961.html">
+                
+                  <h1>联通跨省注销方法</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p><img src="media/15311227612961/%E8%81%94%E9%80%9A%E6%B3%A8%E9%94%80%E5%8F%B7%E7%A0%81.jpg" alt="联通注销号码"/></p>
 
 <p>使用上方二维码可以跨省注销联通号码</p>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/7/9</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Share.html'>Share</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15311227612961.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15287113422567.html">Jenkins ssh登陆到其他主机</a></h1>
-			<p class="meta"><time datetime="2018-06-11T18:02:22+08:00" 
-			pubdate data-updated="true">2018/6/11</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>今天遇到了一个坑,同事部署的jenkins.<br/>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15287113422567.html">
+                
+                  <h1>Jenkins ssh登陆到其他主机</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>今天遇到了一个坑,同事部署的jenkins.<br/>
 无论我怎么添加key,在execute shll里面执行scp等操作都无法登陆....结果找了半天...jenkins的pubkey位置在</p>
 
 <pre><code class="language-text">/var/lib/jenkins/.ssh/id_rsa.pub 
@@ -437,22 +983,42 @@ ssh root@ip
 
 <p>登陆一下就好了</p>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/6/11</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='jenkins.html'>jenkins</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15287113422567.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15263677435766.html">Opera浏览器送你无限流量的V.P.N</a></h1>
-			<p class="meta"><time datetime="2018-05-15T15:02:23+08:00" 
-			pubdate data-updated="true">2018/5/15</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<h4 id="toc_0">1.下载Opera浏览器 <a href="http://www.opera.com">www.opera.com</a></h4>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15263677435766.html">
+                
+                  <h1>Opera浏览器送你无限流量的V.P.N</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h4 id="toc_0">1.下载Opera浏览器 <a href="http://www.opera.com">www.opera.com</a></h4>
 
 <p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1frc1mn8otoj30vh0j944f.jpg" alt=""/></p>
 
@@ -475,22 +1041,42 @@ ssh root@ip
 
 <p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frc1oquve2j308z0d3dgn.jpg" alt=""/></p>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/5/15</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15263677435766.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15247245416912.html">远程执行tomcat执行脚本出现找不到环境变量问题</a></h1>
-			<p class="meta"><time datetime="2018-04-26T14:35:41+08:00" 
-			pubdate data-updated="true">2018/4/26</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>问题描述:</p>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15247245416912.html">
+                
+                  <h1>远程执行tomcat执行脚本出现找不到环境变量问题</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>问题描述:</p>
 
 <blockquote>
 <p>我使用jenkins在build工程的时候,使用了执行shell部分.脚本内含有远程主机运行或者停止tomcat脚本,在执行的时候报告有java_home和java_jar没有环境变量的问题.根据问题查找,是远程执行的时候没有加载profile造成环境变量确实的问题.<br/>
@@ -509,39 +1095,79 @@ ssh root@ip
 <img src="https://ws2.sinaimg.cn/large/006tKfTcly1fqq1ywrzs4j315k0xitf3.jpg" alt=""/></p>
 </blockquote>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/4/26</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15247245416912.html#disqus_thread">comments</a>
+                      
 
-		
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15203221731981.html">
+                
+                  <h1>MYSQL命令行内倒入文本数据</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>load data local infile &#39;/文件名.txt&#39; into table 表名(字段);</p>
 
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15203221731981.html">MYSQL命令行内倒入文本数据</a></h1>
-			<p class="meta"><time datetime="2018-03-06T15:42:53+08:00" 
-			pubdate data-updated="true">2018/3/6</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>load data local infile &#39;/文件名.txt&#39; into table 表名(字段);</p>
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/3/6</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15203221731981.html#disqus_thread">comments</a>
+                      
 
-		</div>
-
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15203031656074.html">Linux增加swap(aws建议添加)</a></h1>
-			<p class="meta"><time datetime="2018-03-06T10:26:05+08:00" 
-			pubdate data-updated="true">2018/3/6</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>添加交换文件步骤： <br/>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15203031656074.html">
+                
+                  <h1>Linux增加swap(aws建议添加)</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>添加交换文件步骤： <br/>
 1、找个地方创建一个.swap的文件，我放在了/mnt目录下 <br/>
 sudo dd if=/dev/zero of=/mnt/10GB.swap bs=1G count=10 <br/>
 这条命令是在/mnt目录下创建一个名为10GB.swap的交换文件，基础大小为1GB，有10个，so：1*10=10GB <br/>
@@ -556,22 +1182,42 @@ sudo gedit /etc/fstab <br/>
 /mnt/10GB.swap none swap sw 0 0 <br/>
 以上步骤为添加交换文件方法。</p>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/3/6</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15203031656074.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15192838129981.html">Geth 的JavaScript控制</a></h1>
-			<p class="meta"><time datetime="2018-02-22T15:16:52+08:00" 
-			pubdate data-updated="true">2018/2/22</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<ol>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15192838129981.html">
+                
+                  <h1>Geth 的JavaScript控制</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<ol>
 <li>  如何连接</li>
 <li><p>常用命令</p>
 <ol>
@@ -610,22 +1256,42 @@ geth attach ws://[IP]:8545</p>
 &gt;通过这个方法可以查看已经连接的节点IP列表
 </code></pre>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/2/22</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Coin.html'>Coin</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15192838129981.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15180905572524.html">Linux 7.4 配置BBR加速</a></h1>
-			<p class="meta"><time datetime="2018-02-08T19:49:17+08:00" 
-			pubdate data-updated="true">2018/2/8</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<h4 id="toc_0">配置BBR加速</h4>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15180905572524.html">
+                
+                  <h1>Linux 7.4 配置BBR加速</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h4 id="toc_0">配置BBR加速</h4>
 
 <p>什么是BBR：</p>
 
@@ -719,22 +1385,42 @@ tcp_bbr                20480  2
 
 <p>输出内容如上，则表示bbr已经成功开启。    </p>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/2/8</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15180905572524.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15180816293582.html">CentOS7.4搭建shadowsocks</a></h1>
-			<p class="meta"><time datetime="2018-02-08T17:20:29+08:00" 
-			pubdate data-updated="true">2018/2/8</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<h4 id="toc_0">安装 pip</h4>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15180816293582.html">
+                
+                  <h1>CentOS7.4搭建shadowsocks</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h4 id="toc_0">安装 pip</h4>
 
 <p>pip是 python 的包管理工具。在本文中将使用 python 版本的 shadowsocks，此版本的 shadowsocks 已发布到 pip 上，因此我们需要通过 pip 命令来安装。</p>
 
@@ -833,22 +1519,42 @@ success
 success
 </code></pre>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/2/8</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15180816293582.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15162450810938.html">MacOS X 10.13(High Sierra)开启隐私权限</a></h1>
-			<p class="meta"><time datetime="2018-01-18T11:11:21+08:00" 
-			pubdate data-updated="true">2018/1/18</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>在下载一些Mac软件后打卡，系统会告诉你说软件受损，需要删除掉。其实，并不是软件受损，而是苹果修改了安全限制。以前，允许来自任何第三方的软件有选项，可以选择。现在，苹果去掉了选项，必须要从App Store或者含有苹果认证证书的软件才可以运行。</p>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15162450810938.html">
+                
+                  <h1>MacOS X 10.13(High Sierra)开启隐私权限</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>在下载一些Mac软件后打卡，系统会告诉你说软件受损，需要删除掉。其实，并不是软件受损，而是苹果修改了安全限制。以前，允许来自任何第三方的软件有选项，可以选择。现在，苹果去掉了选项，必须要从App Store或者含有苹果认证证书的软件才可以运行。</p>
 
 <p>如果关闭这个选项，实现任何软件都可以运行呢？</p>
 
@@ -878,22 +1584,42 @@ success
 
 <p>选择这个选项，软件就可以正常运行了</p>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/1/18</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15162450810938.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15161754454851.html">亚马逊云(aws)提供了4.9核心主机</a></h1>
-			<p class="meta"><time datetime="2018-01-17T15:50:45+08:00" 
-			pubdate data-updated="true">2018/1/17</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>今天发行aws提供了4.9的主机</p>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15161754454851.html">
+                
+                  <h1>亚马逊云(aws)提供了4.9核心主机</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>今天发行aws提供了4.9的主机</p>
 
 <blockquote>
 <p>4.9.76-38.79.amzn2.x86_64</p>
@@ -928,22 +1654,42 @@ net.ipv4.tcp_congestion_control = bbr</p>
 <p>lsmod | grep bbr</p>
 </blockquote>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/1/17</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15161754454851.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15160793301068.html">SSR连接如何解析</a></h1>
-			<p class="meta"><time datetime="2018-01-16T13:08:50+08:00" 
-			pubdate data-updated="true">2018/1/16</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>1、编码后的 URI 格式：</p>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15160793301068.html">
+                
+                  <h1>SSR连接如何解析</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>1、编码后的 URI 格式：</p>
 
 <p>ss://BASE64-ENCODED-STRING-WITHOUT-PADDING</p>
 
@@ -954,22 +1700,42 @@ net.ipv4.tcp_congestion_control = bbr</p>
 <p>3、Base64<br/>
 ss://YmYtY2ZiOnRlc3RAMTkyLjE2OC4xMDAuMTo4ODg4</p>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/1/16</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15160793301068.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15159817711460.html">通过Hook实现VPN代理</a></h1>
-			<p class="meta"><time datetime="2018-01-15T10:02:51+08:00" 
-			pubdate data-updated="true">2018/1/15</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>需要清单:</p>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15159817711460.html">
+                
+                  <h1>通过Hook实现VPN代理</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>需要清单:</p>
 
 <ol>
 <li>外网 IP Server(建议独立)</li>
@@ -977,22 +1743,42 @@ ss://YmYtY2ZiOnRlc3RAMTkyLjE2OC4xMDAuMTo4ODg4</p>
 <li></li>
 </ol>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/1/15</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15159817711460.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15151417121416.html">screen detached了怎么办</a></h1>
-			<p class="meta"><time datetime="2018-01-05T16:41:52+08:00" 
-			pubdate data-updated="true">2018/1/5</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<pre><code class="language-text">screen -X -S [session # you want to kill] quit
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15151417121416.html">
+                
+                  <h1>screen detached了怎么办</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<pre><code class="language-text">screen -X -S [session # you want to kill] quit
 </code></pre>
 
 <p>例如:</p>
@@ -1015,44 +1801,84 @@ There is a screen on:
 <p>参考资料：<br/>
 （1）<a href="http://stackoverflow.com/questions/1509677/kill-detached-screen-session" title="Kill detached screen session">Kill detached screen session</a></p>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/1/5</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15151417121416.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15150357946970.html">在MarkDown中添加潜入视频或音频</a></h1>
-			<p class="meta"><time datetime="2018-01-04T11:16:34+08:00" 
-			pubdate data-updated="true">2018/1/4</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>我们使用iframe来将资源进行潜入</p>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15150357946970.html">
+                
+                  <h1>在MarkDown中添加潜入视频或音频</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>我们使用iframe来将资源进行潜入</p>
 
 <p>下面是一段网易云音乐的音乐播放列表事例,直接在MarkDown中贴上HTML的iframe就可以实现资源的嵌入渲染了.</p>
 
 <pre><code class="language-text">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=450 src=&quot;http://music.163.com/outchain/player?type=1&amp;id=36037083&amp;auto=0&amp;height=430&quot;&gt;&lt;/iframe&gt;
 </code></pre>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/1/4</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15150357946970.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15111487950640.html">【纪录片】《蓝色星球2》单剧连载中</a></h1>
-			<p class="meta"><time datetime="2017-11-20T11:33:15+08:00" 
-			pubdate data-updated="true">2017/11/20</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1floe9z336oj30dw0itq4h.jpg" alt=""/></p>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15111487950640.html">
+                
+                  <h1>【纪录片】《蓝色星球2》单剧连载中</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1floe9z336oj30dw0itq4h.jpg" alt=""/></p>
 
 <p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1floe9sjrk2g30b4069twm.gif" alt=""/></p>
 
@@ -1088,22 +1914,42 @@ ed2k://|file|Blue.Planet.II.S01E01.One.Ocean.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb.
 
 <p>资源来自人人字幕组 zimuzu.tv 感谢你们做出的努力~</p>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2017/11/20</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Movie.html'>Movie</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15111487950640.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15083801639905.html">DxO OpticsPro 11</a></h1>
-			<p class="meta"><time datetime="2017-10-19T10:29:23+08:00" 
-			pubdate data-updated="true">2017/10/19</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>What&#39;s in DxO OpticsPro - Elite Edition:</p>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15083801639905.html">
+                
+                  <h1>DxO OpticsPro 11</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>What&#39;s in DxO OpticsPro - Elite Edition:</p>
 
 <ul>
 <li>Remove atmospheric haze thanks to DxO ClearView</li>
@@ -1131,22 +1977,42 @@ Windows: <a href="https://downloads.sharewareonsale.com/files/hub/sharewareonsal
 <p>Use the code : PRCTPH2017<br/>
 This offer ends on : January, 1st 2018</p>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2017/10/19</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Free.html'>Free</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15083801639905.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15057082298289.html"># 来自深渊 （KINEMA CITRUS改编的电视动画）</a></h1>
-			<p class="meta"><time datetime="2017-09-18T12:17:09+08:00" 
-			pubdate data-updated="true">2017/9/18</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p><img src="http://ofcfvx6lf.bkt.clouddn.com/visual02-02.jpg" alt="visual02-02"/></p>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15057082298289.html">
+                
+                  <h1># 来自深渊 （KINEMA CITRUS改编的电视动画）</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p><img src="http://ofcfvx6lf.bkt.clouddn.com/visual02-02.jpg" alt="visual02-02"/></p>
 
 <p>电视动画《来自深渊》改编自土笔章人原作的同名漫画，动画由KINEMA CITRUS负责制作。于2016年12月21日宣布动画化。</p>
 
@@ -1242,22 +2108,42 @@ This offer ends on : January, 1st 2018</p>
 <pre><code class="language-text">https://pan.baidu.com/s/1dEFVgOT
 </code></pre>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2017/9/18</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Movie.html'>Movie</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15057082298289.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15046915958368.html">敦刻尔克(1080P) Dunkirk 2017 NEW HD-TS x264-CPG</a></h1>
-			<p class="meta"><time datetime="2017-09-06T17:53:15+08:00" 
-			pubdate data-updated="true">2017/9/6</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>《敦刻尔克》是由辛克匹影业出品，美国华纳兄弟影业发行的战争悬疑片，由克里斯托弗·诺兰执导，汤姆·哈迪、肯尼思·布拉纳、马克·里朗斯、哈里·斯泰尔斯、希里安·墨菲、芬恩·怀特海德等领衔主演。<br/>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15046915958368.html">
+                
+                  <h1>敦刻尔克(1080P) Dunkirk 2017 NEW HD-TS x264-CPG</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>《敦刻尔克》是由辛克匹影业出品，美国华纳兄弟影业发行的战争悬疑片，由克里斯托弗·诺兰执导，汤姆·哈迪、肯尼思·布拉纳、马克·里朗斯、哈里·斯泰尔斯、希里安·墨菲、芬恩·怀特海德等领衔主演。<br/>
 该片改编自二战历史事件《敦刻尔克大撤退》，当时40万英法联军被敌军包围在敦刻尔克的海滩上，面对敌军步步逼近的绝境，他们不得不为自己的命运背水一战[1]  。<br/>
 该片于2017年7月21日在美国上映，9月1日在中国大陆上映[2]  。<br/>
 中文名:敦刻尔克<br/>
@@ -1273,44 +2159,84 @@ This offer ends on : January, 1st 2018</p>
 <pre><code class="language-text">ed2k://|file|Dunkirk.2017.BD-1080p.1920X1080.mkv|4297243249|0EAEAFD6C865E3C96C28EDD268E3175D|h=CST5CXE2SWLGSZUJIOBAVF74AWOMFMOR|/
 </code></pre>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2017/9/6</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Movie.html'>Movie</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15046915958368.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15038828406046.html">星际特工：千星之城(1080P & 4K)</a></h1>
-			<p class="meta"><time datetime="2017-08-28T09:14:00+08:00" 
-			pubdate data-updated="true">2017/8/28</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>人类和众多外星种族共同生活在一个名为千星之城阿尔法的繁华星际大都市，数百年来，千星之城阿尔法成为各族群和平共处的美妙天堂，它繁荣昌盛，它欣欣向上，然而，宇宙的神秘黑暗力量正试图摧毁这一切。韦勒瑞恩（戴恩·德哈恩饰）和洛瑞琳（卡拉·迪瓦伊饰）被选择成为阿尔法的守护者，他们俩是警卫部的执行人员，被任命去拦截一种稀有物品的交易。这种稀有物品与一个本该在数十年前就消失的稀有族群存在神秘的关联。然后他们来到了巨大的漂浮都市阿尔法城，这时他们的指挥官Arun Filitt（克里夫·欧文饰）在指挥中心遭到绑架，这对搭档开始意识到手中物品的不寻常价值。二人追寻凶手而来到位于阿尔法城心脏的死亡之境，发现自己身陷一场正在发酵的星际事件中——他们需要通过控制手中那个能够改变宇宙秩序的物品，在其他物种被卷进来之前救出Arun  。</p>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15038828406046.html">
+                
+                  <h1>星际特工：千星之城(1080P & 4K)</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>人类和众多外星种族共同生活在一个名为千星之城阿尔法的繁华星际大都市，数百年来，千星之城阿尔法成为各族群和平共处的美妙天堂，它繁荣昌盛，它欣欣向上，然而，宇宙的神秘黑暗力量正试图摧毁这一切。韦勒瑞恩（戴恩·德哈恩饰）和洛瑞琳（卡拉·迪瓦伊饰）被选择成为阿尔法的守护者，他们俩是警卫部的执行人员，被任命去拦截一种稀有物品的交易。这种稀有物品与一个本该在数十年前就消失的稀有族群存在神秘的关联。然后他们来到了巨大的漂浮都市阿尔法城，这时他们的指挥官Arun Filitt（克里夫·欧文饰）在指挥中心遭到绑架，这对搭档开始意识到手中物品的不寻常价值。二人追寻凶手而来到位于阿尔法城心脏的死亡之境，发现自己身陷一场正在发酵的星际事件中——他们需要通过控制手中那个能够改变宇宙秩序的物品，在其他物种被卷进来之前救出Arun  。</p>
 
 <p><img src="https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=5472f250a3773912d02b8d339970ed7d/8b13632762d0f70333fe213102fa513d2797c58b.jpg" alt=""/></p>
 
 <pre><code class="language-text">magnet:?xt=urn:btih:AN5SS67YIB56US7M6FU5GDDE4EPQQCFW
 </code></pre>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2017/8/28</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Movie.html'>Movie</a></span>
+          				   
+                    
 
-		</div>
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15038828406046.html#disqus_thread">comments</a>
+                      
 
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15017403101947.html">今天遇到了LaunchPad的问题</a></h1>
-			<p class="meta"><time datetime="2017-08-03T14:05:10+08:00" 
-			pubdate data-updated="true">2017/8/3</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>今天遇到了一个Mac OS的LaunchPad的问题，使用手势打开LaunchPad后输入关键字无法进行搜索。</p>
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15017403101947.html">
+                
+                  <h1>今天遇到了LaunchPad的问题</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>今天遇到了一个Mac OS的LaunchPad的问题，使用手势打开LaunchPad后输入关键字无法进行搜索。</p>
 
 <p>处理这个问题我的办法是，重置Dock。<br/>
 LaunchPad是属于Dock的.</p>
@@ -1327,159 +2253,192 @@ LaunchPad是属于Dock的.</p>
 <p>rm ~/Library/Application\ Support/Dock/*.db ; killall Dock</p>
 </blockquote>
 
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2017/8/3</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+                        <a href="https://jarryyen.github.io/15017403101947.html#disqus_thread">comments</a>
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+              
+
+
+			<div class="row">
+			  <div class="large-6 columns">
+			  <p class="text-left" style="padding-top:25px;">
+			   
+			  </p>
+			  </div>
+			  <div class="large-6 columns">
+			<p class="text-right" style="padding-top:25px;">
+			
+			</p>
+			  </div>
+			</div>
 		</div>
+	</div><!-- large 8 -->
 
-		
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+          <div id="site-info" class="site-info">
+            
+                <h1>jarryyen.github.io</h1>
+                <div class="site-des"></div>
+                <div class="social">
 
-	</article>
-  
-	<div class="pagination">
-	
-<a href="archives.html">Blog Archives</a>
-	 
-	    
-	</div>
+
+
+
+
+
+
+
+
+<a target="_blank" class="github" target="_blank" href="https://github.com/jarryyen" title="GitHub">GitHub</a>
+
+  <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+                
+              	 </div>
+          	</div>
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Categories</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="jenkins.html"><strong>jenkins</strong></a>
+        
+            <a href="Movie.html"><strong>Movie</strong></a>
+        
+            <a href="Tips.html"><strong>Tips</strong></a>
+        
+            <a href="Free.html"><strong>Free</strong></a>
+        
+            <a href="Share.html"><strong>Share</strong></a>
+        
+            <a href="Coin.html"><strong>Coin</strong></a>
+        
+            <a href="scrapy.html"><strong>scrapy</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>Recent Posts</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="15759676309433.html">Shadowsocks-NG-R8订阅失效问题</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15734416345812.html">Centos 8 直接开启BBR</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15664660068365.html">MacOS删除文件不释放空间？</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15663803373515.html">百日攻坚后台接口</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15646322854275.html">在MacOS下无需安装任何工具解压PKG</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
+ <div class="page-bottom clearfix">
+  <div class="row">
+   <p class="copyright">Copyright &copy; 2015
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
 </div>
- <aside class="sidebar"> 
 
-	<section>
-	  <h1>Categories</h1>
-	  <ul id="recent_posts">
-	  
-	      <li class="post">
-	        <a href="jenkins.html"><strong>jenkins&nbsp;(1)</strong></a>
-	        
-	        
-	        
-	      </li>
-	  
-	      <li class="post">
-	        <a href="Movie.html"><strong>Movie&nbsp;(4)</strong></a>
-	        
-	        
-	        
-	      </li>
-	  
-	      <li class="post">
-	        <a href="Tips.html"><strong>Tips&nbsp;(17)</strong></a>
-	        
-	        
-	        
-	      </li>
-	  
-	      <li class="post">
-	        <a href="Free.html"><strong>Free&nbsp;(1)</strong></a>
-	        
-	        
-	        
-	      </li>
-	  
-	      <li class="post">
-	        <a href="Share.html"><strong>Share&nbsp;(2)</strong></a>
-	        
-	        
-	        
-	      </li>
-	  
-	      <li class="post">
-	        <a href="Coin.html"><strong>Coin&nbsp;(2)</strong></a>
-	        
-	        
-	        
-	      </li>
-	  
-	      <li class="post">
-	        <a href="scrapy.html"><strong>scrapy&nbsp;(1)</strong></a>
-	        
-	        
-	        
-	      </li>
-	   
-	  </ul>
-	</section>
-	<section>
-	  <h1>Recent Posts</h1>
-	  <ul id="recent_posts">
-	  
-	      
-		      <li class="post">
-		        <a href="15646322854275.html">在MacOS下无需安装任何工具解压PKG</a>
-		      </li>
-	     
-	  
-	      
-		      <li class="post">
-		        <a href="15638065887503.html">不使用PHPExcel导出Excel文件</a>
-		      </li>
-	     
-	  
-	      
-		      <li class="post">
-		        <a href="15459836208690.html">1.Mac上如何安装Python3和scrapy</a>
-		      </li>
-	     
-	  
-	      
-		      <li class="post">
-		        <a href="15451223173625.html">代码merge常用命令</a>
-		      </li>
-	     
-	  
-	      
-		      <li class="post">
-		        <a href="15451222627805.html">以太坊相关参考文档</a>
-		      </li>
-	     
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	   
-	  </ul>
-	</section>
-	<section>
-	  <h1>Links</h1>
-	  <ul id="recent_posts">
-		      <li class="post">
-		        <a href="https://xxlaila.github.io/">懒洋洋的博客</a>
-		      </li>
-	  </ul>
-	</section>
-	
-</aside> </div></div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2014 -  -
-  <span class="credit">Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a> &nbsp;&nbsp; Theme by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
+        </section>
+      </div>
+    </div>
 
 
 <script type="text/javascript">
@@ -1505,8 +2464,26 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
   
     
 
+    <script src="asset/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      function fixSidebarHeight(){
+        var w1 = $('.markdown-body').height();
+          var w2 = $('#sidebar').height();
+          if (w1 > w2) { $('#sidebar').height(w1); };
+      }
+      $(function(){
+        fixSidebarHeight();
+      })
+      $(window).load(function(){
+          fixSidebarHeight();
+      });
+     
+    </script>
+
+    
 
 
 
-</body>
+  </body>
 </html>
