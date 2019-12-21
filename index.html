@@ -15,9 +15,7 @@
     <link rel="stylesheet" href="asset/css/docs.css" />
     <script src="asset/js/vendor/modernizr.js"></script>
     <script src="asset/js/vendor/jquery.js"></script>
-  <script src="asset/highlightjs/highlight.pack.js"></script>
-  <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script>hljs.initHighlightingOnLoad();</script>
+ 
 <script type="text/javascript">
   function before_search(){
     var searchVal = 'site:jarryyen.github.io ' + document.getElementById('search_input').value;
@@ -250,214 +248,6 @@ net.ipv4.tcp_congestion_control = bbr
                   <span class="comments">
                       
                         <a href="https://jarryyen.github.io/15664660068365.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15663803373515.html">
-                
-                  <h1>百日攻坚后台接口</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<blockquote>
-<p>baseURL <a href="http://100day.hlgnet.com/api/">http://100day.hlgnet.com/api/</a></p>
-
-<p>预设值: auth = 7B6E50D62577C570CD541ABBF3B476E8</p>
-</blockquote>
-
-<h2 id="toc_0">1.获取信息列表</h2>
-
-<h5 id="toc_1">文件名:</h5>
-
-<blockquote>
-<pre><code class="language-text">  getInfoList.php
-</code></pre>
-</blockquote>
-
-<h5 id="toc_2">请求:</h5>
-
-<blockquote>
-<pre><code class="language-text">  GET/POST
-</code></pre>
-</blockquote>
-
-<h5 id="toc_3">参数:</h5>
-
-<blockquote>
-<pre><code class="language-text">  page //页数
-  count //获取信息数量
-  authkey //验证key
-</code></pre>
-
-<p>(这个接口中data中的每一组值中的 nickstatus 如果为1就隐藏用户头像及微信昵称,为0就不隐藏)</p>
-</blockquote>
-
-<h5 id="toc_4">返回类型:</h5>
-
-<blockquote>
-<pre><code class="language-text">  json
-</code></pre>
-</blockquote>
-
-<h5 id="toc_5">返回值:</h5>
-
-<blockquote>
-<pre><code class="language-text">  data //列表数据
-  count //总数
-  totalpages //总页数
-</code></pre>
-</blockquote>
-
-<h2 id="toc_6">2.过审以及取消过审</h2>
-
-<h5 id="toc_7">文件名:</h5>
-
-<blockquote>
-<pre><code class="language-text">  activeId.php
-</code></pre>
-</blockquote>
-
-<h5 id="toc_8">请求:</h5>
-
-<blockquote>
-<pre><code class="language-text">  GET/POST
-</code></pre>
-</blockquote>
-
-<h5 id="toc_9">参数:</h5>
-
-<blockquote>
-<pre><code class="language-text">  active //1为过审，0为取消过审
-  id //信息ID
-  authkey //验证key
-</code></pre>
-</blockquote>
-
-<h5 id="toc_10">返回类型:</h5>
-
-<blockquote>
-<pre><code class="language-text">  json
-</code></pre>
-</blockquote>
-
-<h5 id="toc_11">返回值:</h5>
-
-<blockquote>
-<pre><code class="language-text">  status //返回状态，1为成功，0为未成功
-  message //返回文字信息
-</code></pre>
-</blockquote>
-
-<h2 id="toc_12">3.获取或保存结果</h2>
-
-<h5 id="toc_13">文件名:</h5>
-
-<blockquote>
-<pre><code class="language-text">  tag.php
-</code></pre>
-</blockquote>
-
-<h5 id="toc_14">请求:</h5>
-
-<blockquote>
-<pre><code class="language-text">  GET/POST
-</code></pre>
-</blockquote>
-
-<h5 id="toc_15">参数:</h5>
-
-<blockquote>
-<pre><code class="language-text">  type //1为读取，2为保存
-  id //信息ID
-  conn //文字内容
-  pic //图片URL(图片URL使用逗号隔开)
-  authkey //验证key
-</code></pre>
-</blockquote>
-
-<h5 id="toc_16">返回类型:</h5>
-
-<blockquote>
-<pre><code class="language-text">  json
-</code></pre>
-</blockquote>
-
-<h5 id="toc_17">返回值:</h5>
-
-<blockquote>
-<pre><code class="language-text">  status //返回状态，1为成功，0为未成功
-  message //返回文字信息
-  data //返回数据列表
-</code></pre>
-</blockquote>
-
-<h3 id="toc_18">4.获取或保存相关部门</h3>
-
-<h5 id="toc_19">文件名:</h5>
-
-<blockquote>
-<pre><code class="language-text">  jurisdiction.php
-</code></pre>
-</blockquote>
-
-<h5 id="toc_20">请求:</h5>
-
-<blockquote>
-<pre><code class="language-text">  GET/POST
-</code></pre>
-</blockquote>
-
-<h5 id="toc_21">参数:</h5>
-
-<blockquote>
-<pre><code class="language-text">  type //1为读取，2为保存
-  id //信息ID
-  submit //部门ID(使用逗号隔开)
-  pic //图片URL(图片URL使用逗号隔开)
-  authkey //验证key
-</code></pre>
-</blockquote>
-
-<h5 id="toc_22">返回类型:</h5>
-
-<blockquote>
-<pre><code class="language-text">  json
-</code></pre>
-</blockquote>
-
-<h5 id="toc_23">返回值:</h5>
-
-<blockquote>
-<pre><code class="language-text">  status //返回状态，1为成功，0为未成功
-  message //返回文字信息
-  data //返回数据列表
-</code></pre>
-</blockquote>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2019/8/21</span>
-                    
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15663803373515.html#disqus_thread">comments</a>
                       
 
                        
@@ -2379,13 +2169,13 @@ LaunchPad是属于Dock的.</p>
 		  
 		      
 			      <li class="post">
-			        <a href="15663803373515.html">百日攻坚后台接口</a>
+			        <a href="15646322854275.html">在MacOS下无需安装任何工具解压PKG</a>
 			      </li>
 		     
 		  
 		      
 			      <li class="post">
-			        <a href="15646322854275.html">在MacOS下无需安装任何工具解压PKG</a>
+			        <a href="15638065887503.html">不使用PHPExcel导出Excel文件</a>
 			      </li>
 		     
 		  
@@ -2441,6 +2231,213 @@ Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
     </div>
 
 
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+figure{margin: 0;padding: 0;}
+figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+</style>
+
+
 <script type="text/javascript">
     var disqus_shortname = 'jarryyen'; 
 
@@ -2480,8 +2477,6 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
       });
      
     </script>
-
-    
 
 
 

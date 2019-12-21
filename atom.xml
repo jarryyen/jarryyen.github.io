@@ -4,7 +4,7 @@
   <title><![CDATA[jarryyen.github.io]]></title>
   <link href="https://jarryyen.github.io/atom.xml" rel="self"/>
   <link href="https://jarryyen.github.io/"/>
-  <updated>2019-12-10T17:17:21+08:00</updated>
+  <updated>2019-12-10T18:14:03+08:00</updated>
   <id>https://jarryyen.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -77,190 +77,6 @@ net.ipv4.tcp_congestion_control = bbr
 
 <pre><code class="language-text">tmutil thinlocalsnapshots / 999999999999999 4
 </code></pre>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[百日攻坚后台接口]]></title>
-    <link href="https://jarryyen.github.io/15663803373515.html"/>
-    <updated>2019-08-21T17:38:57+08:00</updated>
-    <id>https://jarryyen.github.io/15663803373515.html</id>
-    <content type="html"><![CDATA[
-<blockquote>
-<p>baseURL <a href="http://100day.hlgnet.com/api/">http://100day.hlgnet.com/api/</a></p>
-
-<p>预设值: auth = 7B6E50D62577C570CD541ABBF3B476E8</p>
-</blockquote>
-
-<h2 id="toc_0">1.获取信息列表</h2>
-
-<h5 id="toc_1">文件名:</h5>
-
-<blockquote>
-<pre><code class="language-text">  getInfoList.php
-</code></pre>
-</blockquote>
-
-<h5 id="toc_2">请求:</h5>
-
-<blockquote>
-<pre><code class="language-text">  GET/POST
-</code></pre>
-</blockquote>
-
-<h5 id="toc_3">参数:</h5>
-
-<blockquote>
-<pre><code class="language-text">  page //页数
-  count //获取信息数量
-  authkey //验证key
-</code></pre>
-
-<p>(这个接口中data中的每一组值中的 nickstatus 如果为1就隐藏用户头像及微信昵称,为0就不隐藏)</p>
-</blockquote>
-
-<h5 id="toc_4">返回类型:</h5>
-
-<blockquote>
-<pre><code class="language-text">  json
-</code></pre>
-</blockquote>
-
-<h5 id="toc_5">返回值:</h5>
-
-<blockquote>
-<pre><code class="language-text">  data //列表数据
-  count //总数
-  totalpages //总页数
-</code></pre>
-</blockquote>
-
-<h2 id="toc_6">2.过审以及取消过审</h2>
-
-<h5 id="toc_7">文件名:</h5>
-
-<blockquote>
-<pre><code class="language-text">  activeId.php
-</code></pre>
-</blockquote>
-
-<h5 id="toc_8">请求:</h5>
-
-<blockquote>
-<pre><code class="language-text">  GET/POST
-</code></pre>
-</blockquote>
-
-<h5 id="toc_9">参数:</h5>
-
-<blockquote>
-<pre><code class="language-text">  active //1为过审，0为取消过审
-  id //信息ID
-  authkey //验证key
-</code></pre>
-</blockquote>
-
-<h5 id="toc_10">返回类型:</h5>
-
-<blockquote>
-<pre><code class="language-text">  json
-</code></pre>
-</blockquote>
-
-<h5 id="toc_11">返回值:</h5>
-
-<blockquote>
-<pre><code class="language-text">  status //返回状态，1为成功，0为未成功
-  message //返回文字信息
-</code></pre>
-</blockquote>
-
-<h2 id="toc_12">3.获取或保存结果</h2>
-
-<h5 id="toc_13">文件名:</h5>
-
-<blockquote>
-<pre><code class="language-text">  tag.php
-</code></pre>
-</blockquote>
-
-<h5 id="toc_14">请求:</h5>
-
-<blockquote>
-<pre><code class="language-text">  GET/POST
-</code></pre>
-</blockquote>
-
-<h5 id="toc_15">参数:</h5>
-
-<blockquote>
-<pre><code class="language-text">  type //1为读取，2为保存
-  id //信息ID
-  conn //文字内容
-  pic //图片URL(图片URL使用逗号隔开)
-  authkey //验证key
-</code></pre>
-</blockquote>
-
-<h5 id="toc_16">返回类型:</h5>
-
-<blockquote>
-<pre><code class="language-text">  json
-</code></pre>
-</blockquote>
-
-<h5 id="toc_17">返回值:</h5>
-
-<blockquote>
-<pre><code class="language-text">  status //返回状态，1为成功，0为未成功
-  message //返回文字信息
-  data //返回数据列表
-</code></pre>
-</blockquote>
-
-<h3 id="toc_18">4.获取或保存相关部门</h3>
-
-<h5 id="toc_19">文件名:</h5>
-
-<blockquote>
-<pre><code class="language-text">  jurisdiction.php
-</code></pre>
-</blockquote>
-
-<h5 id="toc_20">请求:</h5>
-
-<blockquote>
-<pre><code class="language-text">  GET/POST
-</code></pre>
-</blockquote>
-
-<h5 id="toc_21">参数:</h5>
-
-<blockquote>
-<pre><code class="language-text">  type //1为读取，2为保存
-  id //信息ID
-  submit //部门ID(使用逗号隔开)
-  pic //图片URL(图片URL使用逗号隔开)
-  authkey //验证key
-</code></pre>
-</blockquote>
-
-<h5 id="toc_22">返回类型:</h5>
-
-<blockquote>
-<pre><code class="language-text">  json
-</code></pre>
-</blockquote>
-
-<h5 id="toc_23">返回值:</h5>
-
-<blockquote>
-<pre><code class="language-text">  status //返回状态，1为成功，0为未成功
-  message //返回文字信息
-  data //返回数据列表
-</code></pre>
-</blockquote>
 
 ]]></content>
   </entry>
@@ -925,6 +741,45 @@ success
 [root@server ~]# firewall-cmd --reload
 success
 </code></pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MacOS X 10.13(High Sierra)开启隐私权限]]></title>
+    <link href="https://jarryyen.github.io/15162450810938.html"/>
+    <updated>2018-01-18T11:11:21+08:00</updated>
+    <id>https://jarryyen.github.io/15162450810938.html</id>
+    <content type="html"><![CDATA[
+<p>在下载一些Mac软件后打卡，系统会告诉你说软件受损，需要删除掉。其实，并不是软件受损，而是苹果修改了安全限制。以前，允许来自任何第三方的软件有选项，可以选择。现在，苹果去掉了选项，必须要从App Store或者含有苹果认证证书的软件才可以运行。</p>
+
+<p>如果关闭这个选项，实现任何软件都可以运行呢？</p>
+
+<p>我们只需要打开终端，输入下面的命令</p>
+
+<blockquote>
+<p>sudo spctl --master-disable</p>
+</blockquote>
+
+<p>然后打开系统便好设置-&gt;安全性与隐私选项-&gt;任何来源（最下面）<br/>
+![WX20180118-111614@2x](# MacOS X 10.13(High Sierra)开启隐私权限</p>
+
+<p>在下载一些Mac软件后打开，系统会告诉你说软件受损，需要删除掉。其实，并不是软件受损，而是苹果修改了安全限制。以前，允许来自任何第三方的软件有选项，可以选择。现在，苹果去掉了选项，必须要从App Store或者含有苹果认证证书的软件才可以运行。</p>
+
+<p>如果关闭这个选项，实现任何软件都可以运行呢？</p>
+
+<p>我们只需要打开终端，输入下面的命令</p>
+
+<blockquote>
+<p>sudo spctl --master-disable</p>
+</blockquote>
+
+<p>然后打开系统便好设置-&gt;安全性与隐私选项-&gt;任何来源（最下面）<br/>
+<img src="http://ofcfvx6lf.bkt.clouddn.com/WX20180118-111614@2x.png" alt="安全性与隐私"/></p>
+
+<p>选择这个选项，软件就可以正常运行了</p>
+
+<p>选择这个选项，软件就可以正常运行了</p>
 
 ]]></content>
   </entry>
