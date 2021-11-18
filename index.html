@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  jarryyen.github.io
+  JarryYen的小日子
   
   </title>
   
   
-  <link href="atom.xml" rel="alternate" title="jarryyen.github.io" type="application/atom+xml">
+  <link href="atom.xml" rel="alternate" title="JarryYen的小日子" type="application/atom+xml">
     <link rel="stylesheet" href="asset/css/foundation.min.css" />
     <link rel="stylesheet" href="asset/css/docs.css" />
     <script src="asset/js/vendor/modernizr.js"></script>
@@ -38,9 +38,11 @@
       <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
         <ul id="main-menu" class="left">
         
-        <li id=""><a target="self" href="index.html">Home</a></li>
+        <li id=""><a target="_self" href="index.html">Home</a></li>
         
         <li id=""><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li id=""><a target="_self" href="atom.xml">RSS</a></li>
         
         </ul>
 
@@ -60,24 +62,24 @@
 
         <nav class="tab-bar show-for-small">
   <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
-    <span> &nbsp; jarryyen.github.io</span>
+    <span> &nbsp; JarryYen的小日子</span>
   </a>
 </nav>
 
 <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
         
-        <li><a target="self" href="index.html">Home</a></li>
+        <li><a target="_self" href="index.html">Home</a></li>
         
         <li><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li><a target="_self" href="atom.xml">RSS</a></li>
         
 
     <li><label>Categories</label></li>
 
         
             <li><a href="jenkins.html">jenkins</a></li>
-        
-            <li><a href="Movie.html">Movie</a></li>
         
             <li><a href="Tips.html">Tips</a></li>
         
@@ -110,25 +112,20 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
-                <a class="clearlink" href="15759676309433.html">
+                <a class="clearlink" href="16364459575433.html">
                 
-                  <h1>Shadowsocks-NG-R8订阅失效问题</h1>
+                  <h1>用BT面板</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
-                        	<p>在下图中为止添加如下两句话</p>
-
-<p>.......</p>
-
-<pre><code class="language-text">&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
-&lt;dict&gt;
-&lt;key&gt;NSAllowsArbitraryLoads&lt;/key&gt; 
-&lt;true/&gt;
-&lt;/dict&gt;
+                        	<p>这是在妖火上看到的最新的免流地址</p>
+<pre><code class="language-plain_text">联通最新免流混淆（4G/5G均免）
+shoutingtoutiao1.10010.com
+shoutingtoutiao2.10010.com
+shoutingtoutiao3.10010.com
+shoutingtoutiao4.10010.com
 </code></pre>
-
-<p><img src="media/15759676309433/WX20191205-093035@2x.png" alt="WX20191205-093035@2x"/></p>
 
                         
                       </div>
@@ -137,7 +134,7 @@
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2019/12/10</span>
+                    <span class="date">2021/11/09</span>
                     <span>posted in&nbsp;</span> 
           				  
           					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
@@ -148,8 +145,6 @@
                   <div class="more-right right">
                   <span class="comments">
                       
-                        <a href="https://jarryyen.github.io/15759676309433.html#disqus_thread">comments</a>
-                      
 
                        
                   </span>
@@ -158,32 +153,29 @@
               </div><!-- article -->
         
 			<div class="article">
-                <a class="clearlink" href="15734416345812.html">
+                <a class="clearlink" href="16324699802783.html">
                 
-                  <h1>Centos 8 直接开启BBR</h1>
+                  <h1>今天解决了手机残留证书的问题</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
                         	<blockquote>
-<p>由于Centos8内核默认已经升级到 4.18 , 所以可以直接开启BBR</p>
+<p>前言:<br />
+之前由于手机里面安装了很多证书,这些证书随着旧手机迁移到了新手机.<br />
+迁移到新手机后,发现描述文件没有了.但是,证书依然还在.<br />
+因为此问题,折腾了好几天.</p>
 </blockquote>
-
-<h4 id="toc_0">1.修改配置文件</h4>
-
-<pre><code class="language-text">vim /etc/sysctl.conf
-</code></pre>
-
-<h4 id="toc_1">2.添加配置选项</h4>
-
-<pre><code class="language-text">net.core.default_qdisc = fq
-net.ipv4.tcp_congestion_control = bbr
-</code></pre>
-
-<h4 id="toc_2">3.启动</h4>
-
-<pre><code class="language-text">sysctl -p
-</code></pre>
+<h4><a id="1-imazing%E7%9C%9F%E7%9A%84%E4%B8%8D%E5%A5%BD%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.iMazing 真的不好用</h4>
+<p>这款软件除了收费还是收费,免费的功能非常少.以下内容提到的到处数据文件是无法在免费版里面完成的,当然如果你购买了收费版本可以考虑使用这款软件.</p>
+<h4><a id="2-iphone-backup-extractor%E5%85%8D%E8%B4%B9%E7%89%88%E4%B9%9F%E5%BE%88%E5%A5%BD%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.iPhone Backup Extractor 免费版也很好用</h4>
+<p>这次我使用的是这款软件,可以免费把Tur*****.db导出.</p>
+<h4><a id="3-advtruststore" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.ADVTrustStore</h4>
+<p>使用ADVTrustStore导出相应的证书</p>
+<h4><a id="4%E5%AF%BC%E5%85%A5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.导入</h4>
+<p>将导出的证书通过Airdrop安装到你的iPhone上</p>
+<h4><a id="5%E5%88%A0%E9%99%A4" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.删除</h4>
+<p>安装好之后你会发现对应证书的描述文件就出现了,这时通过描述文件就可以把对应的证书删除掉了.</p>
 
                         
                       </div>
@@ -192,7 +184,7 @@ net.ipv4.tcp_congestion_control = bbr
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2019/11/11</span>
+                    <span class="date">2021/09/24</span>
                     <span>posted in&nbsp;</span> 
           				  
           					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
@@ -203,8 +195,6 @@ net.ipv4.tcp_congestion_control = bbr
                   <div class="more-right right">
                   <span class="comments">
                       
-                        <a href="https://jarryyen.github.io/15734416345812.html#disqus_thread">comments</a>
-                      
 
                        
                   </span>
@@ -213,20 +203,51 @@ net.ipv4.tcp_congestion_control = bbr
               </div><!-- article -->
         
 			<div class="article">
-                <a class="clearlink" href="15664660068365.html">
+                <a class="clearlink" href="16306473763283.html">
                 
-                  <h1>MacOS删除文件不释放空间？</h1>
+                  <h1>codeigniter 去除index.php (nginx,apache) 通用方法</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
-                        	<p>我今天遇到了一个很头疼的问题，我删除了很多文件但是使用空间一直没有被释放。</p>
+                        	<h5><a id="htaccess%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>.htaccess文件配置</h5>
+<pre><code class="language-plain_text">&lt;IfModule mod_rewrite.c&gt;
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond $1 !^(index\.php|assets|system|robots\.txt)
+  RewriteRule ^(.*)$ /index.php/$1 [L,QSA]
+&lt;/IfModule&gt;
+</code></pre>
+<h3><a id="%E7%AE%80%E8%A6%81%E8%AF%B4%E6%98%8E%EF%BC%9A%E5%85%B3%E9%94%AE%E6%98%AF%E8%BF%99%E5%8F%A5%EF%BC%9Arewirtecond%EF%BC%8C-assets%E6%98%AF%E7%9B%AE%E5%BD%95%E3%80%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>简要说明：关键是这句：rewirteCond ，assets是目录。</h3>
+<hr />
+<h5><a id="apache%E7%9A%84%E9%85%8D%E7%BD%AE%EF%BC%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>apache的配置：</h5>
+<pre><code class="language-plain_text">&lt;VirtualHost *:80&gt;
+    ServerAdmin jjj@163.com
+    DocumentRoot &quot;d:/mywork/m&quot;
 
-<p>在终端里面 df -Hs 后看到使用空间一点也没有被释放。</p>
+    ServerName m.mimi.com
 
-<p>最后找到了Apple在线客服，使用一条命令就完成了。</p>
-
-<pre><code class="language-text">tmutil thinlocalsnapshots / 999999999999999 4
+    &lt;Directory &quot;d:/mywork/m&quot;&gt;  　　// 这里是项目的目录
+        Options Indexes MultiViews FollowSymLinks
+        AllowOverride All
+        Order allow,deny
+        allow from all
+   &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</code></pre>
+<hr />
+<h5><a id="%E7%AE%80%E8%A6%81%E8%AF%B4%E6%98%8E%EF%BC%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>简要说明：</h5>
+<p>ServerAdmin表示错误信息地址，如果发生错误发送到这个邮箱地址。</p>
+<p>Indexes 的作用就是当该目录下没有 index.html 文件时，就显示目录结构，去掉 Indexes，Apache 就不会显示该目录的列表了。</p>
+<p>Nginx配置几句</p>
+<pre><code class="language-plain_text">location /
+        {
+            index index.php;
+            if (!-e $request_filename) {
+                    rewrite ^/(.*)$ /index.php?$1 last;
+                    break;
+            }
+        }
 </code></pre>
 
                         
@@ -236,7 +257,40 @@ net.ipv4.tcp_congestion_control = bbr
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2019/8/22</span>
+                    <span class="date">2021/09/03</span>
+                    
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="16057763012390.html">
+                
+                  <h1>https导致微信内分享链接无图片以及描述等信息</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>今天遇到了一个特别的问题，之前的页面没有启用https。原因竟然是在计算signature的时候需要传入一个完整的url，但是程序传入的url是不带https的。最终导致signature计算错误，无法实现正常的分享等操作。只需要添加一个判断，让计算signature的时候传入正确的url地址即可。</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2020/11/19</span>
                     <span>posted in&nbsp;</span> 
           				  
           					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
@@ -247,8 +301,6 @@ net.ipv4.tcp_congestion_control = bbr
                   <div class="more-right right">
                   <span class="comments">
                       
-                        <a href="https://jarryyen.github.io/15664660068365.html#disqus_thread">comments</a>
-                      
 
                        
                   </span>
@@ -257,17 +309,29 @@ net.ipv4.tcp_congestion_control = bbr
               </div><!-- article -->
         
 			<div class="article">
-                <a class="clearlink" href="15646322854275.html">
+                <a class="clearlink" href="16043696365923.html">
                 
-                  <h1>在MacOS下无需安装任何工具解压PKG</h1>
+                  <h1>今天使用BT(宝塔)出现了这个问题</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
-                        	<pre><code class="language-text">xar -xf [文件名].pkg //之后会解压出来一个新的pkg文件
-
-cat [新的pkg文件名].pkg/Payload | cpio -i //就可以解压出来相应的app了
+                        	<pre><code class="language-plain_text">[Tue Nov 03 10:01:38.237329 2020] [proxy_fcgi:error] [pid 2405:tid 140039740675840] [client 60.205.xxx.xxx:51754] AH01071: Got error 'Primary script unknown\n'
+[Tue Nov 03 10:04:51.147084 2020] [ssl:warn] [pid 21999:tid 140040390793088] AH01909: SSL.target.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Nov 03 10:05:22.670931 2020] [ssl:warn] [pid 21999:tid 140040390793088] AH01909: SSL.target.com:443:0 server certificate does NOT include an ID which matches the server name
 </code></pre>
+<p>这个问题出现在启用SSL后,在站点的设置选项-》配置-〉找到SSL部分</p>
+<pre><code class="language-plain_text">&lt;VirtualHost *:443&gt;
+    ServerAdmin webmasterexample.com
+    DocumentRoot &quot;/data/www/wwwroot/target.com/&quot;
+    ServerName SSL.target.com
+    ServerAlias target.com
+    
+    #errorDocument 404 /404.html
+    ErrorLog &quot;/www/wwwlogs/target.com-error_log&quot;
+    CustomLog &quot;/www/wwwlogs/target.com-access_log&quot; combined
+</code></pre>
+<p>其中 ServerName 去掉 SSL. 开头,然后注释掉ServerAlias即可.保存然后重启Apache</p>
 
                         
                       </div>
@@ -276,7 +340,7 @@ cat [新的pkg文件名].pkg/Payload | cpio -i //就可以解压出来相应的a
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2019/8/1</span>
+                    <span class="date">2020/11/03</span>
                     <span>posted in&nbsp;</span> 
           				  
           					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
@@ -287,8 +351,6 @@ cat [新的pkg文件名].pkg/Payload | cpio -i //就可以解压出来相应的a
                   <div class="more-right right">
                   <span class="comments">
                       
-                        <a href="https://jarryyen.github.io/15646322854275.html#disqus_thread">comments</a>
-                      
 
                        
                   </span>
@@ -297,87 +359,28 @@ cat [新的pkg文件名].pkg/Payload | cpio -i //就可以解压出来相应的a
               </div><!-- article -->
         
 			<div class="article">
-                <a class="clearlink" href="15638065887503.html">
+                <a class="clearlink" href="15924471851785.html">
                 
-                  <h1>不使用PHPExcel导出Excel文件</h1>
+                  <h1>北京的武汉人没有感恩的心</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
-                        	<pre><code class="language-text">$table = &#39;&lt;html xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot; xmlns:x=&quot;urn:schemas-microsoft-com:office:excel&quot; xmlns=&quot;http://www.w3.org/TR/REC-html40&quot;&gt;&lt;head&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;&lt;x:ExcelWorkbook&gt;&lt;x:ExcelWorksheets&gt;&lt;x:ExcelWorksheet&gt;&lt;x:Name&gt;{worksheet}&lt;/x:Name&gt;&lt;x:WorksheetOptions&gt;&lt;x:DisplayGridlines/&gt;&lt;/x:WorksheetOptions&gt;&lt;/x:ExcelWorksheet&gt;&lt;/x:ExcelWorksheets&gt;&lt;/x:ExcelWorkbook&gt;&lt;/xml&gt;&lt;![endif]--&gt;&lt;style type=&quot;text/css&quot;&gt;
-.excelTable  {border-collapse:collapse;border:thin solid #999;}
-.excelTable  th {border: thin solid #999;padding:20px;text-align: center;border-top: thin solid #999;background-color: #E6E6E6;}
-.excelTable  td {border:thin solid #999;padding:2px 5px;text-align: center;}
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&#39;;
-$table .= &quot;&lt;table&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th class=&#39;name&#39;&gt;追逆ID&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;用户ID&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;状态&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;创建时间&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;问题描述&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;问题类型&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;问题图片1&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;问题图片2&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;问题地址&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;投诉人电话&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;备注&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-            &lt;tbody&gt;&quot;;
-foreach ($innerdata as $k =&gt; $v) {
-    $id = $v[&#39;id&#39;];
-    $userid = $v[&#39;users_id&#39;];
-    $status = $v[&#39;status&#39;]==1?&#39;已过审&#39;:&#39;未过审&#39;;
-    $create_time = $v[&#39;create_time&#39;];
-    $qcon = $v[&#39;qcon&#39;];
-    $qid = getQName($v[&#39;qid&#39;]);
-    $photo1 = $v[&#39;photo1&#39;];
-    $address = $v[&#39;address&#39;];
-    $phone = $v[&#39;phone&#39;];
-    //$unionid = $v[&#39;wx_unionid&#39;];
-    $unionid = $v[&#39;users_id&#39;];
-    $tag = $v[&#39;tag&#39;];
-
-    $tmp = json_decode($v[&#39;photo2&#39;]);
-    $ttmp = &#39;&#39;;
-    foreach ($tmp as $v){
-        $ttmp .= $v.&#39;,&#39;;
-    }
-    $photo2 = $ttmp;
-
-    $table .= &quot;&lt;tr&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$id}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$userid}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$status}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$create_time}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$qcon}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$qid}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$photo1}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$photo2}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$address}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$phone}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$tag}&lt;/td&gt;
-                &lt;/tr&gt;&quot;;
-}
-$table .= &quot;&lt;/tbody&gt;
-        &lt;/table&gt;
-        &lt;/body&gt;
-        &lt;/html&gt;&quot;;
-
-//通过header头控制输出excel表格
-header(&quot;Pragma: public&quot;);
-header(&quot;Expires: 0&quot;);
-header(&quot;Cache-Control:must-revalidate, post-check=0, pre-check=0&quot;);
-header(&quot;Content-Type:application/force-download&quot;);
-header(&quot;Content-Type:application/vnd.ms-execl&quot;);
-header(&quot;Content-Type:application/octet-stream&quot;);
-header(&quot;Content-Type:application/download&quot;);;
-header(&#39;Content-Disposition:attachment;filename=&quot;百日攻坚.xls&quot;&#39;);
-header(&quot;Content-Transfer-Encoding:binary&quot;);
-echo $table;
-</code></pre>
+                        	<p>我有个女同事,平时关系不错.最近由于北京疫情的问题,我们讨论了一下.</p>
+<p>这位姐姐是湖北武汉人,她说在全国最缺口罩的时候.她老公的单位(某央企),每个人发了一箱KF94口罩.</p>
+<p>我不能说羡慕,我只是想给医护人员一个公道.在疫情最严重的时候,北京的医院给医生配备的是什么口罩?<br />
+一天一个“一次性医用外科口罩”,不是两个“是一个”.<br />
+因为产量不足,应该每天两个的口罩变成了1个.但是,所有的医护人员没有因此就请假的.</p>
+<p>但是,这里就要提到我那个同事姐姐的老公了.在北京某央企上班,在家办公还能得到一箱KF94口罩......</p>
+<p>这对来自湖北武汉的夫妻真是福气,在家办公都有KF94.</p>
+<p>最主要的,那位姐姐说了.医院不发你要去告医院去,央企是国家的企业....</p>
+<p>难道医院就不是国家的嘛?北京的公立医院那在那个时期就是每人每天1个口罩啊,公立医院难道不是国家的嘛??</p>
+<p>我接触的武汉人不多,只有这位同事.所以,我不能说所有武汉人都这样,但是至少我身边的这位武汉人是这样.</p>
+<p>只能说,在中国.一线医生,不如在家办公的央企职员!医生的命,不如在家办公的央企职员值钱!</p>
+<p>这就是为什么中国医生大量出走海外,中国医疗技术一直停滞不前的重要原因.</p>
+<p>中国医生不被尊重,中国医生是社会的底层.</p>
+<p>需要医护人员的时候,一生号召奔赴前线.</p>
+<p>不需要医护的时候,医护形同草芥.</p>
 
                         
                       </div>
@@ -386,309 +389,7 @@ echo $table;
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2019/7/22</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15638065887503.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15459836208690.html">
-                
-                  <h1>1.Mac上如何安装Python3和scrapy</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>1) 安装brew<br/>
-使用浏览器打开<a href="https://brew.sh/,%E6%8C%89%E7%85%A7%E6%8F%90%E7%A4%BA%E5%9C%A8**%E7%BB%88%E7%AB%AF**%E8%BE%93%E5%85%A5%E4%B8%8B%E9%9D%A2%E4%BF%A1%E6%81%AF">https://brew.sh/,按照提示在**终端**输入下面信息</a></p>
-
-<pre><code class="language-text">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-
-</code></pre>
-
-<p>2) 安装Command Line Tools,在<strong>终端</strong>中输入下面命令</p>
-
-<pre><code class="language-text">xcode-select --install
-</code></pre>
-
-<p>3) 安装GCC编译器,在<strong>终端</strong>中输入下面命令</p>
-
-<pre><code class="language-text">brew install gcc
-</code></pre>
-
-<p>4) 安装后使用brew安装Python3,在<strong>终端</strong>中输入下面命令</p>
-
-<pre><code class="language-text">brew install python3
-</code></pre>
-
-<p>5) 安装scrapy,在<strong>终端</strong>中输入下面命令</p>
-
-<pre><code class="language-text">pip3 install scrapy
-</code></pre>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/12/28</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='scrapy.html'>scrapy</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15459836208690.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15451223173625.html">
-                
-                  <h1>代码merge常用命令</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<h1 id="toc_0">切换到master 分支</h1>
-
-<p>git checkout master </p>
-
-<h1 id="toc_1">切换到dev分支</h1>
-
-<p>git checkout dev</p>
-
-<h1 id="toc_2">获取最新的分支信息</h1>
-
-<p>git fetch </p>
-
-<h1 id="toc_3">确认处于本地分支中</h1>
-
-<p>git status </p>
-
-<h1 id="toc_4">在 dev 分支上合并master 分支</h1>
-
-<p>git merge origin/master</p>
-
-<h1 id="toc_5">在master分支上合并dev分支</h1>
-
-<p>git merge origin/dev</p>
-
-<p>执行 git log ,如果看到 master 分支和dev 分支的最新commit id是一致的，说明master和dev分支是一样的</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/12/18</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15451223173625.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15451222627805.html">
-                
-                  <h1>以太坊相关参考文档</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p><a href="http://web3js.readthedocs.io/en/1.0/index.html">http://web3js.readthedocs.io/en/1.0/index.html</a> web3.js 1.0 版本</p>
-
-<p><a href="https://github.com/ethereum/wiki/wiki/JavaScript-API">https://github.com/ethereum/wiki/wiki/JavaScript-API</a>   web3.js 0.2版本</p>
-
-<p><a href="https://solidity-cn.readthedocs.io/zh/develop/">https://solidity-cn.readthedocs.io/zh/develop/</a>  Solidity 中文版帮助文档</p>
-
-<p><a href="https://solidity.readthedocs.io/en/develop/">https://solidity.readthedocs.io/en/develop/</a>  Solidity 英文版帮助文档</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/12/18</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Coin.html'>Coin</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15451222627805.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15451222204100.html">
-                
-                  <h1>Http auth basic认证</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>使用 nginx 作为前端服务器。某些资源要保护。用 http auth basic 认证简单方便。<br/>
-nginx 的 http auth basic 的密码是用 crypt(3) 加密的。具体可以参考：<a href="http://wiki.nginx.org/HttpAuthBasicModule">http://wiki.nginx.org/HttpAuthBasicModule</a><br/>
-1.修改NGINX配置文件</p>
-
-<pre><code class="language-text">location ~ /admin {
-        auth_basic &quot;Restricted&quot;;
-        auth_basic_user_file /etc/nginx/pass_file;//请使用绝对路径
-        root   /home/www/admin; //host 地址，不然认证通过之后，找不到对应的文件
-}  
-</code></pre>
-
-<p>2.生成加密的auth_basic_user_file文件</p>
-
-<pre><code class="language-text">htpasswd -c -d /etc/nginx/pass_file  username
-</code></pre>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/12/18</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15451222204100.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15311228224258.html">
-                
-                  <h1>【16元全国免流】你要的19元联通全国无限流量，最全合集，邮寄全国</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<blockquote>
-<p>网友反馈:接到工作人员电话:收到卡后一周内激活充值一百元不会回收号码<br/>
-网友反馈:可以取消集团网和回电宝，实际16元一个月全国不限流量</p>
-</blockquote>
-
-<p>南京联通和腾讯联合南京地区部分高校推出了校园套餐，虽然是校园套餐，但是其实和大王卡、米粉卡差不多，都可以顺丰邮寄，关键是可以异地销卡，这就相当于给全国用户享受低价无限流量套餐的机会了。<br/>
-合作的高校还不少，下面是博主从网上搬来的南京部分高校的申请地址：<br/>
-（下方所有链接都是南京地区高校，套餐内容一样，部分学校号段已经选完,可以另换其他高校申请。）</p>
-
-<p><a href="http://xyk.js165.com:8000/wapycfd/nffxh/login">http://xyk.js165.com:8000/wapycfd/nffxh/login</a></p>
-
-<p><a href="http://xyk.js165.com:8000/wapycfd/qqwx/login">http://xyk.js165.com:8000/wapycfd/qqwx/login</a></p>
-
-<p><a href="http://xyk.js165.com:8000/wapycfd/seu/selectNumber">http://xyk.js165.com:8000/wapycfd/seu/selectNumber</a></p>
-
-<p><a href="http://xyk.js165.com:8000/wapycfd/jit/login">http://xyk.js165.com:8000/wapycfd/jit/login</a></p>
-
-<p><a href="http://xyk.js165.com:8000/wapycfd/njit/login">http://xyk.js165.com:8000/wapycfd/njit/login</a></p>
-
-<p><a href="http://xyk.js165.com:8000/wapycfd/nau/login">http://xyk.js165.com:8000/wapycfd/nau/login</a></p>
-
-<p><a href="http://xyk.js165.com:8000/wapycfd/nayw/login">http://xyk.js165.com:8000/wapycfd/nayw/login</a></p>
-
-<p><a href="http://xyk.js165.com:8000/wapycfd/nffx/login">http://xyk.js165.com:8000/wapycfd/nffx/login</a></p>
-
-<p><a href="http://xyk.js165.com:8000/wapycfd/nzyone/login">http://xyk.js165.com:8000/wapycfd/nzyone/login</a></p>
-
-<p><a href="http://xyk.js165.com:8000/wapycfd/ddcx/login">http://xyk.js165.com:8000/wapycfd/ddcx/login</a></p>
-
-<p><img src="https://ws1.sinaimg.cn/large/0072W8ttgy1ft16xqvpvsj30hp0hpwmu.jpg" alt=""/></p>
-
-<p>关于网友们的一些疑问：</p>
-
-<blockquote>
-<p>问：这个卡是否需要在12或24个月到营业厅续订？<br/>
-答：博主在联通APP上看到的套餐是2022年6月30日到期，个人认为应该不需要到营业厅续订，也可能可以直接拨打下方宣传海报上的电话续订。（收到卡片之后，会附赠一张海报，通常下面会留有电话）</p>
-
-<p>问：如果套餐到期了是否需要到当地销户？<br/>
-答：博主已经咨询客服了，可以到你所在省市的大营业厅进行注销，不用到江苏当地。</p>
-
-<p>问：可以取消1元集团网和2元回电宝吗？<br/>
-答：拨打10010可以取消会电宝，不可以取消集团网。取消后不影响无限流量套餐。因此，可以视为月租为17元/月。</p>
-
-<p>问：申请之后是用什么快递发的？为什么查不到物流？ <br/>
-答：邮政EMS，那个申请页面查不到物流信息，只有等快递通知，一般2-3天。</p>
-
-<p>问：同一个人同一个身份信息最多可以办理几张卡？<br/>
-答：一个人凭本人信息最多可以办理一张。</p>
-</blockquote>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/7/9</span>
+                    <span class="date">2020/06/18</span>
                     <span>posted in&nbsp;</span> 
           				  
           					    <span class="posted-in"><a href='Share.html'>Share</a></span>
@@ -699,8 +400,6 @@ nginx 的 http auth basic 的密码是用 crypt(3) 加密的。具体可以参�
                   <div class="more-right right">
                   <span class="comments">
                       
-                        <a href="https://jarryyen.github.io/15311228224258.html#disqus_thread">comments</a>
-                      
 
                        
                   </span>
@@ -709,1193 +408,126 @@ nginx 的 http auth basic 的密码是用 crypt(3) 加密的。具体可以参�
               </div><!-- article -->
         
 			<div class="article">
-                <a class="clearlink" href="15311227612961.html">
+                <a class="clearlink" href="15796596354392.html">
                 
-                  <h1>联通跨省注销方法</h1>
+                  <h1>aMule For Linux 配置</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
-                        	<p><img src="media/15311227612961/%E8%81%94%E9%80%9A%E6%B3%A8%E9%94%80%E5%8F%B7%E7%A0%81.jpg" alt="联通注销号码"/></p>
+                        	<p>1.首先要启动一次amuled这个程序,程序会自动生成配置文件</p>
+<pre><code class="language-plain_text">2020-01-22 05:21:29: Initialising aMuleD 2.3.1 compiled with wxGTK2 v2.8.12
+ 2020-01-22 05:21:29: Checking if there is an instance already running...
+ 2020-01-22 05:21:29: No other instances are running.
+!2020-01-22 05:21:29: ERROR: WARNING Warning! You are running aMule as root.
+!2020-01-22 05:21:29: Doing so is not recommended for security reasons,
+!2020-01-22 05:21:29: and you are advised to run aMule as an normal
+!2020-01-22 05:21:29: user instead.
 
-<p>使用上方二维码可以跨省注销联通号码</p>
+--------------------------------------------------
+Warning! You are running aMule as root.
+Doing so is not recommended for security reasons,
+and you are advised to run aMule as an normal
+user instead.
+--------------------------------------------------
 
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/7/9</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Share.html'>Share</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15311227612961.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15287113422567.html">
-                
-                  <h1>Jenkins ssh登陆到其他主机</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>今天遇到了一个坑,同事部署的jenkins.<br/>
-无论我怎么添加key,在execute shll里面执行scp等操作都无法登陆....结果找了半天...jenkins的pubkey位置在</p>
-
-<pre><code class="language-text">/var/lib/jenkins/.ssh/id_rsa.pub 
+!2020-01-22 05:21:29: ERROR: Info  --- This is the first time you run aMule 2.3.1 ---
+!2020-01-22 05:21:29: More information, support and new releases can found at our homepage,
+!2020-01-22 05:21:29: at www.aMule.org, or in our IRC channel #aMule at irc.freenode.net.
+!2020-01-22 05:21:29: Feel free to report any bugs to http://forum.amule.org
+ 2020-01-22 05:21:29: ListenSocket: Ok.
+ 2020-01-22 05:21:29: Loading temp files from /root/.aMule/Temp.
+ 2020-01-22 05:21:29: All PartFiles Loaded.
+ 2020-01-22 05:21:29: amuled: OnInit - starting timer
+!2020-01-22 05:21:29: ERROR: aMule daemon cannot be used when external connections are disabled. To enable External Connections, use either a normal aMule, start amuled with the option --ec-config or set the key &quot;AcceptExternalConnections&quot; to 1 in the file ~/.aMule/amule.conf
+ 2020-01-22 05:21:29: Now, exiting main app...
+ 2020-01-22 05:21:29: aMule OnExit: Terminating core.
+ 2020-01-22 05:21:29: aMule shutdown completed.
 </code></pre>
-
-<p>无语了....<br/>
-在此记录一下...</p>
-
-<p>还有一个问题.就是known_hosts问题.</p>
-
-<pre><code class="language-text">su -s /bin/bash jenkins
-
-ssh root@ip 
-</code></pre>
-
-<p>登陆一下就好了</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/6/11</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='jenkins.html'>jenkins</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15287113422567.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15263677435766.html">
-                
-                  <h1>Opera浏览器送你无限流量的V.P.N</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<h4 id="toc_0">1.下载Opera浏览器 <a href="http://www.opera.com">www.opera.com</a></h4>
-
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1frc1mn8otoj30vh0j944f.jpg" alt=""/></p>
-
-<h4 id="toc_1">2.安装Opera</h4>
-
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1frc1n4hzzoj312s0sa4i2.jpg" alt=""/><br/>
-3.修改你的电脑所在地,将这里设置为其他地区.例如:中国澳门(仅Mac图例,Win请自己寻找相关功能)<br/>
-<img src="https://ws3.sinaimg.cn/large/006tKfTcly1frc1gvo0nwj31140x8qbg.jpg" alt=""/><br/>
-<img src="https://ws3.sinaimg.cn/large/006tKfTcly1frc1hd7hehj31140qewjk.jpg" alt=""/></p>
-
-<h4 id="toc_2">4.点击Opera菜单并进入&quot;首选下&quot;</h4>
-
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1frc1lvma8ij307d09amy3.jpg" alt=""/></p>
-
-<h4 id="toc_3">5.选择“隐私和安全”选项,并在右侧选择相应选项即可开启</h4>
-
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frc1k61tr0j30vh0j9wit.jpg" alt=""/></p>
-
-<h4 id="toc_4">6.出现蓝色图标打开完成,并且可以设置连接哪一个区域的节点或者使用系统推荐(在这里推荐手动指定亚洲)</h4>
-
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frc1oquve2j308z0d3dgn.jpg" alt=""/></p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/5/15</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15263677435766.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15247245416912.html">
-                
-                  <h1>远程执行tomcat执行脚本出现找不到环境变量问题</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>问题描述:</p>
-
-<blockquote>
-<p>我使用jenkins在build工程的时候,使用了执行shell部分.脚本内含有远程主机运行或者停止tomcat脚本,在执行的时候报告有java_home和java_jar没有环境变量的问题.根据问题查找,是远程执行的时候没有加载profile造成环境变量确实的问题.<br/>
-<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fqq20j3ev3j30tr0fudir.jpg" alt=""/><br/>
-脚本中的远程执行命令是</p>
-
-<blockquote>
-<p>ssh root@web01 &quot;/data/script/run.sh&quot; 中的 run.sh包含tomcat启动脚本</p>
-</blockquote>
-</blockquote>
-
-<p>解决方案:</p>
-
-<blockquote>
-<p>在tomcat的catalina.sh中添加环境变量部分.<br/>
-<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fqq1ywrzs4j315k0xitf3.jpg" alt=""/></p>
-</blockquote>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/4/26</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15247245416912.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15203221731981.html">
-                
-                  <h1>MYSQL命令行内倒入文本数据</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>load data local infile &#39;/文件名.txt&#39; into table 表名(字段);</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/3/6</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15203221731981.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15203031656074.html">
-                
-                  <h1>Linux增加swap(aws建议添加)</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>添加交换文件步骤： <br/>
-1、找个地方创建一个.swap的文件，我放在了/mnt目录下 <br/>
-sudo dd if=/dev/zero of=/mnt/10GB.swap bs=1G count=10 <br/>
-这条命令是在/mnt目录下创建一个名为10GB.swap的交换文件，基础大小为1GB，有10个，so：1*10=10GB <br/>
-2、把创建的.swap文件格式化为Swap文件 <br/>
-sudo mkswap /mnt/10GB.swap <br/>
-3、把创建的.swap文件加入到系统中 <br/>
-sudo swapon /mnt/10GB.swap <br/>
-以上步骤可以做到临时启用交换文件，如果要下次启动系统的时候也启动交换文件，那么还要继续做以下步骤。 <br/>
-4、在/ect/fstab中加入新的Swap分区 <br/>
-sudo gedit /etc/fstab <br/>
-在最后一行添加（前面是生成的.swap文件的位置） <br/>
-/mnt/10GB.swap none swap sw 0 0 <br/>
-以上步骤为添加交换文件方法。</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/3/6</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15203031656074.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15192838129981.html">
-                
-                  <h1>Geth 的JavaScript控制</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<ol>
-<li>  如何连接</li>
-<li><p>常用命令</p>
-<ol>
-<li>attach</li>
-<li>admin.peers</li>
-<li>net.peerCount</li>
-<li>admin.addPeer(&quot;enode://....&quot;)</li>
-</ol></li>
-<li><p>如何连接</p>
-<blockquote>
-<p>geth attach [路径]/geth.ipc<br/>
-geth attach http://[IP]:8545<br/>
-geth attach ws://[IP]:8545</p>
-</blockquote></li>
-<li><p>常用命令</p>
-<blockquote>
-<p>attach<br/>
-可以使用geth然后使用这个参数可以进行登录</p>
-</blockquote></li>
-</ol>
-
-<pre><code class="language-text">-----
-&gt;admin.peers
-&gt;查看集群信息
-
------
-&gt;net.peerCount
-&gt;查看现在已经连接的节点数量
-
------
-&gt;admin.addPeer(&quot;enode://....&quot;)
-&gt;可以使用这个方法添加节点
-
-----
-&gt;admin.peers.forEach(function(p) {console.log(p.network.remoteAddress);})
-&gt;通过这个方法可以查看已经连接的节点IP列表
-</code></pre>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/2/22</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Coin.html'>Coin</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15192838129981.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15180905572524.html">
-                
-                  <h1>Linux 7.4 配置BBR加速</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<h4 id="toc_0">配置BBR加速</h4>
-
-<p>什么是BBR：</p>
-
-<p>TCP BBR是谷歌出品的TCP拥塞控制算法。BBR目的是要尽量跑满带宽，并且尽量不要有排队的情况。BBR可以起到单边加速TCP连接的效果。</p>
-
-<p>Google提交到Linux主线并发表在ACM queue期刊上的TCP-BBR拥塞控制算法。继承了Google“先在生产环境上部署，再开源和发论文”的研究传统。TCP-BBR已经再YouTube服务器和Google跨数据中心的内部广域网(B4)上部署。由此可见出该算法的前途。</p>
-
-<p>TCP-BBR的目标就是最大化利用网络上瓶颈链路的带宽。一条网络链路就像一条水管，要想最大化利用这条水管，最好的办法就是给这跟水管灌满水。</p>
-
-<p>BBR解决了两个问题：</p>
-
-<p>在有一定丢包率的网络链路上充分利用带宽。非常适合高延迟，高带宽的网络链路。<br/>
-降低网络链路上的buffer占用率，从而降低延迟。非常适合慢速接入网络的用户。<br/>
-Google 在 2016年9月份开源了他们的优化网络拥堵算法BBR，最新版本的 Linux内核(4.9-rc8)中已经集成了该算法。</p>
-
-<p>对于TCP单边加速，并非所有人都很熟悉，不过有另外一个大名鼎鼎的商业软件“锐速”，相信很多人都清楚。特别是对于使用国外服务器或者VPS的人来说，效果更佳。</p>
-
-<h5 id="toc_1">BBR项目地址：</h5>
-
-<blockquote>
-<p><a href="https://github.com/google/bbr">https://github.com/google/bbr</a></p>
-</blockquote>
-
-<p>升级内核，第一步首先是升级内核到支持BBR的版本：<br/>
-1.yum更新系统版本：</p>
-
-<blockquote>
-<p>yum update</p>
-</blockquote>
-
-<p>2.查看系统版本：</p>
-
-<pre><code class="language-text">[root@server ~]# cat /etc/redhat-release 
-CentOS Linux release 7.4.1708 (Core) 
-[root@server ~]# 
-</code></pre>
-
-<p>3.安装elrepo并升级内核：</p>
-
-<pre><code class="language-text">[root@server ~]# rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-[root@server ~]# rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm
-[root@server ~]# yum --enablerepo=elrepo-kernel install kernel-ml -y
-</code></pre>
-
-<p>4.更新grub文件并重启系统：</p>
-
-<pre><code class="language-text">[root@server ~]# egrep  ^menuentry /etc/grub2.cfg |     cut -f 2 -d \&#39;
-CentOS Linux 7 Rescue 8619ff5e1306499eac41c02d3b23868e (4.14.14-1.el7.elrepo.x86_64)
-CentOS Linux (4.14.14-1.el7.elrepo.x86_64) 7 (Core)
-CentOS Linux (3.10.0-693.11.6.el7.x86_64) 7 (Core)
-CentOS Linux (3.10.0-693.el7.x86_64) 7 (Core)
-CentOS Linux (0-rescue-c73a5ccf3b8145c3a675b64c4c3ab1d4) 7 (Core)
-[root@server ~]# grub2-set-default 0
-[root@server ~]# reboot
-</code></pre>
-
-<p>5.重启完成后查看内核是否已更换为4.14版本：</p>
-
-<pre><code class="language-text">[root@server ~]# uname -r 4.14.14-1.el7.elrepo.x86_64
-[root@server ~]#
-</code></pre>
-
-<p>6.开启bbr：</p>
-
-<pre><code class="language-text">[root@server ~]# vim /etc/sysctl.conf    # 在文件末尾添加如下内容
-net.core.default_qdisc = fq
-</code></pre>
-
-<p>net.ipv4.tcp_congestion_control = bbr</p>
-
-<p>7.加载系统参数：</p>
-
-<pre><code class="language-text">[root@vultr ~]# sysctl -p
-net.ipv6.conf.all.accept_ra = 2
-net.ipv6.conf.eth0.accept_ra = 2
-net.core.default_qdisc = fq
-net.ipv4.tcp_congestion_control = bbr
-[root@vultr ~]#
-</code></pre>
-
-<p>如上，输出了我们添加的那两行配置代表正常。</p>
-
-<p>8.确定bbr已经成功开启：</p>
-
-<pre><code class="language-text">[root@vultr ~]# sysctl net.ipv4.tcp_available_congestion_control
-net.ipv4.tcp_available_congestion_control = bbr cubic reno
-[root@vultr ~]# lsmod | grep bbr
-tcp_bbr                20480  2 
-[root@vultr ~]# 
-</code></pre>
-
-<p>输出内容如上，则表示bbr已经成功开启。    </p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/2/8</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15180905572524.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15180816293582.html">
-                
-                  <h1>CentOS7.4搭建shadowsocks</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<h4 id="toc_0">安装 pip</h4>
-
-<p>pip是 python 的包管理工具。在本文中将使用 python 版本的 shadowsocks，此版本的 shadowsocks 已发布到 pip 上，因此我们需要通过 pip 命令来安装。</p>
-
-<p>在控制台执行以下命令安装 pip</p>
-
-<pre><code class="language-text">[root@server ~]# curl &quot;https://bootstrap.pypa.io/get-pip.py&quot; -o &quot;get-pip.py&quot;
-[root@server ~]# python get-pip.py
-</code></pre>
-
-<h4 id="toc_1">安装配置 shadowsocks</h4>
-
-<p>在控制台执行以下命令安装 shadowsocks：</p>
-
-<pre><code class="language-text">[root@server ~]# pip install --upgrade pip
-[root@server ~]# pip install shadowsocks
-</code></pre>
-
-<p>安装完成后，需要创建shadowsocks的配置文件/etc/shadowsocks.json，编辑内容如下：</p>
-
-<pre><code class="language-text">[root@server ~]# vim /etc/shadowsocks.json
-{
-&quot;server&quot;: &quot;0.0.0.0&quot;,
-&quot;local_address&quot;:&quot;127.0.0.1&quot;,
-&quot;local_port&quot;: 1080,
-&quot;port_password&quot;: {
-&quot;8080&quot;: &quot;填写密码&quot;,
-&quot;8081&quot;: &quot;填写密码&quot;
-},
-&quot;timeout&quot;: 600,
-&quot;method&quot;: &quot;aes-256-cfb&quot;
-}
-</code></pre>
-
-<p>说明：</p>
-
-<p>method为加密方法，可选aes-128-cfb, aes-192-cfb, aes-256-cfb, bf-cfb, cast5-cfb, des-cfb, rc4-md5, chacha20, salsa20, rc4, table<br/>
-port_password为端口对应的密码，可使用密码生成工具生成一个随机密码<br/>
-以上两项信息在配置 shadowsocks 客户端时需要配置一致，具体说明可查看 shadowsocks 的帮助文档。</p>
-
-<h5 id="toc_2">如果你不需要配置多个端口的话，仅配置单个端口，则可以使用以下配置：</h5>
-
-<pre><code class="language-text">{
-&quot;server&quot;: &quot;0.0.0.0&quot;,
-&quot;server_port&quot;: 8080,
-&quot;password&quot;: &quot;填写密码&quot;,
-&quot;method&quot;: &quot;aes-256-cfb&quot;
-}
-</code></pre>
-
-<p>说明：</p>
-
+<p>2.修改WEB访问控制部分</p>
 <ul>
-<li>server_port为服务监听端口</li>
-<li>password为密码</li>
+<li>生成访问密码</li>
 </ul>
-
-<p>同样的以上两项信息在配置shadowsocks 客户端时需要配置一致。</p>
-
-<hr/>
-
-<h4 id="toc_3">配置自启动</h4>
-
-<p>编辑shadowsocks 服务的启动脚本文件，内容如下：</p>
-
-<pre><code class="language-text">[root@server ~]# vim /etc/systemd/system/shadowsocks.service
-[Unit]
-Description=Shadowsocks
-
-[Service]
-TimeoutStartSec=0
-ExecStart=/usr/bin/ssserver -c /etc/shadowsocks.json
-
-[Install]
-WantedBy=multi-user.target
+<pre><code class="language-plain_text">echo -n 这里替换成你想要的密码 | md5sum | awk '{print $1}'
 </code></pre>
-
-<p>执行以下命令启动 shadowsocks 服务：</p>
-
-<pre><code class="language-text">[root@server ~]# systemctl enable shadowsocks
-[root@server ~]# systemctl start shadowsocks
-</code></pre>
-
-<p>检查 shadowsocks 服务是否已成功启动，可以执行以下命令查看服务的状态：</p>
-
-<blockquote>
-<p>systemctl status shadowsocks -l</p>
-</blockquote>
-
-<p>确认服务启动成功后，配置防火墙规则，开放你配置的端口，不然客户端是无法连接的：</p>
-
-<pre><code class="language-text">[root@server ~]# firewall-cmd --zone=public --add-port=8080/tcp --permanent
-success
-[root@server ~]# firewall-cmd --zone=public --add-port=8081/tcp --permanent
-success
-[root@server ~]# firewall-cmd --reload
-success
-</code></pre>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/2/8</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15180816293582.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15162450810938.html">
-                
-                  <h1>MacOS X 10.13(High Sierra)开启隐私权限</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>在下载一些Mac软件后打卡，系统会告诉你说软件受损，需要删除掉。其实，并不是软件受损，而是苹果修改了安全限制。以前，允许来自任何第三方的软件有选项，可以选择。现在，苹果去掉了选项，必须要从App Store或者含有苹果认证证书的软件才可以运行。</p>
-
-<p>如果关闭这个选项，实现任何软件都可以运行呢？</p>
-
-<p>我们只需要打开终端，输入下面的命令</p>
-
-<blockquote>
-<p>sudo spctl --master-disable</p>
-</blockquote>
-
-<p>然后打开系统便好设置-&gt;安全性与隐私选项-&gt;任何来源（最下面）<br/>
-![WX20180118-111614@2x](# MacOS X 10.13(High Sierra)开启隐私权限</p>
-
-<p>在下载一些Mac软件后打开，系统会告诉你说软件受损，需要删除掉。其实，并不是软件受损，而是苹果修改了安全限制。以前，允许来自任何第三方的软件有选项，可以选择。现在，苹果去掉了选项，必须要从App Store或者含有苹果认证证书的软件才可以运行。</p>
-
-<p>如果关闭这个选项，实现任何软件都可以运行呢？</p>
-
-<p>我们只需要打开终端，输入下面的命令</p>
-
-<blockquote>
-<p>sudo spctl --master-disable</p>
-</blockquote>
-
-<p>然后打开系统便好设置-&gt;安全性与隐私选项-&gt;任何来源（最下面）<br/>
-<img src="http://ofcfvx6lf.bkt.clouddn.com/WX20180118-111614@2x.png" alt="安全性与隐私"/></p>
-
-<p>选择这个选项，软件就可以正常运行了</p>
-
-<p>选择这个选项，软件就可以正常运行了</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/1/18</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15162450810938.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15161754454851.html">
-                
-                  <h1>亚马逊云(aws)提供了4.9核心主机</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>今天发行aws提供了4.9的主机</p>
-
-<blockquote>
-<p>4.9.76-38.79.amzn2.x86_64</p>
-</blockquote>
-
-<p>并且aws用的是什么虚拟化技术呢？<br/>
-我们使用virt-what进行查看</p>
-
-<blockquote>
-<p>如果没有可以通过 yum install virt-what 进行安装</p>
-</blockquote>
-
-<p>结果是</p>
-
-<blockquote>
-<p>xen-hvm</p>
-</blockquote>
-
-<p>如何开通BBR?<br/>
-在sysctl.conf里面添加如下2条信息</p>
-
-<blockquote>
-<p>net.core.default_qdisc = fq<br/>
-net.ipv4.tcp_congestion_control = bbr</p>
-</blockquote>
-
-<p>之后执行 sysctl -p</p>
-
-<p>即可开启BBR，查看BBR是否启用使用来查看</p>
-
-<blockquote>
-<p>lsmod | grep bbr</p>
-</blockquote>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/1/17</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15161754454851.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15160793301068.html">
-                
-                  <h1>SSR连接如何解析</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>1、编码后的 URI 格式：</p>
-
-<p>ss://BASE64-ENCODED-STRING-WITHOUT-PADDING</p>
-
-<p>2、编码前的 URI 格式：</p>
-
-<p>ss://method:password@hostname:port （原文没有直接说明需要把加粗部分经过一次Base64加密才能得下面的地址串）</p>
-
-<p>3、Base64<br/>
-ss://YmYtY2ZiOnRlc3RAMTkyLjE2OC4xMDAuMTo4ODg4</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/1/16</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15160793301068.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15159817711460.html">
-                
-                  <h1>通过Hook实现VPN代理</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>需要清单:</p>
-
-<ol>
-<li>外网 IP Server(建议独立)</li>
-<li>Xen 虚拟化</li>
-<li></li>
-</ol>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/1/15</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15159817711460.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15151417121416.html">
-                
-                  <h1>screen detached了怎么办</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<pre><code class="language-text">screen -X -S [session # you want to kill] quit
-</code></pre>
-
-<p>例如:</p>
-
-<pre><code class="language-text">[root@localhost ~]# screen -ls
-There are screens on:
-        9975.pts-0.localhost    (Detached)
-        4588.pts-3.localhost    (Detached)
-2 Sockets in /var/run/screen/S-root.
-
-[root@localhost ~]# screen -X -S 4588 quit
-[root@localhost ~]# screen -ls
-There is a screen on:
-        9975.pts-0.localhost    (Detached)
-1 Socket in /var/run/screen/S-root.
-</code></pre>
-
-<p>可以看到，4588会话已经没有了。</p>
-
-<p>参考资料：<br/>
-（1）<a href="http://stackoverflow.com/questions/1509677/kill-detached-screen-session" title="Kill detached screen session">Kill detached screen session</a></p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/1/5</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15151417121416.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15150357946970.html">
-                
-                  <h1>在MarkDown中添加潜入视频或音频</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>我们使用iframe来将资源进行潜入</p>
-
-<p>下面是一段网易云音乐的音乐播放列表事例,直接在MarkDown中贴上HTML的iframe就可以实现资源的嵌入渲染了.</p>
-
-<pre><code class="language-text">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=450 src=&quot;http://music.163.com/outchain/player?type=1&amp;id=36037083&amp;auto=0&amp;height=430&quot;&gt;&lt;/iframe&gt;
-</code></pre>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2018/1/4</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15150357946970.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15111487950640.html">
-                
-                  <h1>【纪录片】《蓝色星球2》单剧连载中</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1floe9z336oj30dw0itq4h.jpg" alt=""/></p>
-
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1floe9sjrk2g30b4069twm.gif" alt=""/></p>
-
-<p>英国著名生物学家、BBC主持人及制作人戴维·阿滕伯勒确定将为BBC七集自然类纪录片《蓝色星球》第二季担任旁白。2001年，阿滕伯勒便曾为《蓝色星球》第一季献声。今年91岁高龄的阿滕伯勒表示，再度加盟《蓝色星球》系列、开启全新的海洋之旅，让他激动不已。</p>
-
-<p>迅雷:</p>
-
-<p>第四集<br/>
-thunder://QUFlZDJrOi8vfGZpbGV8Qmx1ZS5QbGFuZXQuSUkuUzAxRTA0LkJpZy5CbHVlLjEwODBwLkFNWk4uV0VCLURMLkREUDUuMS5ILjI2NC1OVGIubWt2fDQ3MDg0NTQwNDN8MTRDNjA1NDBCOUQxMTA0MDgxRjcyQzY5NENDNUNBNjJ8aD1XMkFJU09NVjRWQUtXSENNVlVYS1ZINkQ3Wk5CT01YRnwvWlo=</p>
-
-<p>第三集<br/>
-thunder://QUFlZDJrOi8vfGZpbGV8Qmx1ZS5QbGFuZXQuSUkuUzAxRTAzLkNvcmFsLlJlZWZzLjEwODBwLkFNWk4uV0VCLURMLkREUDUuMS5ILjI2NC1OVGIubWt2fDUyNzk1ODg4NDZ8QTQ2RTQxRDY0ODAzODc5QzY5Q0VCRUM1QTIxRDNDNDR8aD1BQTRMUzZKWTIzWk9STTRXS1JRQ0NIV0RTWkFXWUhXWHwvWlo=</p>
-
-<p>第二集<br/>
-thunder://QUFlZDJrOi8vfGZpbGV8Qmx1ZS5QbGFuZXQuSUkuUzAxRTAyLlRoZS5EZWVwLjEwODBwLkFNWk4uV0VCLURMLkREUDUuMS5ILjI2NC1OVGIubWt2fDM2MDQyODc2NjJ8NzVGM0U3NDgxNzc0NzA5NzNENDlEREZEODIyMEJDODB8aD1DRU01MkJZSFBXTklTUFJaVlE0NUhMQlBCQUZOWU1TUHwvWlo=</p>
-
-<p>第一集<br/>
-thunder://QUFlZDJrOi8vfGZpbGV8Qmx1ZS5QbGFuZXQuSUkuUzAxRTAxLk9uZS5PY2Vhbi4xMDgwcC5BTVpOLldFQi1ETC5ERFA1LjEuSC4yNjQtTlRiLm1rdnw1Mjc3MTYzMDE0fDgyN0QxQUQ0NTkxRDE1REVGNUFERTNCRTQ0MjNCMEFBfGg9TlNUSTZLNlo0NzNOT09RTVNJNEFTWE1TVk1USUJYT0x8L1pa</p>
-
-<p>Ek2k:</p>
-
-<p>第四集<br/>
-ed2k://|file|Blue.Planet.II.S01E04.Big.Blue.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb.mkv|4708454043|14C60540B9D1104081F72C694CC5CA62|h=W2AISOMV4VAKWHCMVUXKVH6D7ZNBOMXF|/</p>
-
-<p>第三集<br/>
-ed2k://|file|Blue.Planet.II.S01E03.Coral.Reefs.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb.mkv|5279588846|A46E41D64803879C69CEBEC5A21D3C44|h=AA4LS6JY23ZORM4WKRQCCHWDSZAWYHWX|/</p>
-
-<p>第二集<br/>
-ed2k://|file|Blue.Planet.II.S01E02.The.Deep.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb.mkv|3604287662|75F3E748177470973D49DDFD8220BC80|h=CEM52BYHPWNISPRZVQ45HLBPBAFNYMSP|/</p>
-
-<p>第一集<br/>
-ed2k://|file|Blue.Planet.II.S01E01.One.Ocean.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb.mkv|5277163014|827D1AD4591D15DEF5ADE3BE4423B0AA|h=NSTI6K6Z473NOOQMSI4ASXMSVMTIBXOL|/</p>
-
-<p>资源来自人人字幕组 zimuzu.tv 感谢你们做出的努力~</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2017/11/20</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Movie.html'>Movie</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15111487950640.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15083801639905.html">
-                
-                  <h1>DxO OpticsPro 11</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>What&#39;s in DxO OpticsPro - Elite Edition:</p>
-
 <ul>
-<li>Remove atmospheric haze thanks to DxO ClearView</li>
-<li>DxO PRIME 2016: even more powerful and up to 4x faster</li>
-<li>Highly customizable interface</li>
-<li>Advanced controls :
-<ul>
-<li>moiré removal,</li>
-<li>ICC profile support,</li>
-<li>multi-camera&#39;s color rendition</li>
-</ul></li>
+<li>修改配置文件</li>
 </ul>
-
-<blockquote>
-<p>DxO Optics Pro 11正式版是世界上最好的照片后期处理软件之一，目前该公司发布的DxO Optics Pro 10正式版将会延续这一经典RAW处理软件的辉煌。DxO Optics Pro 11会自动提高图像质量，并突破相机极限，纠正所有的镜头变形，和改进相机拍照时传感器带给照片的常见现象，包括智能化的照片降噪。DxO Optics Pro是一款屡获殊荣的RAW程序软件，其开发公司基于长期专一的相机和镜头属性研究获取到的研发知识为DxO Optics Pro提供了出色的图像质量输出，即使照片是拍摄在​​超高的ISO下的JPEG或RAW文件格式。</p>
-
-<p>DXO OPTICS PRO11 破解版的独特之处在于它拥有最高质量的照片后期优化修正能力，无需人工干预。无论你是想简单一次性自动化获得一张你要的高质量效果照片，而不必仔细设置 滑块，或者您想手动设置自己的校正参数，DXO OPTICS PRO 11 都将满足您的需要。 DXO OPTICS PRO11是开发理想便是减轻你的工作量，最佳化纠正你宝贵的影像图片。设计是空素材站  国内首发，该软件个人感觉自动化处理的图像是同类软件中最好的。也是最贵的。</p>
-</blockquote>
-
-<p>下载地址：<br/>
-Windows: <a href="https://downloads.sharewareonsale.com/files/hub/sharewareonsale.com/SharewareOnSale_Giveaway_DxO_OpticsPro_11_Essential_hub.exe">https://downloads.sharewareonsale.com/files/hub/sharewareonsale.com/SharewareOnSale_Giveaway_DxO_OpticsPro_11_Essential_hub.exe</a></p>
-
-<p>Mac: <a href="https://downloads.sharewareonsale.com/files/mac/DxO_OpticsPro11.dmg">https://downloads.sharewareonsale.com/files/mac/DxO_OpticsPro11.dmg</a></p>
-
-<p>Use the code : PRCTPH2017<br/>
-This offer ends on : January, 1st 2018</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2017/10/19</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Free.html'>Free</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15083801639905.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15057082298289.html">
-                
-                  <h1># 来自深渊 （KINEMA CITRUS改编的电视动画）</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p><img src="http://ofcfvx6lf.bkt.clouddn.com/visual02-02.jpg" alt="visual02-02"/></p>
-
-<p>电视动画《来自深渊》改编自土笔章人原作的同名漫画，动画由KINEMA CITRUS负责制作。于2016年12月21日宣布动画化。</p>
-
-<p>2017年7月7日起每周五20:30在AT-X首播。<br/>
-中国大陆22:00由爱奇艺独家正版更新。</p>
-
-<p>中文名 来自深渊 <br/>
-原版名称 メイドインアビス <br/>
-其他名称 Made in Abyss <br/>
-动画制作KINEMA CITRUS<br/>
-集    数 13 <br/>
-类    型 奇幻 <br/>
-地    区 日本 <br/>
-原    作 土笔章人 <br/>
-导    演小岛正幸 ，垪和等（副监督） <br/>
-编    剧仓田英之<br/><br/>
-剧    本 仓田英之、小柳啓伍 <br/>
-角色设计 黄濑和哉<br/><br/>
-音    乐 kevin penkin <br/>
-主要配音 富田美忧，伊濑茉莉也 <br/>
-首播电视台 AT-X <br/>
-播放期间 2017年7月7日- <br/>
-其他电视台 TOKYO,MX,BS11,KBS京都,佐贺电视台,爱知电视台,TVQ九州放送,SUN电视台</p>
-
-<p>网络播放爱奇艺（中国大陆） <br/>
-巴哈姆特动画疯（中国台湾） <br/>
-出    品 来自深渊制作委员会 <br/>
-发    行 MEDIA FACTORY<br/>
-发行时间 2017年10月25日-12月22日（全2卷） <br/>
-代理发行 杰外动漫（中国）</p>
-
-<h2 id="toc_0">剧情简介编辑</h2>
-
-<p>在每一个角落都被探索完毕的世界中，唯一残留的秘境——大洞穴“阿比斯”。不知道延续到何方，深不见底的巨大纵向洞穴，栖息着奇妙奇怪的生物们，沉眠着现在的人类无法制造的贵重遗物。“阿比斯”那充满了不可思议的姿态吸引了人们，并驱使人们展开冒险。如此，多次挑战大洞穴的冒险者们，陆续得到了“探窟家”的名号。<br/>
-住在建造于深渊边缘的城镇“奥斯”的孤儿莉可，梦想着有朝一日成为母亲那样伟大的探窟家，并解开深渊的谜团。这样的某一天，莉可在探索深渊的途中，捡到了有着少年样貌的机器人…？</p>
-
-<h2 id="toc_1">角色介绍</h2>
-
-<p><img src="http://ofcfvx6lf.bkt.clouddn.com/p_001.jpg" alt="p_001"/></p>
-
-<p><img src="http://ofcfvx6lf.bkt.clouddn.com/p_002.jpg" alt="p_002"/></p>
-
-<p><img src="http://ofcfvx6lf.bkt.clouddn.com/p_003_02.jpg" alt="p_003_02"/></p>
-
-<p><img src="http://ofcfvx6lf.bkt.clouddn.com/p_004.jpg" alt="p_004"/></p>
-
-<p><img src="http://ofcfvx6lf.bkt.clouddn.com/p_005.jpg" alt="p_005"/></p>
-
-<p><img src="http://ofcfvx6lf.bkt.clouddn.com/p_006.jpg" alt="p_006"/></p>
-
-<h2 id="toc_2">剧情详解</h2>
-
-<h4 id="toc_3">第1话 巨穴之镇</h4>
-
-<p>　　住在建造于巨穴“阿比斯”边缘的城镇“奥斯”的少女见习探险家·莉可。一天，孤儿院的少年伙伴·那多在探窟中被巨大的蛇形生物“血口巨蛇”袭击时而遇难。莉可灵机一动吸引它注意，但这次轮到自己被血口巨蛇袭击了。在穷途末路的那一瞬间，突然周围被闪光和轰鸣所包围…。</p>
-
-<h4 id="toc_4">第2话 复活祭</h4>
-
-<p>　　夜晚，在莉可的房间聚集的孩子们，推测着雷格是否来自阿比斯之底。西吉整理的发掘的遗物图鉴“遗物录”中，哪都没有记载着像雷格那样的遗物。他或许是阿比斯史上最有价值的遗物之一“奈落的至宝”。如果雷格被大人们发现的话，“会被夺走并分解掉”担心的孩子们决定实行某个作战，但…。</p>
-
-<h4 id="toc_5">第3话 出发</h4>
-
-<p>　　莱莎在持有的信上写着“我在阿比斯之底等你”的信息。莉可确信这是莱莎寄给自己的信，于是向伙伴们坦白想要前往阿比斯之底。但是，却与忠告会变成再也回不来的旅程的那多吵起了架…。此时，雷格来孤儿院后第一次去探窟。重新潜入阿比斯的雷格会…。</p>
-
-<h4 id="toc_6">第4话 阿比斯深渊</h4>
-
-<p>　　莉可醒来时，眼前就出现了雷格的睡相和铺满绳索的手臂。从“奥斯”启程的两人到达深界一层“阿比斯深渊”，有常常警戒周围的必要。“照这个速度的话能前往奈落之底的！”眼睛放光的莉可，肚子饿了。于是吃起了特制的莉可汤，此时雷格突然想起了装进口袋里的信封。那里写着的文字是…。</p>
-
-<h4 id="toc_7">第5话 火葬炮</h4>
-
-<p>　　莉可和雷格到达深界二层“诱惑之森”。想起西吉的话，赤笛就这样下去的话就是自寻死路，并且进退两难。甩开追兵后安心的两人走在天雾树的叶子群生的森林时，听到远处传来的人声。慌忙地前往传来呼救声的地方后，发现那里有一只巨大的鸟类生物和倒在旁边的探窟家…。</p>
-
-<h4 id="toc_8">第6话 监视基地</h4>
-
-<p>　　来迎接好不容易来到“监视基地”的莉可和雷格的，是不动卿“不动如山的奥森”。从哈勃尔库的话中，她是现役的白笛，并曾经和莱莎一起把在阿比斯深层出生的莉可运往地上。莉可对救命恩人道谢，然而奥森却用令人害怕的表情开始笑…。然后，两人与奥森的首席弟子“马璐璐库”度过一晚上。莉可在深夜时醒来后…。</p>
-
-<h4 id="toc_9">第7话 不动卿</h4>
-
-<p>　　与莉可他们道别，回到了奥斯城镇的哈勃尔库，向那多和西吉说起有关在白笛之中拥有无双之怪力的“不动卿”奥森的话题。不过，哈勃尔库对奥森感到了某种不安…。另一方面，莉可他们在奥森的房间里与一个四方形的白箱对峙。对猜测着“这不就是传言自己被放进去的‘除咒之笼’？”的莉可，奥森说出了真相…。</p>
-
-<h4 id="toc_10">第8话 生存训练</h4>
-
-<p>　　被奥森布置新的启程训练“生存训练”。被告知要靠有限的装备在十天内活下去的莉可和雷格，首先为了确保饮用水而开始行动。马上发现了干净的水的莉可，一靠近水面突然摇动起来……。另一方面，奥森与“深渊盗贼”一同在远处观察其状况。看见莉可和雷格的样子，怀念起了…。</p>
-
-<h4 id="toc_11">第9话 毒与诅咒</h4>
-
-<p>　　莉可和雷格与奥森和马璐璐库他们道别后，费尽周折来到深界三层“大断层”。大断层正如其名有着巨大的垂直岩壁，据说其高度超过4000米。奥森教他们利用竖洞向下走，而在两人面前却出现了各种阿比斯的生物。就如往常那样依赖雷格的力量前进，然后突然听到了耳熟的某种声音…。</p>
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="http://music.163.com/outchain/player?type=1&id=36037083&auto=0&height=430"></iframe>
-
-<h2 id="toc_12">下载链接</h2>
-
-<pre><code class="language-text">https://pan.baidu.com/s/1dEFVgOT
+<pre><code class="language-plain_text">vim ~/.aMule/amule.conf
+</code></pre>
+<ul>
+<li>(建议)修改文件存储路径</li>
+</ul>
+<pre><code class="language-plain_text">TempDir=/root/.aMule/Temp
+IncomingDir=/root/.aMule/Incoming
+建议修改为
+TempDir=/root/aMule/Temp
+IncomingDir=/root/aMule/Incoming
+</code></pre>
+<ul>
+<li>(建议)新建文件夹</li>
+</ul>
+<pre><code class="language-plain_text">mkdir -p /root/aMule/Temp
+mkdir -p /root/aMule/Incoming
+</code></pre>
+<ul>
+<li>修改连接设置</li>
+</ul>
+<pre><code class="language-plain_text">AcceptExternalConnections=0
+修改为
+AcceptExternalConnections=1
+</code></pre>
+<ul>
+<li>修改WEB访问密码</li>
+</ul>
+<pre><code class="language-plain_text">[WebServer]
+Enabled=0
+Password= [填写您生成的密码字符串]
+</code></pre>
+<ul>
+<li>(建议)修改GUI客户端访问控制密码</li>
+</ul>
+<pre><code class="language-plain_text">ECPassword= [填写您生成的密码字符串]
+</code></pre>
+<ul>
+<li>修改完毕,保存退出</li>
+</ul>
+<p>3.(推荐)使用Screen运行程序</p>
+<ul>
+<li>安装screen</li>
+</ul>
+<pre><code class="language-plain_text">yum install screen -y
+</code></pre>
+<ul>
+<li>生成一个窗口进程</li>
+</ul>
+<pre><code class="language-plain_text">screen -S amule
+</code></pre>
+<ul>
+<li>执行amuled 进程</li>
+</ul>
+<pre><code class="language-plain_text">amuled
+出现如下信息证明程序启动完成
+2020-01-22 05:51:58: Initialising aMuleD 2.3.1 compiled with wxGTK2 v2.8.12
+ 2020-01-22 05:51:58: Checking if there is an instance already running...
+ 2020-01-22 05:51:58: No other instances are running.
+2020-01-22 05:51:58: ERROR: WARNING Warning! You are running aMule as root.
+2020-01-22 05:51:58: Doing so is not recommended for security reasons,
+2020-01-22 05:51:58: and you are advised to run aMule as an normal
+2020-01-22 05:51:58: user instead.
+Warning! You are running aMule as root.
+Doing so is not 
+recommended for security reasons,and you are 
+advised to run aMule as an normal user instead.
+ 2020-01-22 05:51:58: ListenSocket: Ok.
+ 2020-01-22 05:51:58: Loading temp files from /root/aMule/Temp.
+ 2020-01-22 05:51:58: All PartFiles Loaded.
+ 2020-01-22 05:51:58: amuled: OnInit - starting timer
+</code></pre>
+<ul>
+<li>退回首层屏幕</li>
+</ul>
+<pre><code class="language-plain_text">Ctrl + a + d
 </code></pre>
 
                         
@@ -1905,152 +537,7 @@ This offer ends on : January, 1st 2018</p>
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2017/9/18</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Movie.html'>Movie</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15057082298289.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15046915958368.html">
-                
-                  <h1>敦刻尔克(1080P) Dunkirk 2017 NEW HD-TS x264-CPG</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>《敦刻尔克》是由辛克匹影业出品，美国华纳兄弟影业发行的战争悬疑片，由克里斯托弗·诺兰执导，汤姆·哈迪、肯尼思·布拉纳、马克·里朗斯、哈里·斯泰尔斯、希里安·墨菲、芬恩·怀特海德等领衔主演。<br/>
-该片改编自二战历史事件《敦刻尔克大撤退》，当时40万英法联军被敌军包围在敦刻尔克的海滩上，面对敌军步步逼近的绝境，他们不得不为自己的命运背水一战[1]  。<br/>
-该片于2017年7月21日在美国上映，9月1日在中国大陆上映[2]  。<br/>
-中文名:敦刻尔克<br/>
-外文名:Dunkirk<br/>
-其它译名:敦刻尔克大行动（台湾）、邓寇克大行动（香港）<br/>
-出品时间:2017年</p>
-
-<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fj9zyk34ocj30nm0xqdn4.jpg" alt=""/><br/>
-<img src="https://ws1.sinaimg.cn/large/006tNc79ly1fj9zykdw2og30b504qtit.gif" alt=""/><br/>
-<img src="https://ws2.sinaimg.cn/large/006tNc79ly1fj9zykrxv5g308w04s4qp.gif" alt=""/><br/>
-<img src="https://ws1.sinaimg.cn/large/006tNc79ly1fj9zyll4i3g30b4061kjl.gif" alt=""/></p>
-
-<pre><code class="language-text">ed2k://|file|Dunkirk.2017.BD-1080p.1920X1080.mkv|4297243249|0EAEAFD6C865E3C96C28EDD268E3175D|h=CST5CXE2SWLGSZUJIOBAVF74AWOMFMOR|/
-</code></pre>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2017/9/6</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Movie.html'>Movie</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15046915958368.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15038828406046.html">
-                
-                  <h1>星际特工：千星之城(1080P & 4K)</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>人类和众多外星种族共同生活在一个名为千星之城阿尔法的繁华星际大都市，数百年来，千星之城阿尔法成为各族群和平共处的美妙天堂，它繁荣昌盛，它欣欣向上，然而，宇宙的神秘黑暗力量正试图摧毁这一切。韦勒瑞恩（戴恩·德哈恩饰）和洛瑞琳（卡拉·迪瓦伊饰）被选择成为阿尔法的守护者，他们俩是警卫部的执行人员，被任命去拦截一种稀有物品的交易。这种稀有物品与一个本该在数十年前就消失的稀有族群存在神秘的关联。然后他们来到了巨大的漂浮都市阿尔法城，这时他们的指挥官Arun Filitt（克里夫·欧文饰）在指挥中心遭到绑架，这对搭档开始意识到手中物品的不寻常价值。二人追寻凶手而来到位于阿尔法城心脏的死亡之境，发现自己身陷一场正在发酵的星际事件中——他们需要通过控制手中那个能够改变宇宙秩序的物品，在其他物种被卷进来之前救出Arun  。</p>
-
-<p><img src="https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=5472f250a3773912d02b8d339970ed7d/8b13632762d0f70333fe213102fa513d2797c58b.jpg" alt=""/></p>
-
-<pre><code class="language-text">magnet:?xt=urn:btih:AN5SS67YIB56US7M6FU5GDDE4EPQQCFW
-</code></pre>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2017/8/28</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Movie.html'>Movie</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15038828406046.html#disqus_thread">comments</a>
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15017403101947.html">
-                
-                  <h1>今天遇到了LaunchPad的问题</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>今天遇到了一个Mac OS的LaunchPad的问题，使用手势打开LaunchPad后输入关键字无法进行搜索。</p>
-
-<p>处理这个问题我的办法是，重置Dock。<br/>
-LaunchPad是属于Dock的.</p>
-
-<p>Mac OS 10.10系统或更新</p>
-
-<blockquote>
-<p>defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock</p>
-</blockquote>
-
-<p>Mac OS 10.9系统</p>
-
-<blockquote>
-<p>rm ~/Library/Application\ Support/Dock/*.db ; killall Dock</p>
-</blockquote>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2017/8/3</span>
+                    <span class="date">2020/01/22</span>
                     <span>posted in&nbsp;</span> 
           				  
           					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
@@ -2060,8 +547,6 @@ LaunchPad是属于Dock的.</p>
                   </div>
                   <div class="more-right right">
                   <span class="comments">
-                      
-                        <a href="https://jarryyen.github.io/15017403101947.html#disqus_thread">comments</a>
                       
 
                        
@@ -2081,7 +566,7 @@ LaunchPad是属于Dock的.</p>
 			  </div>
 			  <div class="large-6 columns">
 			<p class="text-right" style="padding-top:25px;">
-			
+			 <a href="all_1.html">&raquo; Next Page</a> 
 			</p>
 			  </div>
 			</div>
@@ -2093,8 +578,8 @@ LaunchPad是属于Dock的.</p>
     <div id="sidebar" class="sidebar">
           <div id="site-info" class="site-info">
             
-                <h1>jarryyen.github.io</h1>
-                <div class="site-des"></div>
+                <h1>JarryYen的小日子</h1>
+                <div class="site-des">真实信息 无愧于心</div>
                 <div class="social">
 
 
@@ -2105,7 +590,7 @@ LaunchPad是属于Dock的.</p>
 
 
 
-<a target="_blank" class="github" target="_blank" href="https://github.com/jarryyen" title="GitHub">GitHub</a>
+
 
   <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
                 
@@ -2123,8 +608,6 @@ LaunchPad是属于Dock的.</p>
       	<p class="cat-list">
         
             <a href="jenkins.html"><strong>jenkins</strong></a>
-        
-            <a href="Movie.html"><strong>Movie</strong></a>
         
             <a href="Tips.html"><strong>Tips</strong></a>
         
@@ -2151,31 +634,31 @@ LaunchPad是属于Dock的.</p>
 	      
 		      
 			      <li class="post">
-			        <a href="15759676309433.html">Shadowsocks-NG-R8订阅失效问题</a>
+			        <a href="16364459575433.html">用BT面板</a>
 			      </li>
 		     
 		  
 		      
 			      <li class="post">
-			        <a href="15734416345812.html">Centos 8 直接开启BBR</a>
+			        <a href="16324699802783.html">今天解决了手机残留证书的问题</a>
 			      </li>
 		     
 		  
 		      
 			      <li class="post">
-			        <a href="15664660068365.html">MacOS删除文件不释放空间？</a>
+			        <a href="16306473763283.html">codeigniter 去除index.php (nginx,apache) 通用方法</a>
 			      </li>
 		     
 		  
 		      
 			      <li class="post">
-			        <a href="15646322854275.html">在MacOS下无需安装任何工具解压PKG</a>
+			        <a href="16057763012390.html">https导致微信内分享链接无图片以及描述等信息</a>
 			      </li>
 		     
 		  
 		      
 			      <li class="post">
-			        <a href="15638065887503.html">不使用PHPExcel导出Excel文件</a>
+			        <a href="16043696365923.html">今天使用BT(宝塔)出现了这个问题</a>
 			      </li>
 		     
 		  
@@ -2437,27 +920,6 @@ pre[class*="language-"].line-numbers > code {
 
 </style>
 
-
-<script type="text/javascript">
-    var disqus_shortname = 'jarryyen'; 
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-
-<script type="text/javascript">
-var disqus_shortname = 'jarryyen'; 
-
-(function () {
-var s = document.createElement('script'); s.async = true;
-s.type = 'text/javascript';
-s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}());
-</script>
   
     
 
@@ -2478,7 +940,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
      
     </script>
 
-
+<script></script>
 
   </body>
 </html>

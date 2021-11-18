@@ -112,70 +112,27 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
-                <a class="clearlink" href="16364459575433.html">
+                <a class="clearlink" href="15247245416912.html">
                 
-                  <h1>用BT面板</h1>
+                  <h1>远程执行tomcat执行脚本出现找不到环境变量问题</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
-                        	<p>这是在妖火上看到的最新的免流地址</p>
-<pre><code class="language-plain_text">联通最新免流混淆（4G/5G均免）
-shoutingtoutiao1.10010.com
-shoutingtoutiao2.10010.com
-shoutingtoutiao3.10010.com
-shoutingtoutiao4.10010.com
-</code></pre>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2021/11/09</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="16324699802783.html">
-                
-                  <h1>今天解决了手机残留证书的问题</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<blockquote>
-<p>前言:<br />
-之前由于手机里面安装了很多证书,这些证书随着旧手机迁移到了新手机.<br />
-迁移到新手机后,发现描述文件没有了.但是,证书依然还在.<br />
-因为此问题,折腾了好几天.</p>
+                        	<p>问题描述:</p>
+<blockquote>
+<p>我使用jenkins在build工程的时候,使用了执行shell部分.脚本内含有远程主机运行或者停止tomcat脚本,在执行的时候报告有java_home和java_jar没有环境变量的问题.根据问题查找,是远程执行的时候没有加载profile造成环境变量确实的问题.<br />
+<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fqq20j3ev3j30tr0fudir.jpg" alt="" /><br />
+脚本中的远程执行命令是</p>
+<blockquote>
+<p>ssh root@web01 &quot;/data/script/run.sh&quot; 中的 run.sh包含tomcat启动脚本</p>
 </blockquote>
-<h4><a id="1-imazing%E7%9C%9F%E7%9A%84%E4%B8%8D%E5%A5%BD%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.iMazing 真的不好用</h4>
-<p>这款软件除了收费还是收费,免费的功能非常少.以下内容提到的到处数据文件是无法在免费版里面完成的,当然如果你购买了收费版本可以考虑使用这款软件.</p>
-<h4><a id="2-iphone-backup-extractor%E5%85%8D%E8%B4%B9%E7%89%88%E4%B9%9F%E5%BE%88%E5%A5%BD%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.iPhone Backup Extractor 免费版也很好用</h4>
-<p>这次我使用的是这款软件,可以免费把Tur*****.db导出.</p>
-<h4><a id="3-advtruststore" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.ADVTrustStore</h4>
-<p>使用ADVTrustStore导出相应的证书</p>
-<h4><a id="4%E5%AF%BC%E5%85%A5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.导入</h4>
-<p>将导出的证书通过Airdrop安装到你的iPhone上</p>
-<h4><a id="5%E5%88%A0%E9%99%A4" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.删除</h4>
-<p>安装好之后你会发现对应证书的描述文件就出现了,这时通过描述文件就可以把对应的证书删除掉了.</p>
+</blockquote>
+<p>解决方案:</p>
+<blockquote>
+<p>在tomcat的catalina.sh中添加环境变量部分.<br />
+<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fqq1ywrzs4j315k0xitf3.jpg" alt="" /></p>
+</blockquote>
 
                         
                       </div>
@@ -184,7 +141,7 @@ shoutingtoutiao4.10010.com
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2021/09/24</span>
+                    <span class="date">2018/04/26</span>
                     <span>posted in&nbsp;</span> 
           				  
           					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
@@ -203,52 +160,145 @@ shoutingtoutiao4.10010.com
               </div><!-- article -->
         
 			<div class="article">
-                <a class="clearlink" href="16306473763283.html">
+                <a class="clearlink" href="15203221731981.html">
                 
-                  <h1>codeigniter 去除index.php (nginx,apache) 通用方法</h1>
+                  <h1>MYSQL命令行内倒入文本数据</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
-                        	<h5><a id="htaccess%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>.htaccess文件配置</h5>
-<pre><code class="language-plain_text">&lt;IfModule mod_rewrite.c&gt;
-  RewriteEngine On
-  RewriteBase /
-  RewriteCond $1 !^(index\.php|assets|system|robots\.txt)
-  RewriteRule ^(.*)$ /index.php/$1 [L,QSA]
-&lt;/IfModule&gt;
-</code></pre>
-<h3><a id="%E7%AE%80%E8%A6%81%E8%AF%B4%E6%98%8E%EF%BC%9A%E5%85%B3%E9%94%AE%E6%98%AF%E8%BF%99%E5%8F%A5%EF%BC%9Arewirtecond%EF%BC%8C-assets%E6%98%AF%E7%9B%AE%E5%BD%95%E3%80%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>简要说明：关键是这句：rewirteCond ，assets是目录。</h3>
+                        	<p>load data local infile '/文件名.txt' into table 表名(字段);</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/03/06</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15203031656074.html">
+                
+                  <h1>Linux增加swap(aws建议添加)</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>添加交换文件步骤：<br />
+1、找个地方创建一个.swap的文件，我放在了/mnt目录下<br />
+sudo dd if=/dev/zero of=/mnt/10GB.swap bs=1G count=10<br />
+这条命令是在/mnt目录下创建一个名为10GB.swap的交换文件，基础大小为1GB，有10个，so：1*10=10GB<br />
+2、把创建的.swap文件格式化为Swap文件<br />
+sudo mkswap /mnt/10GB.swap<br />
+3、把创建的.swap文件加入到系统中<br />
+sudo swapon /mnt/10GB.swap<br />
+以上步骤可以做到临时启用交换文件，如果要下次启动系统的时候也启动交换文件，那么还要继续做以下步骤。<br />
+4、在/ect/fstab中加入新的Swap分区<br />
+sudo gedit /etc/fstab<br />
+在最后一行添加（前面是生成的.swap文件的位置）<br />
+/mnt/10GB.swap none swap sw 0 0<br />
+以上步骤为添加交换文件方法。</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/03/06</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15192838129981.html">
+                
+                  <h1>Geth 的JavaScript控制</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<ol>
+<li>
+<p>如何连接</p>
+</li>
+<li>
+<p>常用命令<br />
+1. attach<br />
+2. admin.peers<br />
+3. net.peerCount<br />
+4. admin.addPeer(&quot;enode://....&quot;)</p>
+</li>
+<li>
+<p>如何连接</p>
+</li>
+</ol>
+<blockquote>
+<p>geth attach [路径]/geth.ipc<br />
+geth attach http://[IP]:8545<br />
+geth attach ws://[IP]:8545</p>
+</blockquote>
+<ol start="2">
+<li>
+<p>常用命令</p>
+<blockquote>
+<p>attach<br />
+可以使用geth然后使用这个参数可以进行登录</p>
+</blockquote>
 <hr />
-<h5><a id="apache%E7%9A%84%E9%85%8D%E7%BD%AE%EF%BC%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>apache的配置：</h5>
-<pre><code class="language-plain_text">&lt;VirtualHost *:80&gt;
-    ServerAdmin jjj@163.com
-    DocumentRoot &quot;d:/mywork/m&quot;
-
-    ServerName m.mimi.com
-
-    &lt;Directory &quot;d:/mywork/m&quot;&gt;  　　// 这里是项目的目录
-        Options Indexes MultiViews FollowSymLinks
-        AllowOverride All
-        Order allow,deny
-        allow from all
-   &lt;/Directory&gt;
-&lt;/VirtualHost&gt;
-</code></pre>
+<blockquote>
+<p>admin.peers<br />
+查看集群信息</p>
+</blockquote>
 <hr />
-<h5><a id="%E7%AE%80%E8%A6%81%E8%AF%B4%E6%98%8E%EF%BC%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>简要说明：</h5>
-<p>ServerAdmin表示错误信息地址，如果发生错误发送到这个邮箱地址。</p>
-<p>Indexes 的作用就是当该目录下没有 index.html 文件时，就显示目录结构，去掉 Indexes，Apache 就不会显示该目录的列表了。</p>
-<p>Nginx配置几句</p>
-<pre><code class="language-plain_text">location /
-        {
-            index index.php;
-            if (!-e $request_filename) {
-                    rewrite ^/(.*)$ /index.php?$1 last;
-                    break;
-            }
-        }
-</code></pre>
+<blockquote>
+<p>net.peerCount<br />
+查看现在已经连接的节点数量</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>admin.addPeer(&quot;enode://....&quot;)<br />
+可以使用这个方法添加节点</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>admin.peers.forEach(function(p) {console.log(p.network.remoteAddress);})<br />
+通过这个方法可以查看已经连接的节点IP列表</p>
+</blockquote>
+</li>
+</ol>
 
                         
                       </div>
@@ -257,8 +307,10 @@ shoutingtoutiao4.10010.com
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2021/09/03</span>
-                    
+                    <span class="date">2018/02/22</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Coin.html'>Coin</a></span>
           				   
                     
 
@@ -274,14 +326,78 @@ shoutingtoutiao4.10010.com
               </div><!-- article -->
         
 			<div class="article">
-                <a class="clearlink" href="16057763012390.html">
+                <a class="clearlink" href="15180905572524.html">
                 
-                  <h1>https导致微信内分享链接无图片以及描述等信息</h1>
+                  <h1>Linux 7.4 配置BBR加速</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
-                        	<p>今天遇到了一个特别的问题，之前的页面没有启用https。原因竟然是在计算signature的时候需要传入一个完整的url，但是程序传入的url是不带https的。最终导致signature计算错误，无法实现正常的分享等操作。只需要添加一个判断，让计算signature的时候传入正确的url地址即可。</p>
+                        	<p>####配置BBR加速</p>
+<p>什么是BBR：</p>
+<p>TCP BBR是谷歌出品的TCP拥塞控制算法。BBR目的是要尽量跑满带宽，并且尽量不要有排队的情况。BBR可以起到单边加速TCP连接的效果。</p>
+<p>Google提交到Linux主线并发表在ACM queue期刊上的TCP-BBR拥塞控制算法。继承了Google“先在生产环境上部署，再开源和发论文”的研究传统。TCP-BBR已经再YouTube服务器和Google跨数据中心的内部广域网(B4)上部署。由此可见出该算法的前途。</p>
+<p>TCP-BBR的目标就是最大化利用网络上瓶颈链路的带宽。一条网络链路就像一条水管，要想最大化利用这条水管，最好的办法就是给这跟水管灌满水。</p>
+<p>BBR解决了两个问题：</p>
+<p>在有一定丢包率的网络链路上充分利用带宽。非常适合高延迟，高带宽的网络链路。<br />
+降低网络链路上的buffer占用率，从而降低延迟。非常适合慢速接入网络的用户。<br />
+Google 在 2016年9月份开源了他们的优化网络拥堵算法BBR，最新版本的 Linux内核(4.9-rc8)中已经集成了该算法。</p>
+<p>对于TCP单边加速，并非所有人都很熟悉，不过有另外一个大名鼎鼎的商业软件“锐速”，相信很多人都清楚。特别是对于使用国外服务器或者VPS的人来说，效果更佳。</p>
+<p>#####BBR项目地址：</p>
+<blockquote>
+<p><a href="https://github.com/google/bbr">https://github.com/google/bbr</a></p>
+</blockquote>
+<p>升级内核，第一步首先是升级内核到支持BBR的版本：<br />
+1.yum更新系统版本：</p>
+<blockquote>
+<p>yum update</p>
+</blockquote>
+<p>2.查看系统版本：</p>
+<pre><code class="language-plain_text">[root@server ~]# cat /etc/redhat-release 
+CentOS Linux release 7.4.1708 (Core) 
+[root@server ~]# 
+</code></pre>
+<p>3.安装elrepo并升级内核：</p>
+<pre><code class="language-plain_text">[root@server ~]# rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+[root@server ~]# rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm
+[root@server ~]# yum --enablerepo=elrepo-kernel install kernel-ml -y
+</code></pre>
+<p>4.更新grub文件并重启系统：</p>
+<pre><code class="language-plain_text">[root@server ~]# egrep  ^menuentry /etc/grub2.cfg |     cut -f 2 -d \'
+CentOS Linux 7 Rescue 8619ff5e1306499eac41c02d3b23868e (4.14.14-1.el7.elrepo.x86_64)
+CentOS Linux (4.14.14-1.el7.elrepo.x86_64) 7 (Core)
+CentOS Linux (3.10.0-693.11.6.el7.x86_64) 7 (Core)
+CentOS Linux (3.10.0-693.el7.x86_64) 7 (Core)
+CentOS Linux (0-rescue-c73a5ccf3b8145c3a675b64c4c3ab1d4) 7 (Core)
+[root@server ~]# grub2-set-default 0
+[root@server ~]# reboot
+</code></pre>
+<p>5.重启完成后查看内核是否已更换为4.14版本：</p>
+<pre><code class="language-plain_text">[root@server ~]# uname -r 4.14.14-1.el7.elrepo.x86_64
+[root@server ~]#
+</code></pre>
+<p>6.开启bbr：</p>
+<pre><code class="language-plain_text">[root@server ~]# vim /etc/sysctl.conf    # 在文件末尾添加如下内容
+net.core.default_qdisc = fq
+</code></pre>
+<p>net.ipv4.tcp_congestion_control = bbr</p>
+<p>7.加载系统参数：</p>
+<pre><code class="language-plain_text">[root@vultr ~]# sysctl -p
+net.ipv6.conf.all.accept_ra = 2
+net.ipv6.conf.eth0.accept_ra = 2
+net.core.default_qdisc = fq
+net.ipv4.tcp_congestion_control = bbr
+[root@vultr ~]#
+</code></pre>
+<p>如上，输出了我们添加的那两行配置代表正常。</p>
+<p>8.确定bbr已经成功开启：</p>
+<pre><code class="language-plain_text">[root@vultr ~]# sysctl net.ipv4.tcp_available_congestion_control
+net.ipv4.tcp_available_congestion_control = bbr cubic reno
+[root@vultr ~]# lsmod | grep bbr
+tcp_bbr                20480  2 
+[root@vultr ~]# 
+</code></pre>
+<p>输出内容如上，则表示bbr已经成功开启。</p>
 
                         
                       </div>
@@ -290,7 +406,7 @@ shoutingtoutiao4.10010.com
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2020/11/19</span>
+                    <span class="date">2018/02/08</span>
                     <span>posted in&nbsp;</span> 
           				  
           					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
@@ -309,29 +425,85 @@ shoutingtoutiao4.10010.com
               </div><!-- article -->
         
 			<div class="article">
-                <a class="clearlink" href="16043696365923.html">
+                <a class="clearlink" href="15180816293582.html">
                 
-                  <h1>今天使用BT(宝塔)出现了这个问题</h1>
+                  <h1>CentOS7.4搭建shadowsocks</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
-                        	<pre><code class="language-plain_text">[Tue Nov 03 10:01:38.237329 2020] [proxy_fcgi:error] [pid 2405:tid 140039740675840] [client 60.205.xxx.xxx:51754] AH01071: Got error 'Primary script unknown\n'
-[Tue Nov 03 10:04:51.147084 2020] [ssl:warn] [pid 21999:tid 140040390793088] AH01909: SSL.target.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue Nov 03 10:05:22.670931 2020] [ssl:warn] [pid 21999:tid 140040390793088] AH01909: SSL.target.com:443:0 server certificate does NOT include an ID which matches the server name
+                        	<p>####安装 pip</p>
+<p>pip是 python 的包管理工具。在本文中将使用 python 版本的 shadowsocks，此版本的 shadowsocks 已发布到 pip 上，因此我们需要通过 pip 命令来安装。</p>
+<p>在控制台执行以下命令安装 pip</p>
+<pre><code class="language-plain_text">[root@server ~]# curl &quot;https://bootstrap.pypa.io/get-pip.py&quot; -o &quot;get-pip.py&quot;
+[root@server ~]# python get-pip.py
 </code></pre>
-<p>这个问题出现在启用SSL后,在站点的设置选项-》配置-〉找到SSL部分</p>
-<pre><code class="language-plain_text">&lt;VirtualHost *:443&gt;
-    ServerAdmin webmasterexample.com
-    DocumentRoot &quot;/data/www/wwwroot/target.com/&quot;
-    ServerName SSL.target.com
-    ServerAlias target.com
-    
-    #errorDocument 404 /404.html
-    ErrorLog &quot;/www/wwwlogs/target.com-error_log&quot;
-    CustomLog &quot;/www/wwwlogs/target.com-access_log&quot; combined
+<p>####安装配置 shadowsocks<br />
+在控制台执行以下命令安装 shadowsocks：</p>
+<pre><code class="language-plain_text">[root@server ~]# pip install --upgrade pip
+[root@server ~]# pip install shadowsocks
 </code></pre>
-<p>其中 ServerName 去掉 SSL. 开头,然后注释掉ServerAlias即可.保存然后重启Apache</p>
+<p>安装完成后，需要创建shadowsocks的配置文件/etc/shadowsocks.json，编辑内容如下：</p>
+<pre><code class="language-plain_text">[root@server ~]# vim /etc/shadowsocks.json
+{
+&quot;server&quot;: &quot;0.0.0.0&quot;,
+&quot;local_address&quot;:&quot;127.0.0.1&quot;,
+&quot;local_port&quot;: 1080,
+&quot;port_password&quot;: {
+&quot;8080&quot;: &quot;填写密码&quot;,
+&quot;8081&quot;: &quot;填写密码&quot;
+},
+&quot;timeout&quot;: 600,
+&quot;method&quot;: &quot;aes-256-cfb&quot;
+}
+</code></pre>
+<p>说明：</p>
+<p>method为加密方法，可选aes-128-cfb, aes-192-cfb, aes-256-cfb, bf-cfb, cast5-cfb, des-cfb, rc4-md5, chacha20, salsa20, rc4, table<br />
+port_password为端口对应的密码，可使用密码生成工具生成一个随机密码<br />
+以上两项信息在配置 shadowsocks 客户端时需要配置一致，具体说明可查看 shadowsocks 的帮助文档。</p>
+<p>#####如果你不需要配置多个端口的话，仅配置单个端口，则可以使用以下配置：<br />
+{<br />
+&quot;server&quot;: &quot;0.0.0.0&quot;,<br />
+&quot;server_port&quot;: 8080,<br />
+&quot;password&quot;: &quot;填写密码&quot;,<br />
+&quot;method&quot;: &quot;aes-256-cfb&quot;<br />
+}</p>
+<p>说明：</p>
+<ul>
+<li>server_port为服务监听端口</li>
+<li>password为密码</li>
+</ul>
+<p>同样的以上两项信息在配置shadowsocks 客户端时需要配置一致。</p>
+<hr />
+<p>####配置自启动</p>
+<p>编辑shadowsocks 服务的启动脚本文件，内容如下：</p>
+<pre><code class="language-plain_text">[root@server ~]# vim /etc/systemd/system/shadowsocks.service
+[Unit]
+Description=Shadowsocks
+
+[Service]
+TimeoutStartSec=0
+ExecStart=/usr/bin/ssserver -c /etc/shadowsocks.json
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>执行以下命令启动 shadowsocks 服务：</p>
+<pre><code class="language-plain_text">[root@server ~]# systemctl enable shadowsocks
+[root@server ~]# systemctl start shadowsocks
+</code></pre>
+<p>检查 shadowsocks 服务是否已成功启动，可以执行以下命令查看服务的状态：</p>
+<blockquote>
+<p>systemctl status shadowsocks -l</p>
+</blockquote>
+<p>确认服务启动成功后，配置防火墙规则，开放你配置的端口，不然客户端是无法连接的：</p>
+<pre><code class="language-plain_text">[root@server ~]# firewall-cmd --zone=public --add-port=8080/tcp --permanent
+success
+[root@server ~]# firewall-cmd --zone=public --add-port=8081/tcp --permanent
+success
+[root@server ~]# firewall-cmd --reload
+success
+</code></pre>
 
                         
                       </div>
@@ -340,7 +512,7 @@ shoutingtoutiao4.10010.com
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2020/11/03</span>
+                    <span class="date">2018/02/08</span>
                     <span>posted in&nbsp;</span> 
           				  
           					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
@@ -359,28 +531,31 @@ shoutingtoutiao4.10010.com
               </div><!-- article -->
         
 			<div class="article">
-                <a class="clearlink" href="15924471851785.html">
+                <a class="clearlink" href="15162450810938.html">
                 
-                  <h1>北京的武汉人没有感恩的心</h1>
+                  <h1>MacOS X 10.13(High Sierra)开启隐私权限</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
-                        	<p>我有个女同事,平时关系不错.最近由于北京疫情的问题,我们讨论了一下.</p>
-<p>这位姐姐是湖北武汉人,她说在全国最缺口罩的时候.她老公的单位(某央企),每个人发了一箱KF94口罩.</p>
-<p>我不能说羡慕,我只是想给医护人员一个公道.在疫情最严重的时候,北京的医院给医生配备的是什么口罩?<br />
-一天一个“一次性医用外科口罩”,不是两个“是一个”.<br />
-因为产量不足,应该每天两个的口罩变成了1个.但是,所有的医护人员没有因此就请假的.</p>
-<p>但是,这里就要提到我那个同事姐姐的老公了.在北京某央企上班,在家办公还能得到一箱KF94口罩......</p>
-<p>这对来自湖北武汉的夫妻真是福气,在家办公都有KF94.</p>
-<p>最主要的,那位姐姐说了.医院不发你要去告医院去,央企是国家的企业....</p>
-<p>难道医院就不是国家的嘛?北京的公立医院那在那个时期就是每人每天1个口罩啊,公立医院难道不是国家的嘛??</p>
-<p>我接触的武汉人不多,只有这位同事.所以,我不能说所有武汉人都这样,但是至少我身边的这位武汉人是这样.</p>
-<p>只能说,在中国.一线医生,不如在家办公的央企职员!医生的命,不如在家办公的央企职员值钱!</p>
-<p>这就是为什么中国医生大量出走海外,中国医疗技术一直停滞不前的重要原因.</p>
-<p>中国医生不被尊重,中国医生是社会的底层.</p>
-<p>需要医护人员的时候,一生号召奔赴前线.</p>
-<p>不需要医护的时候,医护形同草芥.</p>
+                        	<p>在下载一些Mac软件后打卡，系统会告诉你说软件受损，需要删除掉。其实，并不是软件受损，而是苹果修改了安全限制。以前，允许来自任何第三方的软件有选项，可以选择。现在，苹果去掉了选项，必须要从App Store或者含有苹果认证证书的软件才可以运行。</p>
+<p>如果关闭这个选项，实现任何软件都可以运行呢？</p>
+<p>我们只需要打开终端，输入下面的命令</p>
+<blockquote>
+<p>sudo spctl --master-disable</p>
+</blockquote>
+<p>然后打开系统便好设置-&gt;安全性与隐私选项-&gt;任何来源（最下面）<br />
+![WX20180118-111614@2x](# MacOS X 10.13(High Sierra)开启隐私权限</p>
+<p>在下载一些Mac软件后打开，系统会告诉你说软件受损，需要删除掉。其实，并不是软件受损，而是苹果修改了安全限制。以前，允许来自任何第三方的软件有选项，可以选择。现在，苹果去掉了选项，必须要从App Store或者含有苹果认证证书的软件才可以运行。</p>
+<p>如果关闭这个选项，实现任何软件都可以运行呢？</p>
+<p>我们只需要打开终端，输入下面的命令</p>
+<blockquote>
+<p>sudo spctl --master-disable</p>
+</blockquote>
+<p>然后打开系统便好设置-&gt;安全性与隐私选项-&gt;任何来源（最下面）<br />
+<img src="http://ofcfvx6lf.bkt.clouddn.com/WX20180118-111614@2x.png" alt="安全性与隐私" /></p>
+<p>选择这个选项，软件就可以正常运行了</p>
+<p>选择这个选项，软件就可以正常运行了</p>
 
                         
                       </div>
@@ -389,155 +564,7 @@ shoutingtoutiao4.10010.com
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2020/06/18</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Share.html'>Share</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15796596354392.html">
-                
-                  <h1>aMule For Linux 配置</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>1.首先要启动一次amuled这个程序,程序会自动生成配置文件</p>
-<pre><code class="language-plain_text">2020-01-22 05:21:29: Initialising aMuleD 2.3.1 compiled with wxGTK2 v2.8.12
- 2020-01-22 05:21:29: Checking if there is an instance already running...
- 2020-01-22 05:21:29: No other instances are running.
-!2020-01-22 05:21:29: ERROR: WARNING Warning! You are running aMule as root.
-!2020-01-22 05:21:29: Doing so is not recommended for security reasons,
-!2020-01-22 05:21:29: and you are advised to run aMule as an normal
-!2020-01-22 05:21:29: user instead.
-
---------------------------------------------------
-Warning! You are running aMule as root.
-Doing so is not recommended for security reasons,
-and you are advised to run aMule as an normal
-user instead.
---------------------------------------------------
-
-!2020-01-22 05:21:29: ERROR: Info  --- This is the first time you run aMule 2.3.1 ---
-!2020-01-22 05:21:29: More information, support and new releases can found at our homepage,
-!2020-01-22 05:21:29: at www.aMule.org, or in our IRC channel #aMule at irc.freenode.net.
-!2020-01-22 05:21:29: Feel free to report any bugs to http://forum.amule.org
- 2020-01-22 05:21:29: ListenSocket: Ok.
- 2020-01-22 05:21:29: Loading temp files from /root/.aMule/Temp.
- 2020-01-22 05:21:29: All PartFiles Loaded.
- 2020-01-22 05:21:29: amuled: OnInit - starting timer
-!2020-01-22 05:21:29: ERROR: aMule daemon cannot be used when external connections are disabled. To enable External Connections, use either a normal aMule, start amuled with the option --ec-config or set the key &quot;AcceptExternalConnections&quot; to 1 in the file ~/.aMule/amule.conf
- 2020-01-22 05:21:29: Now, exiting main app...
- 2020-01-22 05:21:29: aMule OnExit: Terminating core.
- 2020-01-22 05:21:29: aMule shutdown completed.
-</code></pre>
-<p>2.修改WEB访问控制部分</p>
-<ul>
-<li>生成访问密码</li>
-</ul>
-<pre><code class="language-plain_text">echo -n 这里替换成你想要的密码 | md5sum | awk '{print $1}'
-</code></pre>
-<ul>
-<li>修改配置文件</li>
-</ul>
-<pre><code class="language-plain_text">vim ~/.aMule/amule.conf
-</code></pre>
-<ul>
-<li>(建议)修改文件存储路径</li>
-</ul>
-<pre><code class="language-plain_text">TempDir=/root/.aMule/Temp
-IncomingDir=/root/.aMule/Incoming
-建议修改为
-TempDir=/root/aMule/Temp
-IncomingDir=/root/aMule/Incoming
-</code></pre>
-<ul>
-<li>(建议)新建文件夹</li>
-</ul>
-<pre><code class="language-plain_text">mkdir -p /root/aMule/Temp
-mkdir -p /root/aMule/Incoming
-</code></pre>
-<ul>
-<li>修改连接设置</li>
-</ul>
-<pre><code class="language-plain_text">AcceptExternalConnections=0
-修改为
-AcceptExternalConnections=1
-</code></pre>
-<ul>
-<li>修改WEB访问密码</li>
-</ul>
-<pre><code class="language-plain_text">[WebServer]
-Enabled=0
-Password= [填写您生成的密码字符串]
-</code></pre>
-<ul>
-<li>(建议)修改GUI客户端访问控制密码</li>
-</ul>
-<pre><code class="language-plain_text">ECPassword= [填写您生成的密码字符串]
-</code></pre>
-<ul>
-<li>修改完毕,保存退出</li>
-</ul>
-<p>3.(推荐)使用Screen运行程序</p>
-<ul>
-<li>安装screen</li>
-</ul>
-<pre><code class="language-plain_text">yum install screen -y
-</code></pre>
-<ul>
-<li>生成一个窗口进程</li>
-</ul>
-<pre><code class="language-plain_text">screen -S amule
-</code></pre>
-<ul>
-<li>执行amuled 进程</li>
-</ul>
-<pre><code class="language-plain_text">amuled
-出现如下信息证明程序启动完成
-2020-01-22 05:51:58: Initialising aMuleD 2.3.1 compiled with wxGTK2 v2.8.12
- 2020-01-22 05:51:58: Checking if there is an instance already running...
- 2020-01-22 05:51:58: No other instances are running.
-2020-01-22 05:51:58: ERROR: WARNING Warning! You are running aMule as root.
-2020-01-22 05:51:58: Doing so is not recommended for security reasons,
-2020-01-22 05:51:58: and you are advised to run aMule as an normal
-2020-01-22 05:51:58: user instead.
-Warning! You are running aMule as root.
-Doing so is not 
-recommended for security reasons,and you are 
-advised to run aMule as an normal user instead.
- 2020-01-22 05:51:58: ListenSocket: Ok.
- 2020-01-22 05:51:58: Loading temp files from /root/aMule/Temp.
- 2020-01-22 05:51:58: All PartFiles Loaded.
- 2020-01-22 05:51:58: amuled: OnInit - starting timer
-</code></pre>
-<ul>
-<li>退回首层屏幕</li>
-</ul>
-<pre><code class="language-plain_text">Ctrl + a + d
-</code></pre>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2020/01/22</span>
+                    <span class="date">2018/01/18</span>
                     <span>posted in&nbsp;</span> 
           				  
           					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
@@ -561,12 +588,12 @@ advised to run aMule as an normal user instead.
 			<div class="row">
 			  <div class="large-6 columns">
 			  <p class="text-left" style="padding-top:25px;">
-			   
+			   <a href="all_2.html">&laquo; Prev Page</a>  
 			  </p>
 			  </div>
 			  <div class="large-6 columns">
 			<p class="text-right" style="padding-top:25px;">
-			 <a href="all_1.html">&raquo; Next Page</a> 
+			 <a href="all_4.html">&raquo; Next Page</a> 
 			</p>
 			  </div>
 			</div>

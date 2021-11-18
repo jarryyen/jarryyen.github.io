@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  Free - JarryYen的小日子
+  aMule For Linux 配置 - JarryYen的小日子
   
   </title>
   
@@ -103,89 +103,206 @@
        
 
  <script type="text/javascript">
-	$(function(){
-		$('#menu_item_index').addClass('is_active');
-	});
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
 </script>
 <div class="row">
-	<div class="large-8 medium-8 columns">
-		<div class="markdown-body home-categories">
-		
-			<div class="article">
-                <a class="clearlink" href="15083801639905.html">
-                
-                  <h1>DxO OpticsPro 11</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>What's in DxO OpticsPro - Elite Edition:</p>
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+          <h1>aMule For Linux 配置</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2020/01/22</span>
+
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+           
+         
+          <span class="comments">
+            
+
+            
+          </span>
+
+        </div>
+      </div><!-- article -->
+
+      <div class="article-content">
+      <p>1.首先要启动一次amuled这个程序,程序会自动生成配置文件</p>
+<pre><code class="language-plain_text">2020-01-22 05:21:29: Initialising aMuleD 2.3.1 compiled with wxGTK2 v2.8.12
+ 2020-01-22 05:21:29: Checking if there is an instance already running...
+ 2020-01-22 05:21:29: No other instances are running.
+!2020-01-22 05:21:29: ERROR: WARNING Warning! You are running aMule as root.
+!2020-01-22 05:21:29: Doing so is not recommended for security reasons,
+!2020-01-22 05:21:29: and you are advised to run aMule as an normal
+!2020-01-22 05:21:29: user instead.
+
+--------------------------------------------------
+Warning! You are running aMule as root.
+Doing so is not recommended for security reasons,
+and you are advised to run aMule as an normal
+user instead.
+--------------------------------------------------
+
+!2020-01-22 05:21:29: ERROR: Info  --- This is the first time you run aMule 2.3.1 ---
+!2020-01-22 05:21:29: More information, support and new releases can found at our homepage,
+!2020-01-22 05:21:29: at www.aMule.org, or in our IRC channel #aMule at irc.freenode.net.
+!2020-01-22 05:21:29: Feel free to report any bugs to http://forum.amule.org
+ 2020-01-22 05:21:29: ListenSocket: Ok.
+ 2020-01-22 05:21:29: Loading temp files from /root/.aMule/Temp.
+ 2020-01-22 05:21:29: All PartFiles Loaded.
+ 2020-01-22 05:21:29: amuled: OnInit - starting timer
+!2020-01-22 05:21:29: ERROR: aMule daemon cannot be used when external connections are disabled. To enable External Connections, use either a normal aMule, start amuled with the option --ec-config or set the key &quot;AcceptExternalConnections&quot; to 1 in the file ~/.aMule/amule.conf
+ 2020-01-22 05:21:29: Now, exiting main app...
+ 2020-01-22 05:21:29: aMule OnExit: Terminating core.
+ 2020-01-22 05:21:29: aMule shutdown completed.
+</code></pre>
+<p>2.修改WEB访问控制部分</p>
 <ul>
-<li>Remove atmospheric haze thanks to DxO ClearView</li>
-<li>DxO PRIME 2016: even more powerful and up to 4x faster</li>
-<li>Highly customizable interface</li>
-<li>Advanced controls :
+<li>生成访问密码</li>
+</ul>
+<pre><code class="language-plain_text">echo -n 这里替换成你想要的密码 | md5sum | awk '{print $1}'
+</code></pre>
 <ul>
-<li>moiré removal,</li>
-<li>ICC profile support,</li>
-<li>multi-camera's color rendition</li>
+<li>修改配置文件</li>
 </ul>
-</li>
+<pre><code class="language-plain_text">vim ~/.aMule/amule.conf
+</code></pre>
+<ul>
+<li>(建议)修改文件存储路径</li>
 </ul>
-<blockquote>
-<p>DxO Optics Pro 11正式版是世界上最好的照片后期处理软件之一，目前该公司发布的DxO Optics Pro 10正式版将会延续这一经典RAW处理软件的辉煌。DxO Optics Pro 11会自动提高图像质量，并突破相机极限，纠正所有的镜头变形，和改进相机拍照时传感器带给照片的常见现象，包括智能化的照片降噪。DxO Optics Pro是一款屡获殊荣的RAW程序软件，其开发公司基于长期专一的相机和镜头属性研究获取到的研发知识为DxO Optics Pro提供了出色的图像质量输出，即使照片是拍摄在​​超高的ISO下的JPEG或RAW文件格式。</p>
-</blockquote>
-<blockquote>
-<p>DXO OPTICS PRO11 破解版的独特之处在于它拥有最高质量的照片后期优化修正能力，无需人工干预。无论你是想简单一次性自动化获得一张你要的高质量效果照片，而不必仔细设置 滑块，或者您想手动设置自己的校正参数，DXO OPTICS PRO 11 都将满足您的需要。 DXO OPTICS PRO11是开发理想便是减轻你的工作量，最佳化纠正你宝贵的影像图片。设计是空素材站  国内首发，该软件个人感觉自动化处理的图像是同类软件中最好的。也是最贵的。</p>
-</blockquote>
-<p>下载地址：<br />
-Windows: <a href="https://downloads.sharewareonsale.com/files/hub/sharewareonsale.com/SharewareOnSale_Giveaway_DxO_OpticsPro_11_Essential_hub.exe">https://downloads.sharewareonsale.com/files/hub/sharewareonsale.com/SharewareOnSale_Giveaway_DxO_OpticsPro_11_Essential_hub.exe</a></p>
-<p>Mac: <a href="https://downloads.sharewareonsale.com/files/mac/DxO_OpticsPro11.dmg">https://downloads.sharewareonsale.com/files/mac/DxO_OpticsPro11.dmg</a></p>
-<p>Use the code : PRCTPH2017<br />
-This offer ends on : January, 1st 2018</p>
+<pre><code class="language-plain_text">TempDir=/root/.aMule/Temp
+IncomingDir=/root/.aMule/Incoming
+建议修改为
+TempDir=/root/aMule/Temp
+IncomingDir=/root/aMule/Incoming
+</code></pre>
+<ul>
+<li>(建议)新建文件夹</li>
+</ul>
+<pre><code class="language-plain_text">mkdir -p /root/aMule/Temp
+mkdir -p /root/aMule/Incoming
+</code></pre>
+<ul>
+<li>修改连接设置</li>
+</ul>
+<pre><code class="language-plain_text">AcceptExternalConnections=0
+修改为
+AcceptExternalConnections=1
+</code></pre>
+<ul>
+<li>修改WEB访问密码</li>
+</ul>
+<pre><code class="language-plain_text">[WebServer]
+Enabled=0
+Password= [填写您生成的密码字符串]
+</code></pre>
+<ul>
+<li>(建议)修改GUI客户端访问控制密码</li>
+</ul>
+<pre><code class="language-plain_text">ECPassword= [填写您生成的密码字符串]
+</code></pre>
+<ul>
+<li>修改完毕,保存退出</li>
+</ul>
+<p>3.(推荐)使用Screen运行程序</p>
+<ul>
+<li>安装screen</li>
+</ul>
+<pre><code class="language-plain_text">yum install screen -y
+</code></pre>
+<ul>
+<li>生成一个窗口进程</li>
+</ul>
+<pre><code class="language-plain_text">screen -S amule
+</code></pre>
+<ul>
+<li>执行amuled 进程</li>
+</ul>
+<pre><code class="language-plain_text">amuled
+出现如下信息证明程序启动完成
+2020-01-22 05:51:58: Initialising aMuleD 2.3.1 compiled with wxGTK2 v2.8.12
+ 2020-01-22 05:51:58: Checking if there is an instance already running...
+ 2020-01-22 05:51:58: No other instances are running.
+2020-01-22 05:51:58: ERROR: WARNING Warning! You are running aMule as root.
+2020-01-22 05:51:58: Doing so is not recommended for security reasons,
+2020-01-22 05:51:58: and you are advised to run aMule as an normal
+2020-01-22 05:51:58: user instead.
+Warning! You are running aMule as root.
+Doing so is not 
+recommended for security reasons,and you are 
+advised to run aMule as an normal user instead.
+ 2020-01-22 05:51:58: ListenSocket: Ok.
+ 2020-01-22 05:51:58: Loading temp files from /root/aMule/Temp.
+ 2020-01-22 05:51:58: All PartFiles Loaded.
+ 2020-01-22 05:51:58: amuled: OnInit - starting timer
+</code></pre>
+<ul>
+<li>退回首层屏幕</li>
+</ul>
+<pre><code class="language-plain_text">Ctrl + a + d
+</code></pre>
 
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2017/10/19</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Free.html'>Free</a></span>
-          				   
-                    
 
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
+    
 
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-              
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+          <a href="15924471851785.html" 
+          title="Previous Post: 北京的武汉人没有感恩的心">&laquo; 北京的武汉人没有感恩的心</a>
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="15796591780808.html" 
+          title="Next Post: Centos 6 & Centos 7 Yum安装aMule">Centos 6 & Centos 7 Yum安装aMule &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://jarryyen.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
 
 
-			<div class="row">
-			  <div class="large-6 columns">
-			  <p class="text-left" style="padding-top:25px;">
-			   
-			  </p>
-			  </div>
-			  <div class="large-6 columns">
-			<p class="text-right" style="padding-top:25px;">
-			
-			</p>
-			  </div>
-			</div>
-		</div>
-	</div><!-- large 8 -->
+
 
  <div class="large-4 medium-4 columns">
   <div class="hide-for-small">
@@ -342,6 +459,8 @@ Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
 
 
 
+
+<script src="asset/prism.js"></script>
 
 
 <style type="text/css">

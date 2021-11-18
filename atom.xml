@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[jarryyen.github.io]]></title>
+  <title><![CDATA[JarryYen的小日子]]></title>
   <link href="https://jarryyen.github.io/atom.xml" rel="self"/>
   <link href="https://jarryyen.github.io/"/>
-  <updated>2019-12-10T18:14:03+08:00</updated>
+  <updated>2021-11-18T14:00:12+08:00</updated>
   <id>https://jarryyen.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -13,23 +13,323 @@
   <generator uri="http://www.mweb.im/">MWeb</generator>
   
   <entry>
+    <title type="html"><![CDATA[用BT面板]]></title>
+    <link href="https://jarryyen.github.io/16364459575433.html"/>
+    <updated>2021-11-09T16:19:17+08:00</updated>
+    <id>https://jarryyen.github.io/16364459575433.html</id>
+    <content type="html"><![CDATA[
+<p>这是在妖火上看到的最新的免流地址</p>
+<pre><code class="language-plain_text">联通最新免流混淆（4G/5G均免）
+shoutingtoutiao1.10010.com
+shoutingtoutiao2.10010.com
+shoutingtoutiao3.10010.com
+shoutingtoutiao4.10010.com
+</code></pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[今天解决了手机残留证书的问题]]></title>
+    <link href="https://jarryyen.github.io/16324699802783.html"/>
+    <updated>2021-09-24T15:53:00+08:00</updated>
+    <id>https://jarryyen.github.io/16324699802783.html</id>
+    <content type="html"><![CDATA[
+<blockquote>
+<p>前言:<br />
+之前由于手机里面安装了很多证书,这些证书随着旧手机迁移到了新手机.<br />
+迁移到新手机后,发现描述文件没有了.但是,证书依然还在.<br />
+因为此问题,折腾了好几天.</p>
+</blockquote>
+<h4><a id="1-imazing%E7%9C%9F%E7%9A%84%E4%B8%8D%E5%A5%BD%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.iMazing 真的不好用</h4>
+<p>这款软件除了收费还是收费,免费的功能非常少.以下内容提到的到处数据文件是无法在免费版里面完成的,当然如果你购买了收费版本可以考虑使用这款软件.</p>
+<h4><a id="2-iphone-backup-extractor%E5%85%8D%E8%B4%B9%E7%89%88%E4%B9%9F%E5%BE%88%E5%A5%BD%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.iPhone Backup Extractor 免费版也很好用</h4>
+<p>这次我使用的是这款软件,可以免费把Tur*****.db导出.</p>
+<h4><a id="3-advtruststore" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.ADVTrustStore</h4>
+<p>使用ADVTrustStore导出相应的证书</p>
+<h4><a id="4%E5%AF%BC%E5%85%A5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.导入</h4>
+<p>将导出的证书通过Airdrop安装到你的iPhone上</p>
+<h4><a id="5%E5%88%A0%E9%99%A4" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.删除</h4>
+<p>安装好之后你会发现对应证书的描述文件就出现了,这时通过描述文件就可以把对应的证书删除掉了.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[codeigniter 去除index.php (nginx,apache) 通用方法]]></title>
+    <link href="https://jarryyen.github.io/16306473763283.html"/>
+    <updated>2021-09-03T13:36:16+08:00</updated>
+    <id>https://jarryyen.github.io/16306473763283.html</id>
+    <content type="html"><![CDATA[
+<h5><a id="htaccess%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>.htaccess文件配置</h5>
+<pre><code class="language-plain_text">&lt;IfModule mod_rewrite.c&gt;
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond $1 !^(index\.php|assets|system|robots\.txt)
+  RewriteRule ^(.*)$ /index.php/$1 [L,QSA]
+&lt;/IfModule&gt;
+</code></pre>
+<h3><a id="%E7%AE%80%E8%A6%81%E8%AF%B4%E6%98%8E%EF%BC%9A%E5%85%B3%E9%94%AE%E6%98%AF%E8%BF%99%E5%8F%A5%EF%BC%9Arewirtecond%EF%BC%8C-assets%E6%98%AF%E7%9B%AE%E5%BD%95%E3%80%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>简要说明：关键是这句：rewirteCond ，assets是目录。</h3>
+<hr />
+<h5><a id="apache%E7%9A%84%E9%85%8D%E7%BD%AE%EF%BC%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>apache的配置：</h5>
+<pre><code class="language-plain_text">&lt;VirtualHost *:80&gt;
+    ServerAdmin jjj@163.com
+    DocumentRoot &quot;d:/mywork/m&quot;
+
+    ServerName m.mimi.com
+
+    &lt;Directory &quot;d:/mywork/m&quot;&gt;  　　// 这里是项目的目录
+        Options Indexes MultiViews FollowSymLinks
+        AllowOverride All
+        Order allow,deny
+        allow from all
+   &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</code></pre>
+<hr />
+<h5><a id="%E7%AE%80%E8%A6%81%E8%AF%B4%E6%98%8E%EF%BC%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>简要说明：</h5>
+<p>ServerAdmin表示错误信息地址，如果发生错误发送到这个邮箱地址。</p>
+<p>Indexes 的作用就是当该目录下没有 index.html 文件时，就显示目录结构，去掉 Indexes，Apache 就不会显示该目录的列表了。</p>
+<p>Nginx配置几句</p>
+<pre><code class="language-plain_text">location /
+        {
+            index index.php;
+            if (!-e $request_filename) {
+                    rewrite ^/(.*)$ /index.php?$1 last;
+                    break;
+            }
+        }
+</code></pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[https导致微信内分享链接无图片以及描述等信息]]></title>
+    <link href="https://jarryyen.github.io/16057763012390.html"/>
+    <updated>2020-11-19T16:58:21+08:00</updated>
+    <id>https://jarryyen.github.io/16057763012390.html</id>
+    <content type="html"><![CDATA[
+<p>今天遇到了一个特别的问题，之前的页面没有启用https。原因竟然是在计算signature的时候需要传入一个完整的url，但是程序传入的url是不带https的。最终导致signature计算错误，无法实现正常的分享等操作。只需要添加一个判断，让计算signature的时候传入正确的url地址即可。</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[今天使用BT(宝塔)出现了这个问题]]></title>
+    <link href="https://jarryyen.github.io/16043696365923.html"/>
+    <updated>2020-11-03T10:13:56+08:00</updated>
+    <id>https://jarryyen.github.io/16043696365923.html</id>
+    <content type="html"><![CDATA[
+<pre><code class="language-plain_text">[Tue Nov 03 10:01:38.237329 2020] [proxy_fcgi:error] [pid 2405:tid 140039740675840] [client 60.205.xxx.xxx:51754] AH01071: Got error 'Primary script unknown\n'
+[Tue Nov 03 10:04:51.147084 2020] [ssl:warn] [pid 21999:tid 140040390793088] AH01909: SSL.target.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Nov 03 10:05:22.670931 2020] [ssl:warn] [pid 21999:tid 140040390793088] AH01909: SSL.target.com:443:0 server certificate does NOT include an ID which matches the server name
+</code></pre>
+<p>这个问题出现在启用SSL后,在站点的设置选项-》配置-〉找到SSL部分</p>
+<pre><code class="language-plain_text">&lt;VirtualHost *:443&gt;
+    ServerAdmin webmasterexample.com
+    DocumentRoot &quot;/data/www/wwwroot/target.com/&quot;
+    ServerName SSL.target.com
+    ServerAlias target.com
+    
+    #errorDocument 404 /404.html
+    ErrorLog &quot;/www/wwwlogs/target.com-error_log&quot;
+    CustomLog &quot;/www/wwwlogs/target.com-access_log&quot; combined
+</code></pre>
+<p>其中 ServerName 去掉 SSL. 开头,然后注释掉ServerAlias即可.保存然后重启Apache</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[北京的武汉人没有感恩的心]]></title>
+    <link href="https://jarryyen.github.io/15924471851785.html"/>
+    <updated>2020-06-18T10:26:25+08:00</updated>
+    <id>https://jarryyen.github.io/15924471851785.html</id>
+    <content type="html"><![CDATA[
+<p>我有个女同事,平时关系不错.最近由于北京疫情的问题,我们讨论了一下.</p>
+<p>这位姐姐是湖北武汉人,她说在全国最缺口罩的时候.她老公的单位(某央企),每个人发了一箱KF94口罩.</p>
+<p>我不能说羡慕,我只是想给医护人员一个公道.在疫情最严重的时候,北京的医院给医生配备的是什么口罩?<br />
+一天一个“一次性医用外科口罩”,不是两个“是一个”.<br />
+因为产量不足,应该每天两个的口罩变成了1个.但是,所有的医护人员没有因此就请假的.</p>
+<p>但是,这里就要提到我那个同事姐姐的老公了.在北京某央企上班,在家办公还能得到一箱KF94口罩......</p>
+<p>这对来自湖北武汉的夫妻真是福气,在家办公都有KF94.</p>
+<p>最主要的,那位姐姐说了.医院不发你要去告医院去,央企是国家的企业....</p>
+<p>难道医院就不是国家的嘛?北京的公立医院那在那个时期就是每人每天1个口罩啊,公立医院难道不是国家的嘛??</p>
+<p>我接触的武汉人不多,只有这位同事.所以,我不能说所有武汉人都这样,但是至少我身边的这位武汉人是这样.</p>
+<p>只能说,在中国.一线医生,不如在家办公的央企职员!医生的命,不如在家办公的央企职员值钱!</p>
+<p>这就是为什么中国医生大量出走海外,中国医疗技术一直停滞不前的重要原因.</p>
+<p>中国医生不被尊重,中国医生是社会的底层.</p>
+<p>需要医护人员的时候,一生号召奔赴前线.</p>
+<p>不需要医护的时候,医护形同草芥.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[aMule For Linux 配置]]></title>
+    <link href="https://jarryyen.github.io/15796596354392.html"/>
+    <updated>2020-01-22T10:20:35+08:00</updated>
+    <id>https://jarryyen.github.io/15796596354392.html</id>
+    <content type="html"><![CDATA[
+<p>1.首先要启动一次amuled这个程序,程序会自动生成配置文件</p>
+<pre><code class="language-plain_text">2020-01-22 05:21:29: Initialising aMuleD 2.3.1 compiled with wxGTK2 v2.8.12
+ 2020-01-22 05:21:29: Checking if there is an instance already running...
+ 2020-01-22 05:21:29: No other instances are running.
+!2020-01-22 05:21:29: ERROR: WARNING Warning! You are running aMule as root.
+!2020-01-22 05:21:29: Doing so is not recommended for security reasons,
+!2020-01-22 05:21:29: and you are advised to run aMule as an normal
+!2020-01-22 05:21:29: user instead.
+
+--------------------------------------------------
+Warning! You are running aMule as root.
+Doing so is not recommended for security reasons,
+and you are advised to run aMule as an normal
+user instead.
+--------------------------------------------------
+
+!2020-01-22 05:21:29: ERROR: Info  --- This is the first time you run aMule 2.3.1 ---
+!2020-01-22 05:21:29: More information, support and new releases can found at our homepage,
+!2020-01-22 05:21:29: at www.aMule.org, or in our IRC channel #aMule at irc.freenode.net.
+!2020-01-22 05:21:29: Feel free to report any bugs to http://forum.amule.org
+ 2020-01-22 05:21:29: ListenSocket: Ok.
+ 2020-01-22 05:21:29: Loading temp files from /root/.aMule/Temp.
+ 2020-01-22 05:21:29: All PartFiles Loaded.
+ 2020-01-22 05:21:29: amuled: OnInit - starting timer
+!2020-01-22 05:21:29: ERROR: aMule daemon cannot be used when external connections are disabled. To enable External Connections, use either a normal aMule, start amuled with the option --ec-config or set the key &quot;AcceptExternalConnections&quot; to 1 in the file ~/.aMule/amule.conf
+ 2020-01-22 05:21:29: Now, exiting main app...
+ 2020-01-22 05:21:29: aMule OnExit: Terminating core.
+ 2020-01-22 05:21:29: aMule shutdown completed.
+</code></pre>
+<p>2.修改WEB访问控制部分</p>
+<ul>
+<li>生成访问密码</li>
+</ul>
+<pre><code class="language-plain_text">echo -n 这里替换成你想要的密码 | md5sum | awk '{print $1}'
+</code></pre>
+<ul>
+<li>修改配置文件</li>
+</ul>
+<pre><code class="language-plain_text">vim ~/.aMule/amule.conf
+</code></pre>
+<ul>
+<li>(建议)修改文件存储路径</li>
+</ul>
+<pre><code class="language-plain_text">TempDir=/root/.aMule/Temp
+IncomingDir=/root/.aMule/Incoming
+建议修改为
+TempDir=/root/aMule/Temp
+IncomingDir=/root/aMule/Incoming
+</code></pre>
+<ul>
+<li>(建议)新建文件夹</li>
+</ul>
+<pre><code class="language-plain_text">mkdir -p /root/aMule/Temp
+mkdir -p /root/aMule/Incoming
+</code></pre>
+<ul>
+<li>修改连接设置</li>
+</ul>
+<pre><code class="language-plain_text">AcceptExternalConnections=0
+修改为
+AcceptExternalConnections=1
+</code></pre>
+<ul>
+<li>修改WEB访问密码</li>
+</ul>
+<pre><code class="language-plain_text">[WebServer]
+Enabled=0
+Password= [填写您生成的密码字符串]
+</code></pre>
+<ul>
+<li>(建议)修改GUI客户端访问控制密码</li>
+</ul>
+<pre><code class="language-plain_text">ECPassword= [填写您生成的密码字符串]
+</code></pre>
+<ul>
+<li>修改完毕,保存退出</li>
+</ul>
+<p>3.(推荐)使用Screen运行程序</p>
+<ul>
+<li>安装screen</li>
+</ul>
+<pre><code class="language-plain_text">yum install screen -y
+</code></pre>
+<ul>
+<li>生成一个窗口进程</li>
+</ul>
+<pre><code class="language-plain_text">screen -S amule
+</code></pre>
+<ul>
+<li>执行amuled 进程</li>
+</ul>
+<pre><code class="language-plain_text">amuled
+出现如下信息证明程序启动完成
+2020-01-22 05:51:58: Initialising aMuleD 2.3.1 compiled with wxGTK2 v2.8.12
+ 2020-01-22 05:51:58: Checking if there is an instance already running...
+ 2020-01-22 05:51:58: No other instances are running.
+2020-01-22 05:51:58: ERROR: WARNING Warning! You are running aMule as root.
+2020-01-22 05:51:58: Doing so is not recommended for security reasons,
+2020-01-22 05:51:58: and you are advised to run aMule as an normal
+2020-01-22 05:51:58: user instead.
+Warning! You are running aMule as root.
+Doing so is not 
+recommended for security reasons,and you are 
+advised to run aMule as an normal user instead.
+ 2020-01-22 05:51:58: ListenSocket: Ok.
+ 2020-01-22 05:51:58: Loading temp files from /root/aMule/Temp.
+ 2020-01-22 05:51:58: All PartFiles Loaded.
+ 2020-01-22 05:51:58: amuled: OnInit - starting timer
+</code></pre>
+<ul>
+<li>退回首层屏幕</li>
+</ul>
+<pre><code class="language-plain_text">Ctrl + a + d
+</code></pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Centos 6 & Centos 7 Yum安装aMule]]></title>
+    <link href="https://jarryyen.github.io/15796591780808.html"/>
+    <updated>2020-01-22T10:12:58+08:00</updated>
+    <id>https://jarryyen.github.io/15796591780808.html</id>
+    <content type="html"><![CDATA[
+<p>1.安装源文件</p>
+<blockquote>
+<p>Centos 6<br />
+<code>yum -y install epel-release &amp;&amp; rpm -Uvh http://li.nux.ro/download/nux/dextop/el6/x86_64/nux-dextop-release-0-2.el6.nux.noarch.rpm</code></p>
+</blockquote>
+<blockquote>
+<p>Centos 7<br />
+<code>yum -y install epel-release &amp;&amp; rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm</code></p>
+</blockquote>
+<p>2.安装(我这里安装不带GUI版本)</p>
+<blockquote>
+<p>Centos 6 &amp; 7<br />
+<code>yum install amule-nogui -y</code></p>
+</blockquote>
+<p>3.安装完成</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Shadowsocks-NG-R8订阅失效问题]]></title>
     <link href="https://jarryyen.github.io/15759676309433.html"/>
     <updated>2019-12-10T16:47:10+08:00</updated>
     <id>https://jarryyen.github.io/15759676309433.html</id>
     <content type="html"><![CDATA[
 <p>在下图中为止添加如下两句话</p>
-
 <p>.......</p>
-
-<pre><code class="language-text">&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
+<pre><code class="language-plain_text">&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
 &lt;dict&gt;
 &lt;key&gt;NSAllowsArbitraryLoads&lt;/key&gt; 
 &lt;true/&gt;
 &lt;/dict&gt;
 </code></pre>
-
-<p><img src="media/15759676309433/WX20191205-093035@2x.png" alt="WX20191205-093035@2x"/></p>
+<p><img src="media/15759676309433/WX20191205-093035@2x.png" alt="WX20191205-093035@2x" /></p>
 
 ]]></content>
   </entry>
@@ -43,21 +343,15 @@
 <blockquote>
 <p>由于Centos8内核默认已经升级到 4.18 , 所以可以直接开启BBR</p>
 </blockquote>
-
-<h4 id="toc_0">1.修改配置文件</h4>
-
-<pre><code class="language-text">vim /etc/sysctl.conf
+<h4><a id="1%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.修改配置文件</h4>
+<pre><code class="language-plain_text">vim /etc/sysctl.conf
 </code></pre>
-
-<h4 id="toc_1">2.添加配置选项</h4>
-
-<pre><code class="language-text">net.core.default_qdisc = fq
+<h4><a id="2%E6%B7%BB%E5%8A%A0%E9%85%8D%E7%BD%AE%E9%80%89%E9%A1%B9" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.添加配置选项</h4>
+<pre><code class="language-plain_text">net.core.default_qdisc = fq
 net.ipv4.tcp_congestion_control = bbr
 </code></pre>
-
-<h4 id="toc_2">3.启动</h4>
-
-<pre><code class="language-text">sysctl -p
+<h4><a id="3%E5%90%AF%E5%8A%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.启动</h4>
+<pre><code class="language-plain_text">sysctl -p
 </code></pre>
 
 ]]></content>
@@ -70,12 +364,9 @@ net.ipv4.tcp_congestion_control = bbr
     <id>https://jarryyen.github.io/15664660068365.html</id>
     <content type="html"><![CDATA[
 <p>我今天遇到了一个很头疼的问题，我删除了很多文件但是使用空间一直没有被释放。</p>
-
 <p>在终端里面 df -Hs 后看到使用空间一点也没有被释放。</p>
-
 <p>最后找到了Apple在线客服，使用一条命令就完成了。</p>
-
-<pre><code class="language-text">tmutil thinlocalsnapshots / 999999999999999 4
+<pre><code class="language-plain_text">tmutil thinlocalsnapshots / 999999999999999 4
 </code></pre>
 
 ]]></content>
@@ -87,7 +378,7 @@ net.ipv4.tcp_congestion_control = bbr
     <updated>2019-08-01T12:04:45+08:00</updated>
     <id>https://jarryyen.github.io/15646322854275.html</id>
     <content type="html"><![CDATA[
-<pre><code class="language-text">xar -xf [文件名].pkg //之后会解压出来一个新的pkg文件
+<pre><code class="language-plain_text">xar -xf [文件名].pkg //之后会解压出来一个新的pkg文件
 
 cat [新的pkg文件名].pkg/Payload | cpio -i //就可以解压出来相应的app了
 </code></pre>
@@ -101,61 +392,61 @@ cat [新的pkg文件名].pkg/Payload | cpio -i //就可以解压出来相应的a
     <updated>2019-07-22T22:43:08+08:00</updated>
     <id>https://jarryyen.github.io/15638065887503.html</id>
     <content type="html"><![CDATA[
-<pre><code class="language-text">$table = &#39;&lt;html xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot; xmlns:x=&quot;urn:schemas-microsoft-com:office:excel&quot; xmlns=&quot;http://www.w3.org/TR/REC-html40&quot;&gt;&lt;head&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;&lt;x:ExcelWorkbook&gt;&lt;x:ExcelWorksheets&gt;&lt;x:ExcelWorksheet&gt;&lt;x:Name&gt;{worksheet}&lt;/x:Name&gt;&lt;x:WorksheetOptions&gt;&lt;x:DisplayGridlines/&gt;&lt;/x:WorksheetOptions&gt;&lt;/x:ExcelWorksheet&gt;&lt;/x:ExcelWorksheets&gt;&lt;/x:ExcelWorkbook&gt;&lt;/xml&gt;&lt;![endif]--&gt;&lt;style type=&quot;text/css&quot;&gt;
+<pre><code class="language-plain_text">$table = '&lt;html xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot; xmlns:x=&quot;urn:schemas-microsoft-com:office:excel&quot; xmlns=&quot;http://www.w3.org/TR/REC-html40&quot;&gt;&lt;head&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;&lt;x:ExcelWorkbook&gt;&lt;x:ExcelWorksheets&gt;&lt;x:ExcelWorksheet&gt;&lt;x:Name&gt;{worksheet}&lt;/x:Name&gt;&lt;x:WorksheetOptions&gt;&lt;x:DisplayGridlines/&gt;&lt;/x:WorksheetOptions&gt;&lt;/x:ExcelWorksheet&gt;&lt;/x:ExcelWorksheets&gt;&lt;/x:ExcelWorkbook&gt;&lt;/xml&gt;&lt;![endif]--&gt;&lt;style type=&quot;text/css&quot;&gt;
 .excelTable  {border-collapse:collapse;border:thin solid #999;}
 .excelTable  th {border: thin solid #999;padding:20px;text-align: center;border-top: thin solid #999;background-color: #E6E6E6;}
 .excelTable  td {border:thin solid #999;padding:2px 5px;text-align: center;}
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&#39;;
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;';
 $table .= &quot;&lt;table&gt;
             &lt;thead&gt;
                 &lt;tr&gt;
-                    &lt;th class=&#39;name&#39;&gt;追逆ID&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;用户ID&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;状态&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;创建时间&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;问题描述&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;问题类型&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;问题图片1&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;问题图片2&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;问题地址&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;投诉人电话&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;备注&lt;/th&gt;
+                    &lt;th class='name'&gt;追逆ID&lt;/th&gt;
+                    &lt;th class='name'&gt;用户ID&lt;/th&gt;
+                    &lt;th class='name'&gt;状态&lt;/th&gt;
+                    &lt;th class='name'&gt;创建时间&lt;/th&gt;
+                    &lt;th class='name'&gt;问题描述&lt;/th&gt;
+                    &lt;th class='name'&gt;问题类型&lt;/th&gt;
+                    &lt;th class='name'&gt;问题图片1&lt;/th&gt;
+                    &lt;th class='name'&gt;问题图片2&lt;/th&gt;
+                    &lt;th class='name'&gt;问题地址&lt;/th&gt;
+                    &lt;th class='name'&gt;投诉人电话&lt;/th&gt;
+                    &lt;th class='name'&gt;备注&lt;/th&gt;
                 &lt;/tr&gt;
             &lt;/thead&gt;
             &lt;tbody&gt;&quot;;
 foreach ($innerdata as $k =&gt; $v) {
-    $id = $v[&#39;id&#39;];
-    $userid = $v[&#39;users_id&#39;];
-    $status = $v[&#39;status&#39;]==1?&#39;已过审&#39;:&#39;未过审&#39;;
-    $create_time = $v[&#39;create_time&#39;];
-    $qcon = $v[&#39;qcon&#39;];
-    $qid = getQName($v[&#39;qid&#39;]);
-    $photo1 = $v[&#39;photo1&#39;];
-    $address = $v[&#39;address&#39;];
-    $phone = $v[&#39;phone&#39;];
-    //$unionid = $v[&#39;wx_unionid&#39;];
-    $unionid = $v[&#39;users_id&#39;];
-    $tag = $v[&#39;tag&#39;];
+    $id = $v['id'];
+    $userid = $v['users_id'];
+    $status = $v['status']==1?'已过审':'未过审';
+    $create_time = $v['create_time'];
+    $qcon = $v['qcon'];
+    $qid = getQName($v['qid']);
+    $photo1 = $v['photo1'];
+    $address = $v['address'];
+    $phone = $v['phone'];
+    //$unionid = $v['wx_unionid'];
+    $unionid = $v['users_id'];
+    $tag = $v['tag'];
 
-    $tmp = json_decode($v[&#39;photo2&#39;]);
-    $ttmp = &#39;&#39;;
+    $tmp = json_decode($v['photo2']);
+    $ttmp = '';
     foreach ($tmp as $v){
-        $ttmp .= $v.&#39;,&#39;;
+        $ttmp .= $v.',';
     }
     $photo2 = $ttmp;
 
     $table .= &quot;&lt;tr&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$id}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$userid}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$status}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$create_time}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$qcon}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$qid}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$photo1}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$photo2}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$address}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$phone}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$tag}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$id}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$userid}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$status}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$create_time}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$qcon}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$qid}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$photo1}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$photo2}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$address}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$phone}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$tag}&lt;/td&gt;
                 &lt;/tr&gt;&quot;;
 }
 $table .= &quot;&lt;/tbody&gt;
@@ -171,7 +462,7 @@ header(&quot;Content-Type:application/force-download&quot;);
 header(&quot;Content-Type:application/vnd.ms-execl&quot;);
 header(&quot;Content-Type:application/octet-stream&quot;);
 header(&quot;Content-Type:application/download&quot;);;
-header(&#39;Content-Disposition:attachment;filename=&quot;百日攻坚.xls&quot;&#39;);
+header('Content-Disposition:attachment;filename=&quot;百日攻坚.xls&quot;');
 header(&quot;Content-Transfer-Encoding:binary&quot;);
 echo $table;
 </code></pre>
@@ -185,31 +476,32 @@ echo $table;
     <updated>2018-12-28T15:53:40+08:00</updated>
     <id>https://jarryyen.github.io/15459836208690.html</id>
     <content type="html"><![CDATA[
-<p>1) 安装brew<br/>
-使用浏览器打开<a href="https://brew.sh/,%E6%8C%89%E7%85%A7%E6%8F%90%E7%A4%BA%E5%9C%A8**%E7%BB%88%E7%AB%AF**%E8%BE%93%E5%85%A5%E4%B8%8B%E9%9D%A2%E4%BF%A1%E6%81%AF">https://brew.sh/,按照提示在**终端**输入下面信息</a></p>
-
-<pre><code class="language-text">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+<ol>
+<li>安装brew<br />
+使用浏览器打开<a href="https://brew.sh/,%E6%8C%89%E7%85%A7%E6%8F%90%E7%A4%BA%E5%9C%A8**%E7%BB%88%E7%AB%AF**%E8%BE%93%E5%85%A5%E4%B8%8B%E9%9D%A2%E4%BF%A1%E6%81%AF">https://brew.sh/,按照提示在**终端**输入下面信息</a></li>
+</ol>
+<pre><code class="language-plain_text">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
 
 </code></pre>
-
-<p>2) 安装Command Line Tools,在<strong>终端</strong>中输入下面命令</p>
-
-<pre><code class="language-text">xcode-select --install
+<ol start="2">
+<li>安装Command Line Tools,在<strong>终端</strong>中输入下面命令</li>
+</ol>
+<pre><code class="language-plain_text">xcode-select --install
 </code></pre>
-
-<p>3) 安装GCC编译器,在<strong>终端</strong>中输入下面命令</p>
-
-<pre><code class="language-text">brew install gcc
+<ol start="3">
+<li>安装GCC编译器,在<strong>终端</strong>中输入下面命令</li>
+</ol>
+<pre><code class="language-plain_text">brew install gcc
 </code></pre>
-
-<p>4) 安装后使用brew安装Python3,在<strong>终端</strong>中输入下面命令</p>
-
-<pre><code class="language-text">brew install python3
+<ol start="4">
+<li>安装后使用brew安装Python3,在<strong>终端</strong>中输入下面命令</li>
+</ol>
+<pre><code class="language-plain_text">brew install python3
 </code></pre>
-
-<p>5) 安装scrapy,在<strong>终端</strong>中输入下面命令</p>
-
-<pre><code class="language-text">pip3 install scrapy
+<ol start="5">
+<li>安装scrapy,在<strong>终端</strong>中输入下面命令</li>
+</ol>
+<pre><code class="language-plain_text">pip3 install scrapy
 </code></pre>
 
 ]]></content>
@@ -221,30 +513,18 @@ echo $table;
     <updated>2018-12-18T16:38:37+08:00</updated>
     <id>https://jarryyen.github.io/15451223173625.html</id>
     <content type="html"><![CDATA[
-<h1 id="toc_0">切换到master 分支</h1>
-
-<p>git checkout master </p>
-
-<h1 id="toc_1">切换到dev分支</h1>
-
+<h1><a id="%E5%88%87%E6%8D%A2%E5%88%B0master%E5%88%86%E6%94%AF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>切换到master 分支</h1>
+<p>git checkout master</p>
+<h1><a id="%E5%88%87%E6%8D%A2%E5%88%B0dev%E5%88%86%E6%94%AF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>切换到dev分支</h1>
 <p>git checkout dev</p>
-
-<h1 id="toc_2">获取最新的分支信息</h1>
-
-<p>git fetch </p>
-
-<h1 id="toc_3">确认处于本地分支中</h1>
-
-<p>git status </p>
-
-<h1 id="toc_4">在 dev 分支上合并master 分支</h1>
-
+<p>#获取最新的分支信息</p>
+<p>git fetch</p>
+<p>#确认处于本地分支中</p>
+<p>git status</p>
+<h1><a id="%E5%9C%A8dev%E5%88%86%E6%94%AF%E4%B8%8A%E5%90%88%E5%B9%B6-master%E5%88%86%E6%94%AF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>在 dev 分支上合并master 分支</h1>
 <p>git merge origin/master</p>
-
-<h1 id="toc_5">在master分支上合并dev分支</h1>
-
+<h1><a id="%E5%9C%A8master%E5%88%86%E6%94%AF%E4%B8%8A%E5%90%88%E5%B9%B6dev%E5%88%86%E6%94%AF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>在master分支上合并dev分支</h1>
 <p>git merge origin/dev</p>
-
 <p>执行 git log ,如果看到 master 分支和dev 分支的最新commit id是一致的，说明master和dev分支是一样的</p>
 
 ]]></content>
@@ -257,11 +537,8 @@ echo $table;
     <id>https://jarryyen.github.io/15451222627805.html</id>
     <content type="html"><![CDATA[
 <p><a href="http://web3js.readthedocs.io/en/1.0/index.html">http://web3js.readthedocs.io/en/1.0/index.html</a> web3.js 1.0 版本</p>
-
 <p><a href="https://github.com/ethereum/wiki/wiki/JavaScript-API">https://github.com/ethereum/wiki/wiki/JavaScript-API</a>   web3.js 0.2版本</p>
-
 <p><a href="https://solidity-cn.readthedocs.io/zh/develop/">https://solidity-cn.readthedocs.io/zh/develop/</a>  Solidity 中文版帮助文档</p>
-
 <p><a href="https://solidity.readthedocs.io/en/develop/">https://solidity.readthedocs.io/en/develop/</a>  Solidity 英文版帮助文档</p>
 
 ]]></content>
@@ -273,20 +550,17 @@ echo $table;
     <updated>2018-12-18T16:37:00+08:00</updated>
     <id>https://jarryyen.github.io/15451222204100.html</id>
     <content type="html"><![CDATA[
-<p>使用 nginx 作为前端服务器。某些资源要保护。用 http auth basic 认证简单方便。<br/>
-nginx 的 http auth basic 的密码是用 crypt(3) 加密的。具体可以参考：<a href="http://wiki.nginx.org/HttpAuthBasicModule">http://wiki.nginx.org/HttpAuthBasicModule</a><br/>
+<p>使用 nginx 作为前端服务器。某些资源要保护。用 http auth basic 认证简单方便。<br />
+nginx 的 http auth basic 的密码是用 crypt(3) 加密的。具体可以参考：<a href="http://wiki.nginx.org/HttpAuthBasicModule">http://wiki.nginx.org/HttpAuthBasicModule</a><br />
 1.修改NGINX配置文件</p>
-
-<pre><code class="language-text">location ~ /admin {
+<pre><code class="language-plain_text">location ~ /admin {
         auth_basic &quot;Restricted&quot;;
         auth_basic_user_file /etc/nginx/pass_file;//请使用绝对路径
         root   /home/www/admin; //host 地址，不然认证通过之后，找不到对应的文件
 }  
 </code></pre>
-
 <p>2.生成加密的auth_basic_user_file文件</p>
-
-<pre><code class="language-text">htpasswd -c -d /etc/nginx/pass_file  username
+<pre><code class="language-plain_text">htpasswd -c -d /etc/nginx/pass_file  username
 </code></pre>
 
 ]]></content>
@@ -299,52 +573,42 @@ nginx 的 http auth basic 的密码是用 crypt(3) 加密的。具体可以参�
     <id>https://jarryyen.github.io/15311228224258.html</id>
     <content type="html"><![CDATA[
 <blockquote>
-<p>网友反馈:接到工作人员电话:收到卡后一周内激活充值一百元不会回收号码<br/>
+<p>网友反馈:接到工作人员电话:收到卡后一周内激活充值一百元不会回收号码<br />
 网友反馈:可以取消集团网和回电宝，实际16元一个月全国不限流量</p>
 </blockquote>
-
-<p>南京联通和腾讯联合南京地区部分高校推出了校园套餐，虽然是校园套餐，但是其实和大王卡、米粉卡差不多，都可以顺丰邮寄，关键是可以异地销卡，这就相当于给全国用户享受低价无限流量套餐的机会了。<br/>
-合作的高校还不少，下面是博主从网上搬来的南京部分高校的申请地址：<br/>
+<p>南京联通和腾讯联合南京地区部分高校推出了校园套餐，虽然是校园套餐，但是其实和大王卡、米粉卡差不多，都可以顺丰邮寄，关键是可以异地销卡，这就相当于给全国用户享受低价无限流量套餐的机会了。<br />
+合作的高校还不少，下面是博主从网上搬来的南京部分高校的申请地址：<br />
 （下方所有链接都是南京地区高校，套餐内容一样，部分学校号段已经选完,可以另换其他高校申请。）</p>
-
 <p><a href="http://xyk.js165.com:8000/wapycfd/nffxh/login">http://xyk.js165.com:8000/wapycfd/nffxh/login</a></p>
-
 <p><a href="http://xyk.js165.com:8000/wapycfd/qqwx/login">http://xyk.js165.com:8000/wapycfd/qqwx/login</a></p>
-
 <p><a href="http://xyk.js165.com:8000/wapycfd/seu/selectNumber">http://xyk.js165.com:8000/wapycfd/seu/selectNumber</a></p>
-
 <p><a href="http://xyk.js165.com:8000/wapycfd/jit/login">http://xyk.js165.com:8000/wapycfd/jit/login</a></p>
-
 <p><a href="http://xyk.js165.com:8000/wapycfd/njit/login">http://xyk.js165.com:8000/wapycfd/njit/login</a></p>
-
 <p><a href="http://xyk.js165.com:8000/wapycfd/nau/login">http://xyk.js165.com:8000/wapycfd/nau/login</a></p>
-
 <p><a href="http://xyk.js165.com:8000/wapycfd/nayw/login">http://xyk.js165.com:8000/wapycfd/nayw/login</a></p>
-
 <p><a href="http://xyk.js165.com:8000/wapycfd/nffx/login">http://xyk.js165.com:8000/wapycfd/nffx/login</a></p>
-
 <p><a href="http://xyk.js165.com:8000/wapycfd/nzyone/login">http://xyk.js165.com:8000/wapycfd/nzyone/login</a></p>
-
 <p><a href="http://xyk.js165.com:8000/wapycfd/ddcx/login">http://xyk.js165.com:8000/wapycfd/ddcx/login</a></p>
-
-<p><img src="https://ws1.sinaimg.cn/large/0072W8ttgy1ft16xqvpvsj30hp0hpwmu.jpg" alt=""/></p>
-
+<p><img src="https://ws1.sinaimg.cn/large/0072W8ttgy1ft16xqvpvsj30hp0hpwmu.jpg" alt="" /></p>
 <p>关于网友们的一些疑问：</p>
-
 <blockquote>
-<p>问：这个卡是否需要在12或24个月到营业厅续订？<br/>
+<p>问：这个卡是否需要在12或24个月到营业厅续订？<br />
 答：博主在联通APP上看到的套餐是2022年6月30日到期，个人认为应该不需要到营业厅续订，也可能可以直接拨打下方宣传海报上的电话续订。（收到卡片之后，会附赠一张海报，通常下面会留有电话）</p>
-
-<p>问：如果套餐到期了是否需要到当地销户？<br/>
+</blockquote>
+<blockquote>
+<p>问：如果套餐到期了是否需要到当地销户？<br />
 答：博主已经咨询客服了，可以到你所在省市的大营业厅进行注销，不用到江苏当地。</p>
-
-<p>问：可以取消1元集团网和2元回电宝吗？<br/>
+</blockquote>
+<blockquote>
+<p>问：可以取消1元集团网和2元回电宝吗？<br />
 答：拨打10010可以取消会电宝，不可以取消集团网。取消后不影响无限流量套餐。因此，可以视为月租为17元/月。</p>
-
-<p>问：申请之后是用什么快递发的？为什么查不到物流？ <br/>
+</blockquote>
+<blockquote>
+<p>问：申请之后是用什么快递发的？为什么查不到物流？<br />
 答：邮政EMS，那个申请页面查不到物流信息，只有等快递通知，一般2-3天。</p>
-
-<p>问：同一个人同一个身份信息最多可以办理几张卡？<br/>
+</blockquote>
+<blockquote>
+<p>问：同一个人同一个身份信息最多可以办理几张卡？<br />
 答：一个人凭本人信息最多可以办理一张。</p>
 </blockquote>
 
@@ -357,8 +621,7 @@ nginx 的 http auth basic 的密码是用 crypt(3) 加密的。具体可以参�
     <updated>2018-07-09T15:52:41+08:00</updated>
     <id>https://jarryyen.github.io/15311227612961.html</id>
     <content type="html"><![CDATA[
-<p><img src="media/15311227612961/%E8%81%94%E9%80%9A%E6%B3%A8%E9%94%80%E5%8F%B7%E7%A0%81.jpg" alt="联通注销号码"/></p>
-
+<p><img src="media/15311227612961/%E8%81%94%E9%80%9A%E6%B3%A8%E9%94%80%E5%8F%B7%E7%A0%81.jpg" alt="联通注销号码" /></p>
 <p>使用上方二维码可以跨省注销联通号码</p>
 
 ]]></content>
@@ -370,416 +633,18 @@ nginx 的 http auth basic 的密码是用 crypt(3) 加密的。具体可以参�
     <updated>2018-06-11T18:02:22+08:00</updated>
     <id>https://jarryyen.github.io/15287113422567.html</id>
     <content type="html"><![CDATA[
-<p>今天遇到了一个坑,同事部署的jenkins.<br/>
+<p>今天遇到了一个坑,同事部署的jenkins.<br />
 无论我怎么添加key,在execute shll里面执行scp等操作都无法登陆....结果找了半天...jenkins的pubkey位置在</p>
-
-<pre><code class="language-text">/var/lib/jenkins/.ssh/id_rsa.pub 
+<pre><code class="language-plain_text">/var/lib/jenkins/.ssh/id_rsa.pub 
 </code></pre>
-
-<p>无语了....<br/>
+<p>无语了....<br />
 在此记录一下...</p>
-
 <p>还有一个问题.就是known_hosts问题.</p>
-
-<pre><code class="language-text">su -s /bin/bash jenkins
+<pre><code class="language-plain_text">su -s /bin/bash jenkins
 
 ssh root@ip 
 </code></pre>
-
 <p>登陆一下就好了</p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Opera浏览器送你无限流量的V.P.N]]></title>
-    <link href="https://jarryyen.github.io/15263677435766.html"/>
-    <updated>2018-05-15T15:02:23+08:00</updated>
-    <id>https://jarryyen.github.io/15263677435766.html</id>
-    <content type="html"><![CDATA[
-<h4 id="toc_0">1.下载Opera浏览器 <a href="http://www.opera.com">www.opera.com</a></h4>
-
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1frc1mn8otoj30vh0j944f.jpg" alt=""/></p>
-
-<h4 id="toc_1">2.安装Opera</h4>
-
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1frc1n4hzzoj312s0sa4i2.jpg" alt=""/><br/>
-3.修改你的电脑所在地,将这里设置为其他地区.例如:中国澳门(仅Mac图例,Win请自己寻找相关功能)<br/>
-<img src="https://ws3.sinaimg.cn/large/006tKfTcly1frc1gvo0nwj31140x8qbg.jpg" alt=""/><br/>
-<img src="https://ws3.sinaimg.cn/large/006tKfTcly1frc1hd7hehj31140qewjk.jpg" alt=""/></p>
-
-<h4 id="toc_2">4.点击Opera菜单并进入&quot;首选下&quot;</h4>
-
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1frc1lvma8ij307d09amy3.jpg" alt=""/></p>
-
-<h4 id="toc_3">5.选择“隐私和安全”选项,并在右侧选择相应选项即可开启</h4>
-
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frc1k61tr0j30vh0j9wit.jpg" alt=""/></p>
-
-<h4 id="toc_4">6.出现蓝色图标打开完成,并且可以设置连接哪一个区域的节点或者使用系统推荐(在这里推荐手动指定亚洲)</h4>
-
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frc1oquve2j308z0d3dgn.jpg" alt=""/></p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[远程执行tomcat执行脚本出现找不到环境变量问题]]></title>
-    <link href="https://jarryyen.github.io/15247245416912.html"/>
-    <updated>2018-04-26T14:35:41+08:00</updated>
-    <id>https://jarryyen.github.io/15247245416912.html</id>
-    <content type="html"><![CDATA[
-<p>问题描述:</p>
-
-<blockquote>
-<p>我使用jenkins在build工程的时候,使用了执行shell部分.脚本内含有远程主机运行或者停止tomcat脚本,在执行的时候报告有java_home和java_jar没有环境变量的问题.根据问题查找,是远程执行的时候没有加载profile造成环境变量确实的问题.<br/>
-<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fqq20j3ev3j30tr0fudir.jpg" alt=""/><br/>
-脚本中的远程执行命令是</p>
-
-<blockquote>
-<p>ssh root@web01 &quot;/data/script/run.sh&quot; 中的 run.sh包含tomcat启动脚本</p>
-</blockquote>
-</blockquote>
-
-<p>解决方案:</p>
-
-<blockquote>
-<p>在tomcat的catalina.sh中添加环境变量部分.<br/>
-<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fqq1ywrzs4j315k0xitf3.jpg" alt=""/></p>
-</blockquote>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[MYSQL命令行内倒入文本数据]]></title>
-    <link href="https://jarryyen.github.io/15203221731981.html"/>
-    <updated>2018-03-06T15:42:53+08:00</updated>
-    <id>https://jarryyen.github.io/15203221731981.html</id>
-    <content type="html"><![CDATA[
-<p>load data local infile &#39;/文件名.txt&#39; into table 表名(字段);</p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Linux增加swap(aws建议添加)]]></title>
-    <link href="https://jarryyen.github.io/15203031656074.html"/>
-    <updated>2018-03-06T10:26:05+08:00</updated>
-    <id>https://jarryyen.github.io/15203031656074.html</id>
-    <content type="html"><![CDATA[
-<p>添加交换文件步骤： <br/>
-1、找个地方创建一个.swap的文件，我放在了/mnt目录下 <br/>
-sudo dd if=/dev/zero of=/mnt/10GB.swap bs=1G count=10 <br/>
-这条命令是在/mnt目录下创建一个名为10GB.swap的交换文件，基础大小为1GB，有10个，so：1*10=10GB <br/>
-2、把创建的.swap文件格式化为Swap文件 <br/>
-sudo mkswap /mnt/10GB.swap <br/>
-3、把创建的.swap文件加入到系统中 <br/>
-sudo swapon /mnt/10GB.swap <br/>
-以上步骤可以做到临时启用交换文件，如果要下次启动系统的时候也启动交换文件，那么还要继续做以下步骤。 <br/>
-4、在/ect/fstab中加入新的Swap分区 <br/>
-sudo gedit /etc/fstab <br/>
-在最后一行添加（前面是生成的.swap文件的位置） <br/>
-/mnt/10GB.swap none swap sw 0 0 <br/>
-以上步骤为添加交换文件方法。</p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Geth 的JavaScript控制]]></title>
-    <link href="https://jarryyen.github.io/15192838129981.html"/>
-    <updated>2018-02-22T15:16:52+08:00</updated>
-    <id>https://jarryyen.github.io/15192838129981.html</id>
-    <content type="html"><![CDATA[
-<ol>
-<li>  如何连接</li>
-<li><p>常用命令</p>
-<ol>
-<li>attach</li>
-<li>admin.peers</li>
-<li>net.peerCount</li>
-<li>admin.addPeer(&quot;enode://....&quot;)</li>
-</ol></li>
-<li><p>如何连接</p>
-<blockquote>
-<p>geth attach [路径]/geth.ipc<br/>
-geth attach http://[IP]:8545<br/>
-geth attach ws://[IP]:8545</p>
-</blockquote></li>
-<li><p>常用命令</p>
-<blockquote>
-<p>attach<br/>
-可以使用geth然后使用这个参数可以进行登录</p>
-</blockquote></li>
-</ol>
-
-<pre><code class="language-text">-----
-&gt;admin.peers
-&gt;查看集群信息
-
------
-&gt;net.peerCount
-&gt;查看现在已经连接的节点数量
-
------
-&gt;admin.addPeer(&quot;enode://....&quot;)
-&gt;可以使用这个方法添加节点
-
-----
-&gt;admin.peers.forEach(function(p) {console.log(p.network.remoteAddress);})
-&gt;通过这个方法可以查看已经连接的节点IP列表
-</code></pre>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Linux 7.4 配置BBR加速]]></title>
-    <link href="https://jarryyen.github.io/15180905572524.html"/>
-    <updated>2018-02-08T19:49:17+08:00</updated>
-    <id>https://jarryyen.github.io/15180905572524.html</id>
-    <content type="html"><![CDATA[
-<h4 id="toc_0">配置BBR加速</h4>
-
-<p>什么是BBR：</p>
-
-<p>TCP BBR是谷歌出品的TCP拥塞控制算法。BBR目的是要尽量跑满带宽，并且尽量不要有排队的情况。BBR可以起到单边加速TCP连接的效果。</p>
-
-<p>Google提交到Linux主线并发表在ACM queue期刊上的TCP-BBR拥塞控制算法。继承了Google“先在生产环境上部署，再开源和发论文”的研究传统。TCP-BBR已经再YouTube服务器和Google跨数据中心的内部广域网(B4)上部署。由此可见出该算法的前途。</p>
-
-<p>TCP-BBR的目标就是最大化利用网络上瓶颈链路的带宽。一条网络链路就像一条水管，要想最大化利用这条水管，最好的办法就是给这跟水管灌满水。</p>
-
-<p>BBR解决了两个问题：</p>
-
-<p>在有一定丢包率的网络链路上充分利用带宽。非常适合高延迟，高带宽的网络链路。<br/>
-降低网络链路上的buffer占用率，从而降低延迟。非常适合慢速接入网络的用户。<br/>
-Google 在 2016年9月份开源了他们的优化网络拥堵算法BBR，最新版本的 Linux内核(4.9-rc8)中已经集成了该算法。</p>
-
-<p>对于TCP单边加速，并非所有人都很熟悉，不过有另外一个大名鼎鼎的商业软件“锐速”，相信很多人都清楚。特别是对于使用国外服务器或者VPS的人来说，效果更佳。</p>
-
-<h5 id="toc_1">BBR项目地址：</h5>
-
-<blockquote>
-<p><a href="https://github.com/google/bbr">https://github.com/google/bbr</a></p>
-</blockquote>
-
-<p>升级内核，第一步首先是升级内核到支持BBR的版本：<br/>
-1.yum更新系统版本：</p>
-
-<blockquote>
-<p>yum update</p>
-</blockquote>
-
-<p>2.查看系统版本：</p>
-
-<pre><code class="language-text">[root@server ~]# cat /etc/redhat-release 
-CentOS Linux release 7.4.1708 (Core) 
-[root@server ~]# 
-</code></pre>
-
-<p>3.安装elrepo并升级内核：</p>
-
-<pre><code class="language-text">[root@server ~]# rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-[root@server ~]# rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm
-[root@server ~]# yum --enablerepo=elrepo-kernel install kernel-ml -y
-</code></pre>
-
-<p>4.更新grub文件并重启系统：</p>
-
-<pre><code class="language-text">[root@server ~]# egrep  ^menuentry /etc/grub2.cfg |     cut -f 2 -d \&#39;
-CentOS Linux 7 Rescue 8619ff5e1306499eac41c02d3b23868e (4.14.14-1.el7.elrepo.x86_64)
-CentOS Linux (4.14.14-1.el7.elrepo.x86_64) 7 (Core)
-CentOS Linux (3.10.0-693.11.6.el7.x86_64) 7 (Core)
-CentOS Linux (3.10.0-693.el7.x86_64) 7 (Core)
-CentOS Linux (0-rescue-c73a5ccf3b8145c3a675b64c4c3ab1d4) 7 (Core)
-[root@server ~]# grub2-set-default 0
-[root@server ~]# reboot
-</code></pre>
-
-<p>5.重启完成后查看内核是否已更换为4.14版本：</p>
-
-<pre><code class="language-text">[root@server ~]# uname -r 4.14.14-1.el7.elrepo.x86_64
-[root@server ~]#
-</code></pre>
-
-<p>6.开启bbr：</p>
-
-<pre><code class="language-text">[root@server ~]# vim /etc/sysctl.conf    # 在文件末尾添加如下内容
-net.core.default_qdisc = fq
-</code></pre>
-
-<p>net.ipv4.tcp_congestion_control = bbr</p>
-
-<p>7.加载系统参数：</p>
-
-<pre><code class="language-text">[root@vultr ~]# sysctl -p
-net.ipv6.conf.all.accept_ra = 2
-net.ipv6.conf.eth0.accept_ra = 2
-net.core.default_qdisc = fq
-net.ipv4.tcp_congestion_control = bbr
-[root@vultr ~]#
-</code></pre>
-
-<p>如上，输出了我们添加的那两行配置代表正常。</p>
-
-<p>8.确定bbr已经成功开启：</p>
-
-<pre><code class="language-text">[root@vultr ~]# sysctl net.ipv4.tcp_available_congestion_control
-net.ipv4.tcp_available_congestion_control = bbr cubic reno
-[root@vultr ~]# lsmod | grep bbr
-tcp_bbr                20480  2 
-[root@vultr ~]# 
-</code></pre>
-
-<p>输出内容如上，则表示bbr已经成功开启。    </p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[CentOS7.4搭建shadowsocks]]></title>
-    <link href="https://jarryyen.github.io/15180816293582.html"/>
-    <updated>2018-02-08T17:20:29+08:00</updated>
-    <id>https://jarryyen.github.io/15180816293582.html</id>
-    <content type="html"><![CDATA[
-<h4 id="toc_0">安装 pip</h4>
-
-<p>pip是 python 的包管理工具。在本文中将使用 python 版本的 shadowsocks，此版本的 shadowsocks 已发布到 pip 上，因此我们需要通过 pip 命令来安装。</p>
-
-<p>在控制台执行以下命令安装 pip</p>
-
-<pre><code class="language-text">[root@server ~]# curl &quot;https://bootstrap.pypa.io/get-pip.py&quot; -o &quot;get-pip.py&quot;
-[root@server ~]# python get-pip.py
-</code></pre>
-
-<h4 id="toc_1">安装配置 shadowsocks</h4>
-
-<p>在控制台执行以下命令安装 shadowsocks：</p>
-
-<pre><code class="language-text">[root@server ~]# pip install --upgrade pip
-[root@server ~]# pip install shadowsocks
-</code></pre>
-
-<p>安装完成后，需要创建shadowsocks的配置文件/etc/shadowsocks.json，编辑内容如下：</p>
-
-<pre><code class="language-text">[root@server ~]# vim /etc/shadowsocks.json
-{
-&quot;server&quot;: &quot;0.0.0.0&quot;,
-&quot;local_address&quot;:&quot;127.0.0.1&quot;,
-&quot;local_port&quot;: 1080,
-&quot;port_password&quot;: {
-&quot;8080&quot;: &quot;填写密码&quot;,
-&quot;8081&quot;: &quot;填写密码&quot;
-},
-&quot;timeout&quot;: 600,
-&quot;method&quot;: &quot;aes-256-cfb&quot;
-}
-</code></pre>
-
-<p>说明：</p>
-
-<p>method为加密方法，可选aes-128-cfb, aes-192-cfb, aes-256-cfb, bf-cfb, cast5-cfb, des-cfb, rc4-md5, chacha20, salsa20, rc4, table<br/>
-port_password为端口对应的密码，可使用密码生成工具生成一个随机密码<br/>
-以上两项信息在配置 shadowsocks 客户端时需要配置一致，具体说明可查看 shadowsocks 的帮助文档。</p>
-
-<h5 id="toc_2">如果你不需要配置多个端口的话，仅配置单个端口，则可以使用以下配置：</h5>
-
-<pre><code class="language-text">{
-&quot;server&quot;: &quot;0.0.0.0&quot;,
-&quot;server_port&quot;: 8080,
-&quot;password&quot;: &quot;填写密码&quot;,
-&quot;method&quot;: &quot;aes-256-cfb&quot;
-}
-</code></pre>
-
-<p>说明：</p>
-
-<ul>
-<li>server_port为服务监听端口</li>
-<li>password为密码</li>
-</ul>
-
-<p>同样的以上两项信息在配置shadowsocks 客户端时需要配置一致。</p>
-
-<hr/>
-
-<h4 id="toc_3">配置自启动</h4>
-
-<p>编辑shadowsocks 服务的启动脚本文件，内容如下：</p>
-
-<pre><code class="language-text">[root@server ~]# vim /etc/systemd/system/shadowsocks.service
-[Unit]
-Description=Shadowsocks
-
-[Service]
-TimeoutStartSec=0
-ExecStart=/usr/bin/ssserver -c /etc/shadowsocks.json
-
-[Install]
-WantedBy=multi-user.target
-</code></pre>
-
-<p>执行以下命令启动 shadowsocks 服务：</p>
-
-<pre><code class="language-text">[root@server ~]# systemctl enable shadowsocks
-[root@server ~]# systemctl start shadowsocks
-</code></pre>
-
-<p>检查 shadowsocks 服务是否已成功启动，可以执行以下命令查看服务的状态：</p>
-
-<blockquote>
-<p>systemctl status shadowsocks -l</p>
-</blockquote>
-
-<p>确认服务启动成功后，配置防火墙规则，开放你配置的端口，不然客户端是无法连接的：</p>
-
-<pre><code class="language-text">[root@server ~]# firewall-cmd --zone=public --add-port=8080/tcp --permanent
-success
-[root@server ~]# firewall-cmd --zone=public --add-port=8081/tcp --permanent
-success
-[root@server ~]# firewall-cmd --reload
-success
-</code></pre>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[MacOS X 10.13(High Sierra)开启隐私权限]]></title>
-    <link href="https://jarryyen.github.io/15162450810938.html"/>
-    <updated>2018-01-18T11:11:21+08:00</updated>
-    <id>https://jarryyen.github.io/15162450810938.html</id>
-    <content type="html"><![CDATA[
-<p>在下载一些Mac软件后打卡，系统会告诉你说软件受损，需要删除掉。其实，并不是软件受损，而是苹果修改了安全限制。以前，允许来自任何第三方的软件有选项，可以选择。现在，苹果去掉了选项，必须要从App Store或者含有苹果认证证书的软件才可以运行。</p>
-
-<p>如果关闭这个选项，实现任何软件都可以运行呢？</p>
-
-<p>我们只需要打开终端，输入下面的命令</p>
-
-<blockquote>
-<p>sudo spctl --master-disable</p>
-</blockquote>
-
-<p>然后打开系统便好设置-&gt;安全性与隐私选项-&gt;任何来源（最下面）<br/>
-![WX20180118-111614@2x](# MacOS X 10.13(High Sierra)开启隐私权限</p>
-
-<p>在下载一些Mac软件后打开，系统会告诉你说软件受损，需要删除掉。其实，并不是软件受损，而是苹果修改了安全限制。以前，允许来自任何第三方的软件有选项，可以选择。现在，苹果去掉了选项，必须要从App Store或者含有苹果认证证书的软件才可以运行。</p>
-
-<p>如果关闭这个选项，实现任何软件都可以运行呢？</p>
-
-<p>我们只需要打开终端，输入下面的命令</p>
-
-<blockquote>
-<p>sudo spctl --master-disable</p>
-</blockquote>
-
-<p>然后打开系统便好设置-&gt;安全性与隐私选项-&gt;任何来源（最下面）<br/>
-<img src="http://ofcfvx6lf.bkt.clouddn.com/WX20180118-111614@2x.png" alt="安全性与隐私"/></p>
-
-<p>选择这个选项，软件就可以正常运行了</p>
-
-<p>选择这个选项，软件就可以正常运行了</p>
 
 ]]></content>
   </entry>

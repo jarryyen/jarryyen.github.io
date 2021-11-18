@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  不使用PHPExcel导出Excel文件 - jarryyen.github.io
+  不使用PHPExcel导出Excel文件 - JarryYen的小日子
   
   </title>
   
   
-  <link href="atom.xml" rel="alternate" title="jarryyen.github.io" type="application/atom+xml">
+  <link href="atom.xml" rel="alternate" title="JarryYen的小日子" type="application/atom+xml">
     <link rel="stylesheet" href="asset/css/foundation.min.css" />
     <link rel="stylesheet" href="asset/css/docs.css" />
     <script src="asset/js/vendor/modernizr.js"></script>
@@ -38,9 +38,11 @@
       <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
         <ul id="main-menu" class="left">
         
-        <li id=""><a target="self" href="index.html">Home</a></li>
+        <li id=""><a target="_self" href="index.html">Home</a></li>
         
         <li id=""><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li id=""><a target="_self" href="atom.xml">RSS</a></li>
         
         </ul>
 
@@ -60,24 +62,24 @@
 
         <nav class="tab-bar show-for-small">
   <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
-    <span> &nbsp; jarryyen.github.io</span>
+    <span> &nbsp; JarryYen的小日子</span>
   </a>
 </nav>
 
 <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
         
-        <li><a target="self" href="index.html">Home</a></li>
+        <li><a target="_self" href="index.html">Home</a></li>
         
         <li><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li><a target="_self" href="atom.xml">RSS</a></li>
         
 
     <li><label>Categories</label></li>
 
         
             <li><a href="jenkins.html">jenkins</a></li>
-        
-            <li><a href="Movie.html">Movie</a></li>
         
             <li><a href="Tips.html">Tips</a></li>
         
@@ -113,7 +115,7 @@
           <h1>不使用PHPExcel导出Excel文件</h1>
      
         <div class="read-more clearfix">
-          <span class="date">2019/7/22</span>
+          <span class="date">2019/07/22</span>
 
           <span>posted in&nbsp;</span> 
           
@@ -121,8 +123,6 @@
            
          
           <span class="comments">
-            
-              <a href="https://jarryyen.github.io/15638065887503.html#disqus_thread">comments</a>
             
 
             
@@ -132,61 +132,61 @@
       </div><!-- article -->
 
       <div class="article-content">
-      <pre><code class="language-text">$table = &#39;&lt;html xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot; xmlns:x=&quot;urn:schemas-microsoft-com:office:excel&quot; xmlns=&quot;http://www.w3.org/TR/REC-html40&quot;&gt;&lt;head&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;&lt;x:ExcelWorkbook&gt;&lt;x:ExcelWorksheets&gt;&lt;x:ExcelWorksheet&gt;&lt;x:Name&gt;{worksheet}&lt;/x:Name&gt;&lt;x:WorksheetOptions&gt;&lt;x:DisplayGridlines/&gt;&lt;/x:WorksheetOptions&gt;&lt;/x:ExcelWorksheet&gt;&lt;/x:ExcelWorksheets&gt;&lt;/x:ExcelWorkbook&gt;&lt;/xml&gt;&lt;![endif]--&gt;&lt;style type=&quot;text/css&quot;&gt;
+      <pre><code class="language-plain_text">$table = '&lt;html xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot; xmlns:x=&quot;urn:schemas-microsoft-com:office:excel&quot; xmlns=&quot;http://www.w3.org/TR/REC-html40&quot;&gt;&lt;head&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;&lt;x:ExcelWorkbook&gt;&lt;x:ExcelWorksheets&gt;&lt;x:ExcelWorksheet&gt;&lt;x:Name&gt;{worksheet}&lt;/x:Name&gt;&lt;x:WorksheetOptions&gt;&lt;x:DisplayGridlines/&gt;&lt;/x:WorksheetOptions&gt;&lt;/x:ExcelWorksheet&gt;&lt;/x:ExcelWorksheets&gt;&lt;/x:ExcelWorkbook&gt;&lt;/xml&gt;&lt;![endif]--&gt;&lt;style type=&quot;text/css&quot;&gt;
 .excelTable  {border-collapse:collapse;border:thin solid #999;}
 .excelTable  th {border: thin solid #999;padding:20px;text-align: center;border-top: thin solid #999;background-color: #E6E6E6;}
 .excelTable  td {border:thin solid #999;padding:2px 5px;text-align: center;}
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&#39;;
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;';
 $table .= &quot;&lt;table&gt;
             &lt;thead&gt;
                 &lt;tr&gt;
-                    &lt;th class=&#39;name&#39;&gt;追逆ID&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;用户ID&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;状态&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;创建时间&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;问题描述&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;问题类型&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;问题图片1&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;问题图片2&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;问题地址&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;投诉人电话&lt;/th&gt;
-                    &lt;th class=&#39;name&#39;&gt;备注&lt;/th&gt;
+                    &lt;th class='name'&gt;追逆ID&lt;/th&gt;
+                    &lt;th class='name'&gt;用户ID&lt;/th&gt;
+                    &lt;th class='name'&gt;状态&lt;/th&gt;
+                    &lt;th class='name'&gt;创建时间&lt;/th&gt;
+                    &lt;th class='name'&gt;问题描述&lt;/th&gt;
+                    &lt;th class='name'&gt;问题类型&lt;/th&gt;
+                    &lt;th class='name'&gt;问题图片1&lt;/th&gt;
+                    &lt;th class='name'&gt;问题图片2&lt;/th&gt;
+                    &lt;th class='name'&gt;问题地址&lt;/th&gt;
+                    &lt;th class='name'&gt;投诉人电话&lt;/th&gt;
+                    &lt;th class='name'&gt;备注&lt;/th&gt;
                 &lt;/tr&gt;
             &lt;/thead&gt;
             &lt;tbody&gt;&quot;;
 foreach ($innerdata as $k =&gt; $v) {
-    $id = $v[&#39;id&#39;];
-    $userid = $v[&#39;users_id&#39;];
-    $status = $v[&#39;status&#39;]==1?&#39;已过审&#39;:&#39;未过审&#39;;
-    $create_time = $v[&#39;create_time&#39;];
-    $qcon = $v[&#39;qcon&#39;];
-    $qid = getQName($v[&#39;qid&#39;]);
-    $photo1 = $v[&#39;photo1&#39;];
-    $address = $v[&#39;address&#39;];
-    $phone = $v[&#39;phone&#39;];
-    //$unionid = $v[&#39;wx_unionid&#39;];
-    $unionid = $v[&#39;users_id&#39;];
-    $tag = $v[&#39;tag&#39;];
+    $id = $v['id'];
+    $userid = $v['users_id'];
+    $status = $v['status']==1?'已过审':'未过审';
+    $create_time = $v['create_time'];
+    $qcon = $v['qcon'];
+    $qid = getQName($v['qid']);
+    $photo1 = $v['photo1'];
+    $address = $v['address'];
+    $phone = $v['phone'];
+    //$unionid = $v['wx_unionid'];
+    $unionid = $v['users_id'];
+    $tag = $v['tag'];
 
-    $tmp = json_decode($v[&#39;photo2&#39;]);
-    $ttmp = &#39;&#39;;
+    $tmp = json_decode($v['photo2']);
+    $ttmp = '';
     foreach ($tmp as $v){
-        $ttmp .= $v.&#39;,&#39;;
+        $ttmp .= $v.',';
     }
     $photo2 = $ttmp;
 
     $table .= &quot;&lt;tr&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$id}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$userid}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$status}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$create_time}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$qcon}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$qid}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$photo1}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$photo2}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$address}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$phone}&lt;/td&gt;
-                    &lt;td class=&#39;name&#39;&gt;{$tag}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$id}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$userid}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$status}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$create_time}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$qcon}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$qid}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$photo1}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$photo2}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$address}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$phone}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$tag}&lt;/td&gt;
                 &lt;/tr&gt;&quot;;
 }
 $table .= &quot;&lt;/tbody&gt;
@@ -202,7 +202,7 @@ header(&quot;Content-Type:application/force-download&quot;);
 header(&quot;Content-Type:application/vnd.ms-execl&quot;);
 header(&quot;Content-Type:application/octet-stream&quot;);
 header(&quot;Content-Type:application/download&quot;);;
-header(&#39;Content-Disposition:attachment;filename=&quot;百日攻坚.xls&quot;&#39;);
+header('Content-Disposition:attachment;filename=&quot;百日攻坚.xls&quot;');
 header(&quot;Content-Transfer-Encoding:binary&quot;);
 echo $table;
 </code></pre>
@@ -254,8 +254,6 @@ s.setAttribute('data-timestamp', +new Date());
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
           
-            <div id="disqus_thread"></div>
-          
 
           
         </div>
@@ -271,8 +269,8 @@ s.setAttribute('data-timestamp', +new Date());
     <div id="sidebar" class="sidebar">
           <div id="site-info" class="site-info">
             
-                <h1>jarryyen.github.io</h1>
-                <div class="site-des"></div>
+                <h1>JarryYen的小日子</h1>
+                <div class="site-des">真实信息 无愧于心</div>
                 <div class="social">
 
 
@@ -283,7 +281,7 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 
-<a target="_blank" class="github" target="_blank" href="https://github.com/jarryyen" title="GitHub">GitHub</a>
+
 
   <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
                 
@@ -301,8 +299,6 @@ s.setAttribute('data-timestamp', +new Date());
       	<p class="cat-list">
         
             <a href="jenkins.html"><strong>jenkins</strong></a>
-        
-            <a href="Movie.html"><strong>Movie</strong></a>
         
             <a href="Tips.html"><strong>Tips</strong></a>
         
@@ -329,31 +325,31 @@ s.setAttribute('data-timestamp', +new Date());
 	      
 		      
 			      <li class="post">
-			        <a href="15759676309433.html">Shadowsocks-NG-R8订阅失效问题</a>
+			        <a href="16364459575433.html">用BT面板</a>
 			      </li>
 		     
 		  
 		      
 			      <li class="post">
-			        <a href="15734416345812.html">Centos 8 直接开启BBR</a>
+			        <a href="16324699802783.html">今天解决了手机残留证书的问题</a>
 			      </li>
 		     
 		  
 		      
 			      <li class="post">
-			        <a href="15664660068365.html">MacOS删除文件不释放空间？</a>
+			        <a href="16306473763283.html">codeigniter 去除index.php (nginx,apache) 通用方法</a>
 			      </li>
 		     
 		  
 		      
 			      <li class="post">
-			        <a href="15646322854275.html">在MacOS下无需安装任何工具解压PKG</a>
+			        <a href="16057763012390.html">https导致微信内分享链接无图片以及描述等信息</a>
 			      </li>
 		     
 		  
 		      
 			      <li class="post">
-			        <a href="15638065887503.html">不使用PHPExcel导出Excel文件</a>
+			        <a href="16043696365923.html">今天使用BT(宝塔)出现了这个问题</a>
 			      </li>
 		     
 		  
@@ -617,27 +613,6 @@ pre[class*="language-"].line-numbers > code {
 
 </style>
 
-
-<script type="text/javascript">
-    var disqus_shortname = 'jarryyen'; 
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-
-<script type="text/javascript">
-var disqus_shortname = 'jarryyen'; 
-
-(function () {
-var s = document.createElement('script'); s.async = true;
-s.type = 'text/javascript';
-s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}());
-</script>
   
     
 
@@ -658,7 +633,7 @@ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
      
     </script>
 
-
+<script></script>
 
   </body>
 </html>

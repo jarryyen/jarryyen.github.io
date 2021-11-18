@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  JarryYen的小日子
+  Tips - JarryYen的小日子
   
   </title>
   
@@ -112,70 +112,26 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
-                <a class="clearlink" href="16364459575433.html">
+                <a class="clearlink" href="15734416345812.html">
                 
-                  <h1>用BT面板</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>这是在妖火上看到的最新的免流地址</p>
-<pre><code class="language-plain_text">联通最新免流混淆（4G/5G均免）
-shoutingtoutiao1.10010.com
-shoutingtoutiao2.10010.com
-shoutingtoutiao3.10010.com
-shoutingtoutiao4.10010.com
-</code></pre>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2021/11/09</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="16324699802783.html">
-                
-                  <h1>今天解决了手机残留证书的问题</h1>
+                  <h1>Centos 8 直接开启BBR</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
                         	<blockquote>
-<p>前言:<br />
-之前由于手机里面安装了很多证书,这些证书随着旧手机迁移到了新手机.<br />
-迁移到新手机后,发现描述文件没有了.但是,证书依然还在.<br />
-因为此问题,折腾了好几天.</p>
+<p>由于Centos8内核默认已经升级到 4.18 , 所以可以直接开启BBR</p>
 </blockquote>
-<h4><a id="1-imazing%E7%9C%9F%E7%9A%84%E4%B8%8D%E5%A5%BD%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.iMazing 真的不好用</h4>
-<p>这款软件除了收费还是收费,免费的功能非常少.以下内容提到的到处数据文件是无法在免费版里面完成的,当然如果你购买了收费版本可以考虑使用这款软件.</p>
-<h4><a id="2-iphone-backup-extractor%E5%85%8D%E8%B4%B9%E7%89%88%E4%B9%9F%E5%BE%88%E5%A5%BD%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.iPhone Backup Extractor 免费版也很好用</h4>
-<p>这次我使用的是这款软件,可以免费把Tur*****.db导出.</p>
-<h4><a id="3-advtruststore" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.ADVTrustStore</h4>
-<p>使用ADVTrustStore导出相应的证书</p>
-<h4><a id="4%E5%AF%BC%E5%85%A5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.导入</h4>
-<p>将导出的证书通过Airdrop安装到你的iPhone上</p>
-<h4><a id="5%E5%88%A0%E9%99%A4" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.删除</h4>
-<p>安装好之后你会发现对应证书的描述文件就出现了,这时通过描述文件就可以把对应的证书删除掉了.</p>
+<h4><a id="1%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.修改配置文件</h4>
+<pre><code class="language-plain_text">vim /etc/sysctl.conf
+</code></pre>
+<h4><a id="2%E6%B7%BB%E5%8A%A0%E9%85%8D%E7%BD%AE%E9%80%89%E9%A1%B9" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.添加配置选项</h4>
+<pre><code class="language-plain_text">net.core.default_qdisc = fq
+net.ipv4.tcp_congestion_control = bbr
+</code></pre>
+<h4><a id="3%E5%90%AF%E5%8A%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.启动</h4>
+<pre><code class="language-plain_text">sysctl -p
+</code></pre>
 
                         
                       </div>
@@ -184,7 +140,7 @@ shoutingtoutiao4.10010.com
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2021/09/24</span>
+                    <span class="date">2019/11/11</span>
                     <span>posted in&nbsp;</span> 
           				  
           					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
@@ -203,51 +159,17 @@ shoutingtoutiao4.10010.com
               </div><!-- article -->
         
 			<div class="article">
-                <a class="clearlink" href="16306473763283.html">
+                <a class="clearlink" href="15664660068365.html">
                 
-                  <h1>codeigniter 去除index.php (nginx,apache) 通用方法</h1>
+                  <h1>MacOS删除文件不释放空间？</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
-                        	<h5><a id="htaccess%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>.htaccess文件配置</h5>
-<pre><code class="language-plain_text">&lt;IfModule mod_rewrite.c&gt;
-  RewriteEngine On
-  RewriteBase /
-  RewriteCond $1 !^(index\.php|assets|system|robots\.txt)
-  RewriteRule ^(.*)$ /index.php/$1 [L,QSA]
-&lt;/IfModule&gt;
-</code></pre>
-<h3><a id="%E7%AE%80%E8%A6%81%E8%AF%B4%E6%98%8E%EF%BC%9A%E5%85%B3%E9%94%AE%E6%98%AF%E8%BF%99%E5%8F%A5%EF%BC%9Arewirtecond%EF%BC%8C-assets%E6%98%AF%E7%9B%AE%E5%BD%95%E3%80%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>简要说明：关键是这句：rewirteCond ，assets是目录。</h3>
-<hr />
-<h5><a id="apache%E7%9A%84%E9%85%8D%E7%BD%AE%EF%BC%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>apache的配置：</h5>
-<pre><code class="language-plain_text">&lt;VirtualHost *:80&gt;
-    ServerAdmin jjj@163.com
-    DocumentRoot &quot;d:/mywork/m&quot;
-
-    ServerName m.mimi.com
-
-    &lt;Directory &quot;d:/mywork/m&quot;&gt;  　　// 这里是项目的目录
-        Options Indexes MultiViews FollowSymLinks
-        AllowOverride All
-        Order allow,deny
-        allow from all
-   &lt;/Directory&gt;
-&lt;/VirtualHost&gt;
-</code></pre>
-<hr />
-<h5><a id="%E7%AE%80%E8%A6%81%E8%AF%B4%E6%98%8E%EF%BC%9A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>简要说明：</h5>
-<p>ServerAdmin表示错误信息地址，如果发生错误发送到这个邮箱地址。</p>
-<p>Indexes 的作用就是当该目录下没有 index.html 文件时，就显示目录结构，去掉 Indexes，Apache 就不会显示该目录的列表了。</p>
-<p>Nginx配置几句</p>
-<pre><code class="language-plain_text">location /
-        {
-            index index.php;
-            if (!-e $request_filename) {
-                    rewrite ^/(.*)$ /index.php?$1 last;
-                    break;
-            }
-        }
+                        	<p>我今天遇到了一个很头疼的问题，我删除了很多文件但是使用空间一直没有被释放。</p>
+<p>在终端里面 df -Hs 后看到使用空间一点也没有被释放。</p>
+<p>最后找到了Apple在线客服，使用一条命令就完成了。</p>
+<pre><code class="language-plain_text">tmutil thinlocalsnapshots / 999999999999999 4
 </code></pre>
 
                         
@@ -257,40 +179,7 @@ shoutingtoutiao4.10010.com
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2021/09/03</span>
-                    
-          				   
-                    
-
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="16057763012390.html">
-                
-                  <h1>https导致微信内分享链接无图片以及描述等信息</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>今天遇到了一个特别的问题，之前的页面没有启用https。原因竟然是在计算signature的时候需要传入一个完整的url，但是程序传入的url是不带https的。最终导致signature计算错误，无法实现正常的分享等操作。只需要添加一个判断，让计算signature的时候传入正确的url地址即可。</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2020/11/19</span>
+                    <span class="date">2019/08/22</span>
                     <span>posted in&nbsp;</span> 
           				  
           					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
@@ -309,29 +198,17 @@ shoutingtoutiao4.10010.com
               </div><!-- article -->
         
 			<div class="article">
-                <a class="clearlink" href="16043696365923.html">
+                <a class="clearlink" href="15646322854275.html">
                 
-                  <h1>今天使用BT(宝塔)出现了这个问题</h1>
+                  <h1>在MacOS下无需安装任何工具解压PKG</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
-                        	<pre><code class="language-plain_text">[Tue Nov 03 10:01:38.237329 2020] [proxy_fcgi:error] [pid 2405:tid 140039740675840] [client 60.205.xxx.xxx:51754] AH01071: Got error 'Primary script unknown\n'
-[Tue Nov 03 10:04:51.147084 2020] [ssl:warn] [pid 21999:tid 140040390793088] AH01909: SSL.target.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue Nov 03 10:05:22.670931 2020] [ssl:warn] [pid 21999:tid 140040390793088] AH01909: SSL.target.com:443:0 server certificate does NOT include an ID which matches the server name
+                        	<pre><code class="language-plain_text">xar -xf [文件名].pkg //之后会解压出来一个新的pkg文件
+
+cat [新的pkg文件名].pkg/Payload | cpio -i //就可以解压出来相应的app了
 </code></pre>
-<p>这个问题出现在启用SSL后,在站点的设置选项-》配置-〉找到SSL部分</p>
-<pre><code class="language-plain_text">&lt;VirtualHost *:443&gt;
-    ServerAdmin webmasterexample.com
-    DocumentRoot &quot;/data/www/wwwroot/target.com/&quot;
-    ServerName SSL.target.com
-    ServerAlias target.com
-    
-    #errorDocument 404 /404.html
-    ErrorLog &quot;/www/wwwlogs/target.com-error_log&quot;
-    CustomLog &quot;/www/wwwlogs/target.com-access_log&quot; combined
-</code></pre>
-<p>其中 ServerName 去掉 SSL. 开头,然后注释掉ServerAlias即可.保存然后重启Apache</p>
 
                         
                       </div>
@@ -340,7 +217,7 @@ shoutingtoutiao4.10010.com
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2020/11/03</span>
+                    <span class="date">2019/08/01</span>
                     <span>posted in&nbsp;</span> 
           				  
           					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
@@ -359,28 +236,87 @@ shoutingtoutiao4.10010.com
               </div><!-- article -->
         
 			<div class="article">
-                <a class="clearlink" href="15924471851785.html">
+                <a class="clearlink" href="15638065887503.html">
                 
-                  <h1>北京的武汉人没有感恩的心</h1>
+                  <h1>不使用PHPExcel导出Excel文件</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
-                        	<p>我有个女同事,平时关系不错.最近由于北京疫情的问题,我们讨论了一下.</p>
-<p>这位姐姐是湖北武汉人,她说在全国最缺口罩的时候.她老公的单位(某央企),每个人发了一箱KF94口罩.</p>
-<p>我不能说羡慕,我只是想给医护人员一个公道.在疫情最严重的时候,北京的医院给医生配备的是什么口罩?<br />
-一天一个“一次性医用外科口罩”,不是两个“是一个”.<br />
-因为产量不足,应该每天两个的口罩变成了1个.但是,所有的医护人员没有因此就请假的.</p>
-<p>但是,这里就要提到我那个同事姐姐的老公了.在北京某央企上班,在家办公还能得到一箱KF94口罩......</p>
-<p>这对来自湖北武汉的夫妻真是福气,在家办公都有KF94.</p>
-<p>最主要的,那位姐姐说了.医院不发你要去告医院去,央企是国家的企业....</p>
-<p>难道医院就不是国家的嘛?北京的公立医院那在那个时期就是每人每天1个口罩啊,公立医院难道不是国家的嘛??</p>
-<p>我接触的武汉人不多,只有这位同事.所以,我不能说所有武汉人都这样,但是至少我身边的这位武汉人是这样.</p>
-<p>只能说,在中国.一线医生,不如在家办公的央企职员!医生的命,不如在家办公的央企职员值钱!</p>
-<p>这就是为什么中国医生大量出走海外,中国医疗技术一直停滞不前的重要原因.</p>
-<p>中国医生不被尊重,中国医生是社会的底层.</p>
-<p>需要医护人员的时候,一生号召奔赴前线.</p>
-<p>不需要医护的时候,医护形同草芥.</p>
+                        	<pre><code class="language-plain_text">$table = '&lt;html xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot; xmlns:x=&quot;urn:schemas-microsoft-com:office:excel&quot; xmlns=&quot;http://www.w3.org/TR/REC-html40&quot;&gt;&lt;head&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt;&lt;x:ExcelWorkbook&gt;&lt;x:ExcelWorksheets&gt;&lt;x:ExcelWorksheet&gt;&lt;x:Name&gt;{worksheet}&lt;/x:Name&gt;&lt;x:WorksheetOptions&gt;&lt;x:DisplayGridlines/&gt;&lt;/x:WorksheetOptions&gt;&lt;/x:ExcelWorksheet&gt;&lt;/x:ExcelWorksheets&gt;&lt;/x:ExcelWorkbook&gt;&lt;/xml&gt;&lt;![endif]--&gt;&lt;style type=&quot;text/css&quot;&gt;
+.excelTable  {border-collapse:collapse;border:thin solid #999;}
+.excelTable  th {border: thin solid #999;padding:20px;text-align: center;border-top: thin solid #999;background-color: #E6E6E6;}
+.excelTable  td {border:thin solid #999;padding:2px 5px;text-align: center;}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;';
+$table .= &quot;&lt;table&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th class='name'&gt;追逆ID&lt;/th&gt;
+                    &lt;th class='name'&gt;用户ID&lt;/th&gt;
+                    &lt;th class='name'&gt;状态&lt;/th&gt;
+                    &lt;th class='name'&gt;创建时间&lt;/th&gt;
+                    &lt;th class='name'&gt;问题描述&lt;/th&gt;
+                    &lt;th class='name'&gt;问题类型&lt;/th&gt;
+                    &lt;th class='name'&gt;问题图片1&lt;/th&gt;
+                    &lt;th class='name'&gt;问题图片2&lt;/th&gt;
+                    &lt;th class='name'&gt;问题地址&lt;/th&gt;
+                    &lt;th class='name'&gt;投诉人电话&lt;/th&gt;
+                    &lt;th class='name'&gt;备注&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;&quot;;
+foreach ($innerdata as $k =&gt; $v) {
+    $id = $v['id'];
+    $userid = $v['users_id'];
+    $status = $v['status']==1?'已过审':'未过审';
+    $create_time = $v['create_time'];
+    $qcon = $v['qcon'];
+    $qid = getQName($v['qid']);
+    $photo1 = $v['photo1'];
+    $address = $v['address'];
+    $phone = $v['phone'];
+    //$unionid = $v['wx_unionid'];
+    $unionid = $v['users_id'];
+    $tag = $v['tag'];
+
+    $tmp = json_decode($v['photo2']);
+    $ttmp = '';
+    foreach ($tmp as $v){
+        $ttmp .= $v.',';
+    }
+    $photo2 = $ttmp;
+
+    $table .= &quot;&lt;tr&gt;
+                    &lt;td class='name'&gt;{$id}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$userid}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$status}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$create_time}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$qcon}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$qid}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$photo1}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$photo2}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$address}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$phone}&lt;/td&gt;
+                    &lt;td class='name'&gt;{$tag}&lt;/td&gt;
+                &lt;/tr&gt;&quot;;
+}
+$table .= &quot;&lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;&quot;;
+
+//通过header头控制输出excel表格
+header(&quot;Pragma: public&quot;);
+header(&quot;Expires: 0&quot;);
+header(&quot;Cache-Control:must-revalidate, post-check=0, pre-check=0&quot;);
+header(&quot;Content-Type:application/force-download&quot;);
+header(&quot;Content-Type:application/vnd.ms-execl&quot;);
+header(&quot;Content-Type:application/octet-stream&quot;);
+header(&quot;Content-Type:application/download&quot;);;
+header('Content-Disposition:attachment;filename=&quot;百日攻坚.xls&quot;');
+header(&quot;Content-Transfer-Encoding:binary&quot;);
+echo $table;
+</code></pre>
 
                         
                       </div>
@@ -389,10 +325,10 @@ shoutingtoutiao4.10010.com
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2020/06/18</span>
+                    <span class="date">2019/07/22</span>
                     <span>posted in&nbsp;</span> 
           				  
-          					    <span class="posted-in"><a href='Share.html'>Share</a></span>
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
           				   
                     
 
@@ -408,126 +344,71 @@ shoutingtoutiao4.10010.com
               </div><!-- article -->
         
 			<div class="article">
-                <a class="clearlink" href="15796596354392.html">
+                <a class="clearlink" href="15451223173625.html">
                 
-                  <h1>aMule For Linux 配置</h1>
+                  <h1>代码merge常用命令</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
-                        	<p>1.首先要启动一次amuled这个程序,程序会自动生成配置文件</p>
-<pre><code class="language-plain_text">2020-01-22 05:21:29: Initialising aMuleD 2.3.1 compiled with wxGTK2 v2.8.12
- 2020-01-22 05:21:29: Checking if there is an instance already running...
- 2020-01-22 05:21:29: No other instances are running.
-!2020-01-22 05:21:29: ERROR: WARNING Warning! You are running aMule as root.
-!2020-01-22 05:21:29: Doing so is not recommended for security reasons,
-!2020-01-22 05:21:29: and you are advised to run aMule as an normal
-!2020-01-22 05:21:29: user instead.
+                        	<h1><a id="%E5%88%87%E6%8D%A2%E5%88%B0master%E5%88%86%E6%94%AF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>切换到master 分支</h1>
+<p>git checkout master</p>
+<h1><a id="%E5%88%87%E6%8D%A2%E5%88%B0dev%E5%88%86%E6%94%AF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>切换到dev分支</h1>
+<p>git checkout dev</p>
+<p>#获取最新的分支信息</p>
+<p>git fetch</p>
+<p>#确认处于本地分支中</p>
+<p>git status</p>
+<h1><a id="%E5%9C%A8dev%E5%88%86%E6%94%AF%E4%B8%8A%E5%90%88%E5%B9%B6-master%E5%88%86%E6%94%AF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>在 dev 分支上合并master 分支</h1>
+<p>git merge origin/master</p>
+<h1><a id="%E5%9C%A8master%E5%88%86%E6%94%AF%E4%B8%8A%E5%90%88%E5%B9%B6dev%E5%88%86%E6%94%AF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>在master分支上合并dev分支</h1>
+<p>git merge origin/dev</p>
+<p>执行 git log ,如果看到 master 分支和dev 分支的最新commit id是一致的，说明master和dev分支是一样的</p>
 
---------------------------------------------------
-Warning! You are running aMule as root.
-Doing so is not recommended for security reasons,
-and you are advised to run aMule as an normal
-user instead.
---------------------------------------------------
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/12/18</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
 
-!2020-01-22 05:21:29: ERROR: Info  --- This is the first time you run aMule 2.3.1 ---
-!2020-01-22 05:21:29: More information, support and new releases can found at our homepage,
-!2020-01-22 05:21:29: at www.aMule.org, or in our IRC channel #aMule at irc.freenode.net.
-!2020-01-22 05:21:29: Feel free to report any bugs to http://forum.amule.org
- 2020-01-22 05:21:29: ListenSocket: Ok.
- 2020-01-22 05:21:29: Loading temp files from /root/.aMule/Temp.
- 2020-01-22 05:21:29: All PartFiles Loaded.
- 2020-01-22 05:21:29: amuled: OnInit - starting timer
-!2020-01-22 05:21:29: ERROR: aMule daemon cannot be used when external connections are disabled. To enable External Connections, use either a normal aMule, start amuled with the option --ec-config or set the key &quot;AcceptExternalConnections&quot; to 1 in the file ~/.aMule/amule.conf
- 2020-01-22 05:21:29: Now, exiting main app...
- 2020-01-22 05:21:29: aMule OnExit: Terminating core.
- 2020-01-22 05:21:29: aMule shutdown completed.
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15451222204100.html">
+                
+                  <h1>Http auth basic认证</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>使用 nginx 作为前端服务器。某些资源要保护。用 http auth basic 认证简单方便。<br />
+nginx 的 http auth basic 的密码是用 crypt(3) 加密的。具体可以参考：<a href="http://wiki.nginx.org/HttpAuthBasicModule">http://wiki.nginx.org/HttpAuthBasicModule</a><br />
+1.修改NGINX配置文件</p>
+<pre><code class="language-plain_text">location ~ /admin {
+        auth_basic &quot;Restricted&quot;;
+        auth_basic_user_file /etc/nginx/pass_file;//请使用绝对路径
+        root   /home/www/admin; //host 地址，不然认证通过之后，找不到对应的文件
+}  
 </code></pre>
-<p>2.修改WEB访问控制部分</p>
-<ul>
-<li>生成访问密码</li>
-</ul>
-<pre><code class="language-plain_text">echo -n 这里替换成你想要的密码 | md5sum | awk '{print $1}'
-</code></pre>
-<ul>
-<li>修改配置文件</li>
-</ul>
-<pre><code class="language-plain_text">vim ~/.aMule/amule.conf
-</code></pre>
-<ul>
-<li>(建议)修改文件存储路径</li>
-</ul>
-<pre><code class="language-plain_text">TempDir=/root/.aMule/Temp
-IncomingDir=/root/.aMule/Incoming
-建议修改为
-TempDir=/root/aMule/Temp
-IncomingDir=/root/aMule/Incoming
-</code></pre>
-<ul>
-<li>(建议)新建文件夹</li>
-</ul>
-<pre><code class="language-plain_text">mkdir -p /root/aMule/Temp
-mkdir -p /root/aMule/Incoming
-</code></pre>
-<ul>
-<li>修改连接设置</li>
-</ul>
-<pre><code class="language-plain_text">AcceptExternalConnections=0
-修改为
-AcceptExternalConnections=1
-</code></pre>
-<ul>
-<li>修改WEB访问密码</li>
-</ul>
-<pre><code class="language-plain_text">[WebServer]
-Enabled=0
-Password= [填写您生成的密码字符串]
-</code></pre>
-<ul>
-<li>(建议)修改GUI客户端访问控制密码</li>
-</ul>
-<pre><code class="language-plain_text">ECPassword= [填写您生成的密码字符串]
-</code></pre>
-<ul>
-<li>修改完毕,保存退出</li>
-</ul>
-<p>3.(推荐)使用Screen运行程序</p>
-<ul>
-<li>安装screen</li>
-</ul>
-<pre><code class="language-plain_text">yum install screen -y
-</code></pre>
-<ul>
-<li>生成一个窗口进程</li>
-</ul>
-<pre><code class="language-plain_text">screen -S amule
-</code></pre>
-<ul>
-<li>执行amuled 进程</li>
-</ul>
-<pre><code class="language-plain_text">amuled
-出现如下信息证明程序启动完成
-2020-01-22 05:51:58: Initialising aMuleD 2.3.1 compiled with wxGTK2 v2.8.12
- 2020-01-22 05:51:58: Checking if there is an instance already running...
- 2020-01-22 05:51:58: No other instances are running.
-2020-01-22 05:51:58: ERROR: WARNING Warning! You are running aMule as root.
-2020-01-22 05:51:58: Doing so is not recommended for security reasons,
-2020-01-22 05:51:58: and you are advised to run aMule as an normal
-2020-01-22 05:51:58: user instead.
-Warning! You are running aMule as root.
-Doing so is not 
-recommended for security reasons,and you are 
-advised to run aMule as an normal user instead.
- 2020-01-22 05:51:58: ListenSocket: Ok.
- 2020-01-22 05:51:58: Loading temp files from /root/aMule/Temp.
- 2020-01-22 05:51:58: All PartFiles Loaded.
- 2020-01-22 05:51:58: amuled: OnInit - starting timer
-</code></pre>
-<ul>
-<li>退回首层屏幕</li>
-</ul>
-<pre><code class="language-plain_text">Ctrl + a + d
+<p>2.生成加密的auth_basic_user_file文件</p>
+<pre><code class="language-plain_text">htpasswd -c -d /etc/nginx/pass_file  username
 </code></pre>
 
                         
@@ -537,7 +418,54 @@ advised to run aMule as an normal user instead.
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2020/01/22</span>
+                    <span class="date">2018/12/18</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
+          				   
+                    
+
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15263677435766.html">
+                
+                  <h1>Opera浏览器送你无限流量的V.P.N</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h4><a id="1%E4%B8%8B%E8%BD%BD-opera%E6%B5%8F%E8%A7%88%E5%99%A8-www-opera-com" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.下载Opera浏览器 <a href="http://www.opera.com">www.opera.com</a></h4>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1frc1mn8otoj30vh0j944f.jpg" alt="" /></p>
+<h4><a id="2%E5%AE%89%E8%A3%85-opera" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.安装Opera</h4>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1frc1n4hzzoj312s0sa4i2.jpg" alt="" /><br />
+3.修改你的电脑所在地,将这里设置为其他地区.例如:中国澳门(仅Mac图例,Win请自己寻找相关功能)<br />
+<img src="https://ws3.sinaimg.cn/large/006tKfTcly1frc1gvo0nwj31140x8qbg.jpg" alt="" /><br />
+<img src="https://ws3.sinaimg.cn/large/006tKfTcly1frc1hd7hehj31140qewjk.jpg" alt="" /></p>
+<h4><a id="4%E7%82%B9%E5%87%BB-opera%E8%8F%9C%E5%8D%95%E5%B9%B6%E8%BF%9B%E5%85%A5%E9%A6%96%E9%80%89%E4%B8%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.点击Opera菜单并进入&quot;首选下&quot;</h4>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1frc1lvma8ij307d09amy3.jpg" alt="" /></p>
+<h4><a id="5%E9%80%89%E6%8B%A9%E2%80%9C%E9%9A%90%E7%A7%81%E5%92%8C%E5%AE%89%E5%85%A8%E2%80%9D%E9%80%89%E9%A1%B9%E5%B9%B6%E5%9C%A8%E5%8F%B3%E4%BE%A7%E9%80%89%E6%8B%A9%E7%9B%B8%E5%BA%94%E9%80%89%E9%A1%B9%E5%8D%B3%E5%8F%AF%E5%BC%80%E5%90%AF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.选择“隐私和安全”选项,并在右侧选择相应选项即可开启</h4>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frc1k61tr0j30vh0j9wit.jpg" alt="" /></p>
+<h4><a id="6%E5%87%BA%E7%8E%B0%E8%93%9D%E8%89%B2%E5%9B%BE%E6%A0%87%E6%89%93%E5%BC%80%E5%AE%8C%E6%88%90%E5%B9%B6%E4%B8%94%E5%8F%AF%E4%BB%A5%E8%AE%BE%E7%BD%AE%E8%BF%9E%E6%8E%A5%E5%93%AA%E4%B8%80%E4%B8%AA%E5%8C%BA%E5%9F%9F%E7%9A%84%E8%8A%82%E7%82%B9%E6%88%96%E8%80%85%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F%E6%8E%A8%E8%8D%90%E5%9C%A8%E8%BF%99%E9%87%8C%E6%8E%A8%E8%8D%90%E6%89%8B%E5%8A%A8%E6%8C%87%E5%AE%9A%E4%BA%9A%E6%B4%B2" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>6.出现蓝色图标打开完成,并且可以设置连接哪一个区域的节点或者使用系统推荐(在这里推荐手动指定亚洲)</h4>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frc1oquve2j308z0d3dgn.jpg" alt="" /></p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/05/15</span>
                     <span>posted in&nbsp;</span> 
           				  
           					    <span class="posted-in"><a href='Tips.html'>Tips</a></span>
@@ -561,12 +489,12 @@ advised to run aMule as an normal user instead.
 			<div class="row">
 			  <div class="large-6 columns">
 			  <p class="text-left" style="padding-top:25px;">
-			   
+			   <a href="Tips.html">&laquo; Prev Page</a>  
 			  </p>
 			  </div>
 			  <div class="large-6 columns">
 			<p class="text-right" style="padding-top:25px;">
-			 <a href="all_1.html">&raquo; Next Page</a> 
+			 <a href="Tips_2.html">&raquo; Next Page</a> 
 			</p>
 			  </div>
 			</div>
